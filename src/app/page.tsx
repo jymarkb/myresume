@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TestForm from "@/component/TestForm";
 
 export default function Home() {
   return (
@@ -50,6 +51,10 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+        <TestForm
+          title="Tes Title"
+          sentence="Lupus is an autoimmune disease that makes your immune system damage organs and tissue throughout your body. It causes inflammation that can affect your skin, joints, blood and organs like your kidneys, lungs and heart. A healthcare provider will help you find medications to manage your symptoms and reduce how often you experience flare-ups."
+        />
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
