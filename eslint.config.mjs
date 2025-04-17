@@ -28,6 +28,8 @@ const eslintConfig = [
     rules: {
       semi: ["error"],
       quotes: ["error", "double"], // Fixing typo from "qoutes" to "quotes"
+      "prefer-arrow-callback": ["error"],
+      "prefer-template": ["error"],
     },
   }),
 

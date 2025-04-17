@@ -53,7 +53,7 @@ export default function Home() {
         </div>
         <TestForm
           title="Tes Title"
-          sentence="Lupus is an autoimmune disease that makes your immune system damage organs and tissue throughout your body. It causes inflammation that can affect your skin, joints, blood and organs like your kidneys, lungs and heart. A healthcare provider will help you find medications to manage your symptoms and reduce how often you experience flare-ups."
+          sentence="Lupus is an autoimmune disease that makes your immune system damage organs and tissue throughout your body. It causes inflammation that can affect your skin, joints, blood and organs like your kidneys, lungs and heart."
         />
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
