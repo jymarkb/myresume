@@ -1,3 +1,30 @@
+export const headerLinkData = [
+    {
+        "title": "Home",
+        "targetSection": "home",
+    },
+    {
+        "title": "About Me",
+        "targetSection": "aboutme",
+    },
+    {
+        "title": "Experties",
+        "targetSection": "experties",
+    },
+    {
+        "title": "Services",
+        "targetSection": "services",
+    },
+    {
+        "title": "Recent Work",
+        "targetSection": "work",
+    },
+    {
+        "title": "Contact",
+        "targetSection": "contact",
+    },
+];
+
 export const serviceData = [
     {
         "title": "Web Development",
@@ -33,23 +60,18 @@ export const serviceData = [
 
 export const socialData = [
     {
-        "title": "facebook",
-        "url": "/",
-        "icon": "facebook"
-    },
-    {
         "title": "mail",
-        "url": "/",
+        "url": "mailto:dev.jymarkb@gmail.com",
         "icon": "mail"
     },
     {
         "title": "github",
-        "url": "/",
+        "url": "https://github.com/jymarkb",
         "icon": "github"
     },
     {
         "title": "linkedin",
-        "url": "/",
+        "url": "https://www.linkedin.com/in/jaymark-borja/",
         "icon": "linkedin"
     },
 ];

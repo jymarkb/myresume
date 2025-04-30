@@ -21,6 +21,10 @@
   text-decoration-line: underline;
 }
 
+.mobile-header .active {
+  color: hsl(var(--primary-theme));
+}
+
 .btn-get-in-touch {
   background-color: hsl(var(--primary-theme));
 }

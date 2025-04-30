@@ -52,3 +52,6 @@
 .icon-minus:before {
   content: "\e120";
 }
+.icon-nav-menu:before {
+  content: "\e5a1";
+}
