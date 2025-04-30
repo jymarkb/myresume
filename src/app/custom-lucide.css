@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "lucide";
+  src: url("~lucide-static/font/lucide.eot");
+  src:
+    url("~lucide-static/font/lucide.eot?#iefix") format("embedded-opentype"),
+    url("~lucide-static/font/lucide.woff2") format("woff2"),
+    url("~lucide-static/font/lucide.woff") format("woff"),
+    url("~lucide-static/font/lucide.ttf") format("truetype"),
+    url("~lucide-static/font/lucide.svg#lucide") format("svg");
+  font-display: swap;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "lucide" !important;
+  font-size: inherit;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e0ea";
+}
+.icon-linkedin:before {
+  content: "\e10b";
+}
+.icon-facebook:before {
+  content: "\e0c0";
+}
+.icon-mail:before {
+  content: "\e113";
+}
+.icon-move-right:before {
+  content: "\e495";
+}
+.icon-arrow-right:before {
+  content: "\e04d";
+}
+.icon-expand:before {
+  content: "\e21a";
+}
+.icon-x:before {
+  content: "\e1b2";
+}
+.icon-briefcase:before {
+  content: "\e066";
+}
+.icon-phone:before {
+  content: "\e137";
+}
+.icon-minus:before {
+  content: "\e120";
+}
