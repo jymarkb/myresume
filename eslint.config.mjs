@@ -75,6 +75,12 @@ const eslintConfig = [
       ...pluginNext.configs.recommended.rules,
 
       // Custom rules
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        { argsIgnorePattern: "^_" },
+      ],
+      "@typescript-eslint/no-require-imports": "error",
       "react/react-in-jsx-scope": "off", // Turn off React in scope since React 17+
       // "react/prop-types": "off", // Disable prop-types check since we use TypeScript
     },
