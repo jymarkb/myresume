@@ -24,6 +24,10 @@ module.exports = {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        primaryTheme: {
+          DEFAULT: "hsl(var(--primary-theme))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -51,7 +55,40 @@ module.exports = {
           5: "hsl(var(--chart-5))",
         },
       },
+
+      keyframes: {
+        subtlePulse: {
+          "0%, 100%": { filter: "brightness(1)" },
+          "20%": { filter: "brightness(1.15)" },
+          "40%": { filter: "brightness(1.05)" },
+          "60%": { filter: "brightness(0.95)" },
+          "80%": { filter: "brightness(0.9)" },
+        },
+
+        scrollBottomToTop: {
+          "0%": { transform: "translateY(100%)" },
+          "100%": { transform: "translateY(-100%)" },
+        },
+        scrollTopToBottom: {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100%)" },
+        },
+      },
+      animation: {
+        subtlePulse: "subtlePulse 2s ease-in-out infinite",
+        "scroll-bottom-to-top": "scrollBottomToTop 5s linear infinite",
+        "scroll-top-to-bottom": "scrollTopToBottom 5s linear infinite",
+      },
+      scrollBehavior: {
+        smooth: "smooth",
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    "@tailwindcss-animate",
+    "@tailwindcss/forms",
+    "@tailwindcss/typography",
+    "@tailwindcss/aspect-ratio",
+    "@tailwindcss/container-queries",
+  ],
 };
