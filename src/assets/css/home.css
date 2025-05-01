@@ -97,6 +97,81 @@
     bottom: calc((12 * 7rem) * -1);
   }
 }
+/* escape hydration error */
+.delay-up-0 {
+  animation-delay: calc(var(--delay-up-base) / 12 * (12 - 1) * -1);
+}
+.delay-up-1 {
+  animation-delay: calc(var(--delay-up-base) / 12 * (12 - 2) * -1);
+}
+.delay-up-2 {
+  animation-delay: calc(var(--delay-up-base) / 12 * (12 - 3) * -1);
+}
+.delay-up-3 {
+  animation-delay: calc(var(--delay-up-base) / 12 * (12 - 4) * -1);
+}
+.delay-up-4 {
+  animation-delay: calc(var(--delay-up-base) / 12 * (12 - 5) * -1);
+}
+.delay-up-5 {
+  animation-delay: calc(var(--delay-up-base) / 12 * (12 - 6) * -1);
+}
+.delay-up-6 {
+  animation-delay: calc(var(--delay-up-base) / 12 * (12 - 7) * -1);
+}
+.delay-up-7 {
+  animation-delay: calc(var(--delay-up-base) / 12 * (12 - 8) * -1);
+}
+.delay-up-8 {
+  animation-delay: calc(var(--delay-up-base) / 12 * (12 - 9) * -1);
+}
+.delay-up-9 {
+  animation-delay: calc(var(--delay-up-base) / 12 * (12 - 10) * -1);
+}
+.delay-up-10 {
+  animation-delay: calc(var(--delay-up-base) / 12 * (12 - 11) * -1);
+}
+.delay-up-11 {
+  animation-delay: calc(var(--delay-up-base) / 12 * (12 - 12) * -1);
+}
+
+.delay-down-0 {
+  animation-delay: calc(var(--delay-down-base) / 12 * (12 - 1) * -1);
+}
+.delay-down-1 {
+  animation-delay: calc(var(--delay-down-base) / 12 * (12 - 2) * -1);
+}
+.delay-down-2 {
+  animation-delay: calc(var(--delay-down-base) / 12 * (12 - 3) * -1);
+}
+.delay-down-3 {
+  animation-delay: calc(var(--delay-down-base) / 12 * (12 - 4) * -1);
+}
+.delay-down-4 {
+  animation-delay: calc(var(--delay-down-base) / 12 * (12 - 5) * -1);
+}
+.delay-down-5 {
+  animation-delay: calc(var(--delay-down-base) / 12 * (12 - 6) * -1);
+}
+.delay-down-6 {
+  animation-delay: calc(var(--delay-down-base) / 12 * (12 - 7) * -1);
+}
+.delay-down-7 {
+  animation-delay: calc(var(--delay-down-base) / 12 * (12 - 8) * -1);
+}
+.delay-down-8 {
+  animation-delay: calc(var(--delay-down-base) / 12 * (12 - 9) * -1);
+}
+.delay-down-9 {
+  animation-delay: calc(var(--delay-down-base) / 12 * (12 - 10) * -1);
+}
+.delay-down-10 {
+  animation-delay: calc(var(--delay-down-base) / 12 * (12 - 11) * -1);
+}
+.delay-down-11 {
+  animation-delay: calc(var(--delay-down-base) / 12 * (12 - 12) * -1);
+}
+/* escape hydration error */
 
 .tech-buttons button.active {
   border-color: hsl(var(--primary-theme));
