@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import MobileHeader from "./mobile-header";
 import HeaderLink from "./header-link";
 const Header = () => {
-  const [isActive, setIsActive] = useState("home");
+  const [isActive, setIsActive] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
   const setMobileHeader = () => {

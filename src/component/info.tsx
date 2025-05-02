@@ -2,7 +2,7 @@ import Image from "next/image";
 import AuthorSocial from "./author-social";
 const Info = () => {
   return (
-    <div className="container-max-w w-full flex flex-col md:flex-row py-8 px-4 sm:px-8 lg:p-12 xl:p-16 md:gap-8 lg:gap-12 xl:gap-16">
+    <div className="container-max-w w-full flex flex-col md:flex-row py-8 px-6 sm:px-8 lg:p-12 xl:p-16 md:gap-8 lg:gap-12 xl:gap-16">
       <div className="md:flex lg:ml-auto items-center hidden">
         <Image
           className="rounded-xl shadow-lg object-cover aspect-square md:max-w-[300px] md:max-h-full lg:max-h-[350px] lg:max-w-[350px] xl:max-w-[450px] xl:max-h-[450px] 2xl:max-w-[500px] 2xl:max-h-[500px] overflow"
