@@ -13,13 +13,15 @@ const Talk = () => {
 
   return (
     <div className="container-max-w w-full flex flex-col py-16 text-center items-center gap-4">
-      <p className="text-2xl font-semibold">Have project in mind?</p>
-      <h1 className="text-8xl font-semibold mb-8">Let&rsquo;s talk with me</h1>
+      <p className="text-xl font-semibold">Have project in mind?</p>
+      <h1 className="text-4xl font-semibold mb-4">
+        {"Let's discuss your project"}
+      </h1>
       <a
         className="px-8 py-2 bg-primary text-white rounded shadow-md transition duration-300 hover:bg-primary/90 hover:scale-105 w-fit"
-        href="/talk-with-me"
+        href="/get-in-touch"
       >
-        Talk with me
+        Get in touch
       </a>
       <p>
         <span className="font-semibold text-gray-600">My local time :</span>
