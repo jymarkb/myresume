@@ -20,7 +20,7 @@ const Services = () => {
           return (
             <div
               key={index}
-              className={`max-w-md flex flex-col border rounded-lg py-4 px-4 md:px-6 lg:px-8 shadow-lg ${(index + 1) % 2 == 0 ? "border-primary bg-gradient-to-r from-primary/90 to-primary/80 text-white" : "bg-gradient-to-r from-gray-200 to-gray-100 border-primaryTheme"}`}
+              className={`max-w-md flex flex-col border rounded-lg py-4 px-4 md:px-6 xl:px-8 shadow-lg ${(index + 1) % 2 == 0 ? "border-primary bg-gradient-to-r from-primary/90 to-primary/80 text-white" : "bg-gradient-to-r from-gray-200 to-gray-100 border-primaryTheme"}`}
             >
               <div className="h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16 aspect-square">
                 <Image
@@ -33,7 +33,7 @@ const Services = () => {
                   className="object-cover"
                 />
               </div>
-              <h3 className="text-lg lg:text-xl xl:text-2xl font-bold text-primaryTheme">
+              <h3 className="text-lg xl:text-2xl font-bold text-primaryTheme">
                 {item.title}
               </h3>
               <p className="text-xs md:text-sm xl:text-md text-justify">

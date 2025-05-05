@@ -1,17 +1,16 @@
 import "@/assets/css/home.css";
 import Headers from "@/component/header";
 import Info from "@/component/info";
-import Services from "@/component/services";
-import Talk from "@/component/talk";
-import Socials from "@/component/socials";
-import Work from "@/component/work";
 import AboutMe from "@/component/about";
 import TechStack from "@/component/tech-stack";
+import Services from "@/component/services";
+import Work from "@/component/work";
+import Talk from "@/component/talk";
+import Socials from "@/component/socials";
 
 export default function Home() {
   return (
     <main className="grid grid-cols-1">
-      {/* todo: active color */}
       <Headers />
 
       <section id="home" className="wrapper flex justify-center">
@@ -30,10 +29,7 @@ export default function Home() {
         <Services />
       </section>
 
-      <section
-        id="work"
-        className="bg-primary flex justify-center min-h-[500px]"
-      >
+      <section id="work" className="bg-primary flex justify-center">
         <Work />
       </section>
 
