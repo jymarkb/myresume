@@ -74,6 +74,7 @@
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 
 /* Track */
@@ -85,11 +86,14 @@
 ::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 5px;
+  background-clip: content-box;
+  border: 1px solid transparent;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+  border: 1px solid transparent;
 }
 
 /* 
