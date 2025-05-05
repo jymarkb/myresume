@@ -1,9 +1,5 @@
 export const headerLinkData = [
     {
-        "title": "Home",
-        "targetSection": "home",
-    },
-    {
         "title": "About Me",
         "targetSection": "aboutme",
     },
@@ -111,9 +107,9 @@ export const aboutMeSocial = [
         "icon": "linkedin"
     },
     {
-        "data": "(+63)951-4292-787",
-        "title": "Phone",
-        "icon": "phone"
+        "data": "github.com/jymarkb",
+        "title": "Github",
+        "icon": "github"
     },
     {
         "data": "dev.jymarkb@gmail.com",
