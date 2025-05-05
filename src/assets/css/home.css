@@ -2,6 +2,10 @@
   color: hsl(var(--primary)) / 0.8;
 } */
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container-max-w {
   max-width: 1400px;
 }
@@ -23,6 +27,21 @@
 
 .mobile-header .active {
   color: hsl(var(--primary-theme));
+}
+
+@keyframes slideInHeader {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-header {
+  animation: slideInHeader 0.3s ease-out forwards;
 }
 
 .btn-get-in-touch {

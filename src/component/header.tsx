@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import MobileHeader from "./mobile-header";
 import HeaderLink from "./header-link";
 const Header = () => {
-  const [isActive, setIsActive] = useState("");
+  const [isActive, setIsActive] = useState("home");
   const [isOpen, setIsOpen] = useState(false);
 
   const setMobileHeader = () => {
@@ -15,28 +15,24 @@ const Header = () => {
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
-    const options = {
-      threshold: 0.7,
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.intersectionRatio > 0.8) {
-          const target = entry.target.getAttribute("id");
-          if (target) {
-            setIsActive(target);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
+            const targetId = entry.target.getAttribute("id");
+            if (targetId) {
+              setIsActive(targetId);
+            }
           }
         }
-      });
-    }, options);
+      },
+      { threshold: 0.5 }
+    );
 
     sections.forEach((section) => observer.observe(section));
 
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
-      observer.disconnect();
-    };
-  }, [isActive]);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header className="h-20 sticky top-0 bg-background/95 z-50 flex items-center justify-center border-b-4 border-primary shadow-lg">
