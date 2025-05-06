@@ -29,7 +29,7 @@ html {
   color: hsl(var(--primary-theme));
 }
 
-@keyframes slideInHeader {
+@keyframes miniSlideIn {
   from {
     transform: translateY(20px);
     opacity: 0;
@@ -40,8 +40,8 @@ html {
   }
 }
 
-.animate-header {
-  animation: slideInHeader 0.3s ease-out forwards;
+.animate-slideIn {
+  animation: miniSlideIn 0.3s ease-out forwards;
 }
 
 .btn-get-in-touch {
@@ -229,4 +229,8 @@ html {
   animation-timing-function: ease-out;
   animation-fill-mode: both;
   backface-visibility: hidden;
+}
+
+.select-container:focus-within i {
+  transform: rotate(180deg);
 }
