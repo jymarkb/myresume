@@ -55,3 +55,9 @@
 .icon-nav-menu:before {
   content: "\e5a1";
 }
+.icon-chevron-down:before {
+  content: "\e071";
+}
+.icon-send:before {
+  content: "\e156";
+}

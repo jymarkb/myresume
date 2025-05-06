@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import GetInTouch from "./get-in-touch";
 
 const Talk = () => {
   const [time, setTime] = useState("00:00:00 AM");
@@ -17,12 +18,7 @@ const Talk = () => {
       <h1 className="text-4xl font-semibold mb-4">
         {"Let's discuss your project"}
       </h1>
-      <a
-        className="px-8 py-2 bg-primary text-white rounded shadow-md transition duration-300 hover:bg-primary/90 hover:scale-105 w-fit"
-        href="/get-in-touch"
-      >
-        Get in touch
-      </a>
+      <GetInTouch />
       <p>
         <span className="font-semibold text-gray-600">My local time :</span>
         <span className="font-bold"> {time} (GMT +8)</span>
