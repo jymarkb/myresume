@@ -13,10 +13,18 @@ const ExpandedGallery = ({
 }) => {
   const [selectedImgId, setSelectedImgId] = useState(0);
 
-  const selectedImage = (id: string) => {
+  const onSelectedImage = (id: string) => {
     const tempId = Number(id);
     setSelectedImgId(tempId);
   };
+
+  const scrollToTarget = (id: string) => {
+    const target = document.getElementById(id);
+    if (!target) return;
+    target.scrollIntoView({ behavior: "smooth", block: "end" });
+  };
+
+  console.log(selectedImgId, onSelectedImage);
 
   const onWrapperClick = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
@@ -32,61 +40,77 @@ const ExpandedGallery = ({
     document.body.style.overflow = "hidden";
     const tempId = Number(selectedImg);
     setSelectedImgId(tempId);
+    scrollToTarget(`wrapper-img-${tempId}`);
   }, [selectedImg]);
 
   return (
     <div
       id="modalWrapper"
-      className="fixed top-0 left-0 h-screen w-screen z-50 bg-black/80 flex items-center justify-center"
+      className="fixed top-0 left-0 h-screen w-screen z-50 bg-black/80 "
       onClickCapture={onWrapperClick}
     >
-      <div className="max-w-[1280px] h-[720px] flex bg-white mx-auto">
-        {/* Left: 960px image section */}
-        <div className="w-[960px] h-full">
-          <Image
-            src={`${workData[selectedImgId].imgSrc}`}
-            alt="selected work image"
-            className="h-full w-full object-cover"
-            width={960}
-            height={720}
-          />
+      <div className="relative">
+        <div className="fixed top-0 right-0 m-2 sm:mt-4">
+          <button
+            onClick={onClose}
+            className="text-red-500 bg-white hover:text-white hover:bg-red-500 rounded flex items-center"
+            aria-label="close button"
+          >
+            <i className="h-8 w-8 text-2xl icon-x"></i>
+          </button>
         </div>
-
-        {/* Right: 320px side section */}
-        <div className="w-[320px] h-full bg-gray-100 overflow-auto relative">
-          <div className="fixed top-0 right-0 m-10">
-            <button
-              onClick={onClose}
-              className="text-primaryTheme bg-white hover:text-white hover:bg-primaryTheme rounded flex items-center"
-              aria-label="close button"
-            >
-              <i className="h-8 w-8 text-2xl icon-x"></i>
-            </button>
+      </div>
+      <div className="h-full w-full flex items-center justify-center">
+        <div
+          className=" 
+        flex w-full
+        flex-col xl:flex-row
+      w-full max-w-[95%] sm:max-w-[90%] lg:max-w-[850px] xl:max-w-[1100px] 2xl:max-w-[1280px]
+      h-full max-h-[70%] sm:max-h-[80%]  md:max-h-[85%] lg:max-h-[720px]
+      bg-white"
+        >
+          <div className="relative w-full h-full max-h-[560px] sm:max-h-[540px] lg:max-h-[520px] xl:max-h-full flex items-center bg-primary">
+            <Image
+              src={workData[selectedImgId].imgSrc}
+              alt="selected work image"
+              fill
+              className="object-contain"
+              sizes="(max-width: 640px) 95vw, (max-width: 1024px) 90vw, (max-width: 1280px) 850px, (max-width: 1536px) 780px, 960px"
+              loading="lazy"
+            />
           </div>
-          <div className="flex flex-col items-center gap-4 p-4 overflow overflow-y">
-            {workData.map((item, index) => {
-              return (
-                <button
-                  key={index}
-                  id={index.toString()}
-                  onClick={() => selectedImage(index.toString())}
-                  className={`w-[280px] h-[150px] border-2 shadow-md relative ${index === selectedImgId ? "border-primaryTheme" : "border-gray-700"}`}
-                >
-                  <Image
-                    src={item.imgSrc}
-                    alt={`work image # ${index + 1}`}
-                    className="h-full w-full object-cover"
-                    width={280}
-                    height={150}
-                  />
-                  <p
-                    className={`h-10 w-10 p-2 ${index === selectedImgId ? "bg-primaryTheme" : "bg-gray-700"} font-semibold text-white absolute top-0 right-0`}
+          <div className="bg-gray-200  w-full xl:max-w-[320px] h-full max-h-[160px] sm:max-h-[180px] lg:max-h-[200px] xl:max-h-full">
+            <div className="flex flex-nowrap items-center xl:flex-col gap-2 xl:gap-2 py-2 xl:px-2 h-full w-full  overflow-y-hidden overflow-x-scroll xl:overflow-y-scroll xl:overflow-x-hidden">
+              {workData.map((item, index) => {
+                return (
+                  <div
+                    key={index}
+                    id={`wrapper-img-${index}`}
+                    className="bg-white flex-none w-full h-full max-w-[250px] sm:max-w-[280px] md:max-w-[300px] lg:max-w-[320]  xl:max-w-full max-h-[180px] shadow-md"
                   >
-                    {index + 1}
-                  </p>
-                </button>
-              );
-            })}
+                    <button
+                      id={index.toString()}
+                      onClick={() => onSelectedImage(index.toString())}
+                      className={`h-full w-full border-2 relative ${index === selectedImgId ? "border-primaryTheme" : "border-gray-700"}`}
+                    >
+                      <Image
+                        src={item.imgSrc}
+                        alt={`work image # ${index + 1}`}
+                        className="h-full w-full object-cover"
+                        width={280}
+                        height={150}
+                        loading="lazy"
+                      />
+                      <p
+                        className={`h-10 w-10 p-2 ${index === selectedImgId ? "bg-primaryTheme" : "bg-gray-700"} font-semibold text-white absolute top-0 right-0`}
+                      >
+                        {index + 1}
+                      </p>
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
