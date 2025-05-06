@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { toast } from "sonner";
 
 const ContactForm = ({ onClose }: { onClose: () => void }) => {
-  const form = document.getElementById("form-contact") as HTMLFormElement;
   const onSubmit = (e: React.MouseEvent) => {
     e.preventDefault();
+    const form = document.getElementById("form-contact") as HTMLFormElement;
     const formData = new FormData(form);
     try {
       fetch(form.action, {
