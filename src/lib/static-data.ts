@@ -177,7 +177,7 @@ export const techData = [
             { name: "PHP", imgSrc: "php.svg" },
             { name: "Prisma", imgSrc: "prisma.svg" },
             { name: "MySQL", imgSrc: "mysql.svg" },
-            { name: "Postgres", imgSrc: "postgresql.svg" },
+            // { name: "Postgres", imgSrc: "postgresql.svg" },
         ],
     },
     {
@@ -205,6 +205,7 @@ export const techData = [
             { name: "Postman", imgSrc: "postman.svg" },
             { name: "WSL 2 Linux", imgSrc: "linux.svg" },
             { name: "Agile Method", imgSrc: "agile.svg" },
+            { name: "Micro Service", imgSrc: "micro-services.svg" },
         ],
     },
 ];
