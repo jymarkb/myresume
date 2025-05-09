@@ -6,7 +6,7 @@ const Info = () => {
       <div className="md:flex lg:ml-auto items-center hidden">
         <Image
           className="rounded-xl shadow-lg object-cover aspect-square md:max-w-[300px] md:max-h-full lg:max-h-[350px] lg:max-w-[350px] xl:max-w-[450px] xl:max-h-[450px] 2xl:max-w-[500px] 2xl:max-h-[500px] overflow"
-          src="/images/webp/admin.webp"
+          src="/images/webp/avatar.webp"
           width={500}
           height={500}
           alt="Jay Mark Borja"
@@ -35,10 +35,10 @@ const Info = () => {
                 </span>
               </div>
               <div className="grid gap-1 sm:gap-2 lg:gap-4">
-                <h1 className="font-bold text-[2.75rem] sm:text-6xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl w-fit z-10">
+                <h1 className="font-bold text-[2.75rem] sm:text-6xl md:text-5xl lg:text-6xl xl:text-7xl w-fit z-10">
                   Jay Mark Borja
                 </h1>
-                <h2 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+                <h2 className="text-3xl lg:text-4xl xl:text-5xl">
                   A
                   <span className="ml-2 bg-gradient-to-r from-primaryTheme to-indigo-500 text-white px-3 py-1 rounded-sm border-solid shadow-md filter animate-subtlePulse">
                     {"{ Web Developer }"}
