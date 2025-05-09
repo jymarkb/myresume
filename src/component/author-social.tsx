@@ -6,7 +6,7 @@ const AuthorSocial = () => {
       <div className="flex gap-4">
         <GetInTouch />
         <a
-          className="px-6 sm:px-8 py-2 text-primary border rounded shadow-md transition duration-300 hover:scale-105"
+          className="px-5 sm:px-8 py-2 text-primary border rounded shadow-md transition duration-300 hover:scale-105"
           href="/projects"
         >
           See my work

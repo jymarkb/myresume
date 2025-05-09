@@ -3,10 +3,10 @@ import AuthorSocial from "./author-social";
 const Info = () => {
   return (
     <div className="container-max-w w-full flex flex-col md:flex-row py-8 px-6 sm:px-8 lg:p-12 xl:p-16 md:gap-8 lg:gap-12 xl:gap-16">
-      <div className="md:flex lg:ml-auto items-center hidden">
+      <div className="lg:flex lg:ml-auto items-center hidden">
         <Image
           className="rounded-xl shadow-lg object-cover aspect-square md:max-w-[300px] md:max-h-full lg:max-h-[350px] lg:max-w-[350px] xl:max-w-[450px] xl:max-h-[450px] 2xl:max-w-[500px] 2xl:max-h-[500px] overflow"
-          src="/images/webp/admin.webp"
+          src="/images/webp/avatar.webp"
           width={500}
           height={500}
           alt="Jay Mark Borja"
@@ -16,10 +16,10 @@ const Info = () => {
       <div className="font-semibold flex items-center justify-center">
         <div className="author-wrapper h-fit grid w-fit gap-2 lg:gap-3 xl:gap-4 text-primary/85">
           <div className="flex gap-4 flex-col sm:flex-row md">
-            <div className="static md:hidden order-2 sm:order-1">
+            <div className="static lg:hidden order-2 sm:order-1">
               <Image
-                className="rounded-xl shadow-lg object-cover overflow aspect-square sm:max-w-[250px] sm:max-h-[250px]"
-                src="/images/webp/admin.webp"
+                className="rounded-xl shadow-lg object-cover overflow aspect-square sm:max-w-[180px] md:max-w-[210px]"
+                src="/images/webp/avatar.webp"
                 width={500}
                 height={500}
                 alt="Jay Mark Borja avatar"
@@ -27,18 +27,20 @@ const Info = () => {
             </div>
 
             <div className="order-1 sm:order-2 ">
-              <div className="flex gap-2 items-center">
-                <span className="span-text text-md xl:text-lg">{"<span>"}</span>
-                <span className="text-lg xl:text-xl">{"Hello, I'm"}</span>
-                <span className="span-text text-md xl:text-lg">
-                  {"</span>"}
-                </span>
-              </div>
-              <div className="grid gap-1 sm:gap-2 lg:gap-4">
-                <h1 className="font-bold text-[2.75rem] sm:text-6xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl w-fit z-10">
+              <div className="grid gap-1 sm:gap-3 md:gap-4">
+                <div className="flex gap-2 items-center">
+                  <span className="span-text text-md xl:text-lg">
+                    {"<span>"}
+                  </span>
+                  <span className="text-lg xl:text-xl">{"Hello, I'm"}</span>
+                  <span className="span-text text-md xl:text-lg">
+                    {"</span>"}
+                  </span>
+                </div>
+                <h1 className="font-bold text-[2.5rem] sm:text-5xl md:text-6xl xl:text-7xl w-fit z-10">
                   Jay Mark Borja
                 </h1>
-                <h2 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+                <h2 className="text-[1.7rem] md:text-4xl xl:text-5xl">
                   A
                   <span className="ml-2 bg-gradient-to-r from-primaryTheme to-indigo-500 text-white px-3 py-1 rounded-sm border-solid shadow-md filter animate-subtlePulse">
                     {"{ Web Developer }"}
@@ -51,7 +53,7 @@ const Info = () => {
             </div>
           </div>
 
-          <p className="leading-8 lg:leading-9 xl:leading-9 lg:text-md xl:text-lg text-gray-600 max-w-[670px]">
+          <p className="leading-8 lg:leading-9 xl:leading-9 lg:text-md xl:text-lg text-gray-600 max-w-[610px]">
             <span className="span-text">{"<p>"}</span>
             {" I'm a web developer, experience in "}
             <span className="span-text">

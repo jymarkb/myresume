@@ -10,15 +10,12 @@ const HeaderLink = ({ isActive }: { isActive: string }) => {
         return (
           <li
             key={index}
-            className={`h-fit ${isActive === item.targetSection ? "active" : ""}`}
+            className={`h-fit ${isActive === item.target ? "active" : ""}`}
           >
-            <Link href={`#${item.targetSection}`}>{item.title}</Link>
+            <Link href={`${item.anchor}${item.target}`}>{item.title}</Link>
           </li>
         );
       })}
-      <li className="h-fit8">
-        <Link href="/projects">Projects</Link>
-      </li>
     </>
   );
 };

@@ -4,10 +4,10 @@ import Info from "@/component/info";
 import AboutMe from "@/component/about";
 import TechStack from "@/component/tech-stack";
 import Services from "@/component/services";
-import Work from "@/component/work";
+import Projects from "@/component/projects";
 import Talk from "@/component/talk";
-import Socials from "@/component/socials";
 import { Toaster } from "sonner";
+import Footer from "@/component/footer";
 
 export default function Home() {
   return (
@@ -30,8 +30,8 @@ export default function Home() {
         <Services />
       </section>
 
-      <section id="work" className="bg-primary flex justify-center">
-        <Work />
+      <section id="projects" className="bg-primary flex justify-center">
+        <Projects />
       </section>
 
       <section id="contact" className="wrapper flex justify-center">
@@ -40,14 +40,7 @@ export default function Home() {
 
       <Toaster richColors />
 
-      <footer className="h-20 border-t-8 border-primary flex justify-center">
-        <div className="container-max-w w-full p-4 flex items-center gap-4 relative">
-          <div className="font-semibold">© 2025 Jay Mark B.</div>
-          <ul className="flex gap-4 items-center ml-auto">
-            <Socials />
-          </ul>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
