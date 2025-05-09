@@ -8,14 +8,14 @@ const Services = () => {
         <p className="text-xl text-white font-semibold bg-gradient-to-r from-primaryTheme to-indigo-500 filter animate-subtlePulse px-8 py-2 rounded-sm">
           My Services
         </p>
-        <div className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl max-w-full md:max-w-[700px] lg:max-w-[900px] font-semibold">
+        <div className="text-2xl sm:text-4xl xl:text-6xl max-w-full md:max-w-[700px] xl:max-w-[1000px] font-semibold">
           <span className="bg-gradient-to-r from-primaryTheme to-indigo-500 bg-clip-text text-transparent filter animate-subtlePulse">
             Designing Solution
           </span>
           <span> Customized to Meet Your Requirement</span>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 w-fit">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-4 xl:gap-8 w-fit">
         {serviceData.map((item, index) => {
           return (
             <div
@@ -33,7 +33,7 @@ const Services = () => {
                   className="object-cover"
                 />
               </div>
-              <h3 className="text-lg xl:text-2xl font-bold text-primaryTheme">
+              <h3 className="text-lg xl:text-xl 2xl:text-2xl font-bold text-primaryTheme">
                 {item.title}
               </h3>
               <p className="text-xs md:text-sm xl:text-md text-justify">

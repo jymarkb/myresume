@@ -4,11 +4,10 @@ import Info from "@/component/info";
 import AboutMe from "@/component/about";
 import TechStack from "@/component/tech-stack";
 import Services from "@/component/services";
-// import Work from "@/component/work";
+import Projects from "@/component/projects";
 import Talk from "@/component/talk";
 import { Toaster } from "sonner";
 import Footer from "@/component/footer";
-import Projects from "@/component/projects";
 
 export default function Home() {
   return (
@@ -32,7 +31,6 @@ export default function Home() {
       </section>
 
       <section id="projects" className="bg-primary flex justify-center">
-        {/* <Work /> */}
         <Projects />
       </section>
 
