@@ -1,4 +1,5 @@
 import { clsx, type ClassValue } from "clsx";
+import React from "react";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
@@ -17,4 +18,14 @@ export const debounce = (func: () => void, delay: number) => {
     window.clearTimeout(timeoutId);
     timeoutId = window.setTimeout(func, delay);
   };
+};
+
+export const closeModal = ({ e, onClose }: { e: React.MouseEvent; onClose: () => void; }) => {
+  const target = e.target as HTMLElement;
+
+  if (target.getAttribute("id") !== "popupWrapper") {
+    return;
+  }
+
+  onClose();
 };

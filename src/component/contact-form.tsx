@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import { toast } from "sonner";
+import { closeModal } from "@/lib/utils";
 
 const ContactForm = ({ onClose }: { onClose: () => void }) => {
   const onSubmit = (e: React.MouseEvent) => {
     e.preventDefault();
     const form = document.getElementById("form-contact") as HTMLFormElement;
     const formData = new FormData(form);
+
     try {
       fetch(form.action, {
         method: "POST",
@@ -39,7 +41,11 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
   }, []);
   return (
     <div className="fixed top-0 left-0 h-screen w-screen bg-black/50 n z-50">
-      <div className="form-wrapper h-full w-full flex items-center justify-center">
+      <div
+        id="popupWrapper"
+        className="form-wrapper h-full w-full flex items-center justify-center"
+        onClickCapture={(e) => closeModal({ e, onClose })}
+      >
         <div className="form-container h-fit w-full max-w-[95%] sm:max-w-[400px] xl:max-w-[450px] bg-white border rounded-xl animate-slideIn">
           <div className="flex justify-end px-2 py-2">
             <button onClick={onClose}>
