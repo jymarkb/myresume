@@ -1,5 +1,8 @@
 import { headerLinkData } from "@/lib/static-data";
 import Link from "next/link";
+import ScrollToTarget from "./scroll-to-target";
+// import TargetLink from "./target-link";
+
 const HeaderLink = ({ isActive }: { isActive: string }) => {
   return (
     <>
@@ -12,7 +15,12 @@ const HeaderLink = ({ isActive }: { isActive: string }) => {
             key={index}
             className={`h-fit ${isActive === item.target ? "active" : ""}`}
           >
-            <Link href={`${item.anchor}${item.target}`}>{item.title}</Link>
+            <Link href={`#${item.target}`} onClick={ScrollToTarget}>
+              {item.title}
+            </Link>
+            {/* <TargetLink style="" target={`#${item.target}`}>
+              {item.title}
+            </TargetLink> */}
           </li>
         );
       })}

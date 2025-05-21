@@ -2,11 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import MobileHeader from "./mobile-header";
 import HeaderLink from "./header-link";
+import { sectionType, debounce } from "@/lib/utils";
+
 const Header = () => {
-  const [isActive, setIsActive] = useState("home");
+  const [isActive, setIsActive] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
   const setMobileHeader = () => {
@@ -14,24 +16,58 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
-            const targetId = entry.target.getAttribute("id");
-            if (targetId) {
-              setIsActive(targetId);
-            }
-          }
-        }
-      },
-      { threshold: 0.5 }
-    );
+    const sections = document.querySelectorAll("section.wrapper");
+    let sectionData: sectionType[] = [];
 
-    sections.forEach((section) => observer.observe(section));
+    const setData = () => {
+      //clear last data, some section has
+      //different height due to lazy load
+      sectionData = [];
+      let totalH = 80; // set header height
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const target = section.getAttribute("id") as string;
+        const prevHeight = totalH;
+        totalH += rect.height;
 
-    return () => observer.disconnect();
+        sectionData.push({
+          target: target,
+          top: prevHeight,
+          bot: totalH,
+        });
+      });
+    };
+
+    const setActive = () => {
+      setData();
+      const yAxis = window.scrollY;
+      const windowInner = window.innerHeight;
+      const currentScroll = windowInner * 0.3 + yAxis;
+
+      const match = sectionData.find(
+        (item) => item.top < currentScroll && item.bot > currentScroll
+      );
+
+      const target = match?.target as string;
+      if (match) setIsActive(target);
+
+      const isScrolledToBottom =
+        windowInner + yAxis >= document.body.offsetHeight;
+
+      if (isScrolledToBottom) {
+        setIsActive("contact");
+      }
+    };
+
+    setActive();
+    const navLinkDebounce = debounce(setActive, 100);
+    window.addEventListener("scroll", navLinkDebounce);
+    window.addEventListener("resize", navLinkDebounce);
+
+    return () => {
+      window.removeEventListener("scroll", navLinkDebounce);
+      window.removeEventListener("resize", navLinkDebounce);
+    };
   }, []);
 
   return (
