@@ -22,7 +22,7 @@ export default function Home() {
         <AboutMe />
       </section>
 
-      <section id="experties" className="wrappe flex justify-center">
+      <section id="experties" className="wrapper flex justify-center">
         <TechStack />
       </section>
 
@@ -30,7 +30,7 @@ export default function Home() {
         <Services />
       </section>
 
-      <section id="projects" className="bg-primary flex justify-center">
+      <section id="projects" className="wrapper bg-primary flex justify-center">
         <Projects />
       </section>
 
@@ -38,9 +38,8 @@ export default function Home() {
         <Talk />
       </section>
 
-      <Toaster richColors />
-
       <Footer />
+      <Toaster richColors />
     </main>
   );
 }
