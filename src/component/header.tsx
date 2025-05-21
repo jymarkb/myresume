@@ -54,6 +54,8 @@ const Header = () => {
       const isScrolledToBottom =
         windowInner + yAxis >= document.body.offsetHeight;
 
+      //force set, due to contact section height is small
+      //might need to update for new design
       if (isScrolledToBottom) {
         setIsActive("contact");
       }
