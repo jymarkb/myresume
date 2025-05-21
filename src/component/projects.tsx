@@ -20,7 +20,7 @@ const Projects = () => {
           <Image
             src="/images/webp/work/image-1.webp"
             alt="project feature image"
-            className="object-cover h-full w-full"
+            className="object-cover object-top h-full w-full"
             width={854}
             height={480}
           />
