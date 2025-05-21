@@ -1,27 +1,22 @@
 export const headerLinkData = [
     {
         "title": "About Me",
-        "anchor": "/#",
         "target": "aboutme",
     },
     {
         "title": "Experties",
-        "anchor": "/#",
         "target": "experties",
     },
     {
         "title": "Services",
-        "anchor": "/#",
         "target": "services",
     },
     {
         "title": "Projects",
-        "anchor": "/#",
         "target": "projects",
     },
     {
         "title": "Contact",
-        "anchor": "/#",
         "target": "contact",
     },
 ];
@@ -216,28 +211,32 @@ export const projectCard = [
         description: "An AI-powered image optimization tool built with a Laravel backend and a Next.js frontend. SmartPixel allows users to upload images with custom parameters (e.g., width, height, format, crop) and returns optimized results using advanced processing logic and cloud storage integration.",
         tags: [
             "React", "TypeScript", "Laravel", "Next.js", "MySQL", "Monorepo", "AI", "Image Optimization"
-        ]
+        ],
+        link: "/"
     },
     {
         title: "My Drive",
         description: "A personal cloud storage application inspired by Google Drive. My Drive allows users to securely upload, organize, and manage files in folders, with support for sharing and downloading. Built with a Laravel backend and React-based frontend, it integrates with S3 for scalable storage and uses Docker for containerized deployment.",
         tags: [
             "React", "TypeScript", "Laravel", "MySQL", "S3", "Docker", "Cloud Storage", "File Management", "REST API", "JWT Auth",
-        ]
+        ],
+        link: "/"
     },
     {
         title: "COVID-19 Contact Tracing System",
         description: "A web and mobile-based application designed to assist in tracking and managing COVID-19 exposure. The system allows users to log check-ins, monitor potential contact events, and store health data securely. Built with Laravel 7 and Bootstrap for the web interface, and Android with Material UI for the mobile app scanner.",
         tags: [
-            "Bootstrap", "Material UI", "Android", "Laravel 7", "XAMPP", "MySQL",
-        ]
+            "Bootstrap", "Material UI", "Android (Java)", "Laravel 7", "XAMPP", "MySQL", "JWT Auth", "Monorepo",
+        ],
+        link: "https://github.com/jymarkb/ContactTracing"
     },
     {
         title: "E-CapProLib",
         description: "An online Capstone Project Repository Library designed for academic institutions to store, manage, and browse student capstone projects. Developed with PHP and MySQL, the system allows users to upload documents, search project titles, and categorize works by course and year level, with a responsive UI using Bootstrap.",
         tags: [
-            "Bootstrap", "PHP", "MySQL", "XAMPP", "HTML", "CSS", "Capstone Repository"
-        ]
+            "Bootstrap", "PHP", "MySQL", "XAMPP", "HTML", "CSS", "jQuery"
+        ],
+        link: "https://github.com/jymarkb/CapstoneRepo"
     }
 
 ];
