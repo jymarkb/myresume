@@ -238,7 +238,7 @@ html {
 /* Optional base state for hidden elements */
 .hidden-left {
   opacity: 0;
-  transform: translateX(-100px);
+  transform: translateX(-24px);
   transition:
     opacity 0.6s ease-out,
     transform 0.6s ease-out;
@@ -246,7 +246,7 @@ html {
 
 .hidden-right {
   opacity: 0;
-  transform: translateX(100px);
+  transform: translateX(24px);
   transition:
     opacity 0.6s ease-out,
     transform 0.6s ease-out;
@@ -261,7 +261,7 @@ html {
 .hidden-up,
 .tech-up {
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateY(24px);
   transition:
     opacity 0.6s ease-out,
     transform 0.6s ease-out;
@@ -269,7 +269,7 @@ html {
 .hidden-down,
 .tech-down {
   opacity: 0;
-  transform: translateY(-100px);
+  transform: translateY(-24px);
   transition:
     opacity 0.6s ease-out,
     transform 0.6s ease-out;
@@ -295,7 +295,7 @@ html {
 
 .hidden-left-up {
   opacity: 0;
-  transform: translate(-100px, 100px); /* left and down */
+  transform: translate(-24px, 24px); /* left and down */
   transition:
     opacity 0.6s ease-out,
     transform 0.6s ease-out;
@@ -314,7 +314,7 @@ html {
 @keyframes slideIn {
   from {
     opacity: 0;
-    transform: translateX(40px);
+    transform: translateX(24px);
   }
   to {
     opacity: 1;
