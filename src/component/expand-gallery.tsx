@@ -24,8 +24,6 @@ const ExpandedGallery = ({
     target.scrollIntoView({ behavior: "smooth", block: "end" });
   };
 
-  console.log(selectedImgId, onSelectedImage);
-
   const onWrapperClick = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
 

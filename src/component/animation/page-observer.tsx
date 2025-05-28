@@ -47,8 +47,6 @@ export const PageObserver = () => {
     const descInfo = document.getElementById("desc-info");
     if (!descInfo) return;
 
-    console.log(descInfo);
-
     MonoObserver({ target: descInfo, options, animate: AnimateInfo });
   }, []);
 
