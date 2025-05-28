@@ -215,17 +215,17 @@ html {
 @keyframes flipIn {
   from {
     opacity: 0;
-    transform: perspective(1000px) rotateY(90deg);
+    transform: perspective(1000px) translate(-75px) rotateY(90deg);
   }
   to {
     opacity: 1;
-    transform: perspective(1000px) rotateY(0deg);
+    transform: perspective(1000px) translate(0) rotateY(0deg);
   }
 }
 
 .tech-image {
   animation-name: flipIn;
-  animation-duration: 0.3s;
+  animation-duration: 0.5s;
   animation-timing-function: ease-out;
   animation-fill-mode: both;
   backface-visibility: hidden;
@@ -233,4 +233,91 @@ html {
 
 .select-container:focus-within i {
   transform: rotate(180deg);
+}
+
+/* Optional base state for hidden elements */
+.hidden-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+.hidden-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+/* Animation class to trigger */
+.animate-side {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hidden-up,
+.tech-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+.hidden-down,
+.tech-down {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+.animate-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden-pop {
+  opacity: 0;
+  transform: scale(0.8);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+.animate-pop {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hidden-left-up {
+  opacity: 0;
+  transform: translate(-100px, 100px); /* left and down */
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+.animate-left-up {
+  opacity: 1;
+  transform: translate(0, 0); /* reset position */
+}
+
+#desc-info span {
+  opacity: 0;
+  animation: slideIn 0.2s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
