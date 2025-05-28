@@ -8,6 +8,8 @@ import Projects from "@/component/projects";
 import Talk from "@/component/talk";
 import { Toaster } from "sonner";
 import Footer from "@/component/footer";
+import ClientObserver from "@/component/animation/client-observer";
+import { PageObserver } from "@/component/animation/page-observer";
 
 export default function Home() {
   return (
@@ -39,6 +41,7 @@ export default function Home() {
       </section>
 
       <Footer />
+      <ClientObserver animate={PageObserver} />
       <Toaster richColors />
     </main>
   );

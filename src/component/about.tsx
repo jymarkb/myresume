@@ -1,8 +1,9 @@
 import { aboutMeDescription, aboutMeSocial } from "@/lib/static-data";
+
 const AboutMe = () => {
   return (
     <div className="container-max-w w-full bg-primary 2xl:rounded-2xl text-white py-8 px-6 sm:px-8 lg:p-12 xl:p-16 md:gap-8 lg:gap-12 xl:gap-16">
-      <div className="flex items-center justify-center text-center w-full flex flex-col gap-2 mb-8">
+      <div className="flex items-center justify-center text-center w-full flex flex-col gap-2 mb-8 hidden-up">
         <p className="text-xl text-white font-semibold bg-gradient-to-r from-primaryTheme to-indigo-500 filter animate-subtlePulse px-8 py-2 rounded-sm">
           About Me
         </p>
@@ -23,7 +24,7 @@ const AboutMe = () => {
           {aboutMeSocial.map((item, index) => {
             return (
               <div
-                className="flex items-center gap-2 md:gap-3 xl:gap-4"
+                className="flex items-center gap-2 md:gap-3 xl:gap-4 observe-left hidden-left"
                 key={index}
               >
                 <i
@@ -46,13 +47,16 @@ const AboutMe = () => {
           <div className="grid gap-4 lg:gap-6 lg:gap-8">
             {aboutMeDescription.map((item, index) => {
               return (
-                <p key={index} className="text-sm sm:text-base lg:text-lg">
+                <p
+                  key={index}
+                  className="text-sm sm:text-base lg:text-lg hidden-right"
+                >
                   {item.sentence}
                 </p>
               );
             })}
 
-            <p className="flex italic text-gray-300 text-xs lg:text-base">
+            <p className="flex italic text-gray-300 text-xs lg:text-base hidden-right">
               <i className="icon-minus h-full" />
               <span className="ml-1">
                 <strong className="font-semibold">

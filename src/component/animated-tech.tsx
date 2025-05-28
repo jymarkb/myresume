@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { techData } from "@/lib/static-data";
 import Image from "next/image";
+import { AnimateElement } from "@/lib/animate-element";
+import ObserveWrapper from "./animation/observer-wrapper";
 
 const AnimatedTech = () => {
   const [hasMounted, setHasMounted] = useState(false);
@@ -11,10 +13,31 @@ const AnimatedTech = () => {
   useEffect(() => {
     // escape hydration errors
     setHasMounted(true);
+
+    setTimeout(() => {
+      // added timeout due to lazyload image
+      const up = document.querySelectorAll(".tech-up");
+      const down = document.querySelectorAll(".tech-down");
+
+      ObserveWrapper({
+        target: up,
+        options: { threshold: 0.1, rootMargin: "100px 0px 0px 0px" },
+        animate: AnimateElement,
+      });
+      ObserveWrapper({
+        target: down,
+        options: { threshold: 0.25, rootMargin: "100px 0px 0px 0px" },
+        animate: AnimateElement,
+      });
+    }, 200);
   }, []);
 
   const animateDirection = (index: number) => {
     return index === 1 ? "down" : "up";
+  };
+
+  const animateSlide = (index: number) => {
+    return index === 1 ? "tech-down" : "tech-up";
   };
 
   if (!hasMounted) return null;
@@ -29,7 +52,7 @@ const AnimatedTech = () => {
       {chunkedTechData.map((data, index) => (
         <div
           key={index}
-          className={`relative overflow-hidden col-wrapper-${animateDirection(index)}`}
+          className={`relative overflow-hidden col-wrapper-${animateDirection(index)} ${animateSlide(index)}`}
         >
           {data.map((item, jindex) => (
             <div

@@ -3,7 +3,7 @@ import ProjectCarousel from "./project-carousel";
 const Projects = () => {
   return (
     <div className="container-max-w w-full lg:p-12 xl:p-16 flex flex-col items-center">
-      <div className="pt-8 px-6 sm:px-8 lg:p-0 flex items-center justify-center text-center w-full flex flex-col gap-2 mb-8">
+      <div className="pt-8 px-6 sm:px-8 lg:p-0 flex items-center justify-center text-center w-full flex flex-col gap-2 mb-4 sm:mb-8 lg:mb-12 xl:mb-16 hidden-up">
         <p className="text-xl text-white font-semibold bg-gradient-to-r from-primaryTheme to-indigo-500 filter animate-subtlePulse px-8 py-2 rounded-sm">
           Projects
         </p>
@@ -16,7 +16,7 @@ const Projects = () => {
       </div>
 
       <div className="feature-project-container flex flex-col lg:flex-row flex-nowrap h-full w-full lg:gap-4 xl:gap-8 mb-20 xl:mb-24">
-        <div className="feature-image h-full aspect-video lg:max-w-[580px] xl:max-w-[720px] 2xl:max-w-[854px] lg:rounded-tl-4xl lg:rounded-br-4xl overflow-hidden">
+        <div className="feature-image h-full aspect-video lg:max-w-[580px] xl:max-w-[720px] 2xl:max-w-[854px] lg:rounded-tl-4xl lg:rounded-br-4xl overflow-hidden hidden-pop">
           <Image
             src="/images/webp/work/image-1.webp"
             alt="project feature image"
@@ -25,7 +25,7 @@ const Projects = () => {
             height={480}
           />
         </div>
-        <div className="flex-1 feature-description bg-gradient-to-r from-gray-300 to-gray-100 lg:rounded-r-4xl border-t-4 sm:border-t-6 md:border-t-8 border-primary lg:border-t-0">
+        <div className="flex-1 feature-description bg-gradient-to-r from-gray-300 to-gray-100 lg:rounded-r-4xl border-t-4 sm:border-t-6 md:border-t-8 border-primary lg:border-t-0 hidden-up">
           <div className="flex flex-col h-full gap-4 md:gap-6 lg:gap-8 py-4 px-6 sm:py-8 sm:px-12 md:px-16 lg:p-8 justify-center">
             <div className="grid gap-2 lg:gap-4">
               <h1 className="font-bold text-primaryTheme text-3xl xl:text-4xl">

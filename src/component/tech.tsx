@@ -25,7 +25,7 @@ const Tech = () => {
             <div
               key={uniqueKey}
               className="tech-image aspect-square bg-gray-200 rounded flex flex-col justify-center items-center text-center gap-1"
-              style={{ animationDelay: `${index * 0.03}s` }}
+              style={{ animationDelay: `${index * 0.05}s` }}
             >
               <div className="h-10 w-10 md:h-12 md:w-12 xl:h-14 xl:w-14 2xl:h-16 2xl:w-16 aspect-square flex items-center">
                 <Image
