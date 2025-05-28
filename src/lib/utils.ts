@@ -29,3 +29,13 @@ export const closeModal = ({ e, onClose }: { e: React.MouseEvent; onClose: () =>
 
   onClose();
 };
+
+export type OptionType = {
+  threshold: number;
+  rootMargin: string;
+};
+
+export type AnimateType = {
+  target: Element;
+  entry: IntersectionObserverEntry;
+};

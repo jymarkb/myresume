@@ -14,12 +14,12 @@ const Talk = () => {
 
   return (
     <div className="container-max-w w-full flex flex-col py-16 text-center items-center gap-4">
-      <p className="text-xl font-semibold">Have project in mind?</p>
-      <h1 className="text-4xl font-semibold mb-4">
+      <p className="text-xl font-semibold hidden-pop">Have project in mind?</p>
+      <h1 className="text-4xl font-semibold mb-4 hidden-pop">
         {"Let's discuss your project"}
       </h1>
-      <GetInTouch />
-      <p>
+      <GetInTouch slideStyle="hidden-pop" />
+      <p className="hidden-pop">
         <span className="font-semibold text-gray-600">My local time :</span>
         <span className="font-bold"> {time} (GMT +8)</span>
       </p>

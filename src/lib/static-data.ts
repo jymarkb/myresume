@@ -240,3 +240,27 @@ export const projectCard = [
     }
 
 ];
+
+export const animationGroups = [
+    { classes: ["hidden-up", "hidden-down", "tech-down", "tech-up"], animation: "animate-up" },
+    { classes: ["hidden-left", "hidden-right"], animation: "animate-side" },
+    { classes: ["hidden-pop"], animation: "animate-pop" },
+    { classes: ["hidden-left-up"], animation: "animate-left-up" },
+];
+
+export const descInfoText = "<p> I'm a web developer, experience in building and maintaining full-stack web applications. I specialize in creating responsive, reusable UI components and contributing to robust server-side functionality. </p>";
+
+export const animateSpan = [
+    "<p>",
+    "developer,",
+    "building",
+    "maintaining",
+    "full-stack",
+    "web",
+    "applications.",
+    "responsive,",
+    "reusable",
+    "UI",
+    "components",
+    "</p>",
+];

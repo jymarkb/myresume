@@ -3,7 +3,7 @@ import AuthorSocial from "./author-social";
 const Info = () => {
   return (
     <div className="container-max-w w-full flex flex-col justify-center md:flex-row py-8 px-6 sm:px-8 lg:p-12 xl:p-16 md:gap-8 lg:gap-12 xl:gap-16">
-      <div className="lg:flex lg:ml-auto items-center hidden">
+      <div className="lg:flex lg:ml-auto items-center hidden hidden-pop">
         <Image
           className="rounded-xl shadow-lg object-cover aspect-square md:max-w-[300px] md:max-h-full lg:max-h-[350px] lg:max-w-[350px] xl:max-w-[450px] xl:max-h-[450px] 2xl:max-w-[500px] 2xl:max-h-[500px] overflow"
           src="/images/webp/avatar.webp"
@@ -16,7 +16,7 @@ const Info = () => {
       <div className="font-semibold flex items-center justify-center">
         <div className="author-wrapper h-fit grid w-fit gap-2 lg:gap-3 xl:gap-4 text-primary/85">
           <div className="flex gap-4 flex-col sm:flex-row md">
-            <div className="static lg:hidden order-2 sm:order-1">
+            <div className="static lg:hidden order-2 sm:order-1 hidden-pop mb-2">
               <Image
                 className="rounded-xl shadow-lg object-cover overflow aspect-square sm:max-w-[180px] md:max-w-[210px]"
                 src="/images/webp/avatar.webp"
@@ -26,7 +26,7 @@ const Info = () => {
               />
             </div>
 
-            <div className="order-1 sm:order-2 ">
+            <div className="order-1 sm:order-2 hidden-up">
               <div className="grid gap-1 sm:gap-3 md:gap-4">
                 <div className="flex gap-2 items-center">
                   <span className="span-text text-md xl:text-lg">
@@ -53,8 +53,11 @@ const Info = () => {
             </div>
           </div>
 
-          <p className="leading-8 lg:leading-9 xl:leading-9 lg:text-md xl:text-lg text-gray-600 max-w-[610px]">
-            <span className="span-text">{"<p>"}</span>
+          <p
+            id="desc-info"
+            className="min-h-[90px] leading-8 lg:leading-9 xl:leading-9 lg:text-md xl:text-lg text-gray-600 max-w-[610px"
+          >
+            {/* <span className="span-text">{"<p>"}</span>
             {" I'm a web developer, experience in "}
             <span className="span-text">
               building and maintaining full-stack web applications
@@ -64,7 +67,7 @@ const Info = () => {
               responsive, reusable UI components
             </span>
             {" and contributing to robust server-side functionality. "}
-            <span className="span-text">{"</p>"}</span>
+            <span className="span-text">{"</p>"}</span> */}
           </p>
 
           <div className="author-btn flex flex-col sm:flex-row md:flex-col lg:flex-row gap-4 mt-2 2xl:mt-8">

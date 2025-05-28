@@ -22,7 +22,7 @@ const ProjectCarousel = () => {
           return (
             <CarouselItem
               key={index}
-              className="card-container lg:basis-1/2 xl:basis-1/3"
+              className="card-container lg:basis-1/2 xl:basis-1/3 hidden-right"
             >
               <ProjectCard data={item} />
             </CarouselItem>
