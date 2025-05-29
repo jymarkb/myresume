@@ -6,9 +6,9 @@ import ScrollToTarget from "./scroll-to-target";
 const HeaderLink = ({ isActive }: { isActive: string }) => {
   return (
     <>
-      <li className={`h-fit ${isActive === "home" ? "active" : ""}`}>
+      {/* <li className={`h-fit ${isActive === "home" ? "active" : ""}`}>
         <Link href="/">Home</Link>
-      </li>
+      </li> */}
       {headerLinkData.map((item, index) => {
         return (
           <li
