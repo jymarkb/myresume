@@ -45,7 +45,7 @@ const Projects = () => {
             <div className="flex gap-2 md:gap-3 items-center">
               <a
                 href="https://github.com/jymarkb/symfonyBlog"
-                aria-label="github repository link"
+                aria-label="github"
                 className="md:text-xl"
                 target="_blank"
                 rel="noreferrer"

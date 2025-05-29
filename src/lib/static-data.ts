@@ -29,32 +29,32 @@ export const serviceData = [
     {
         "title": "Web Development",
         "description": "Building responsive and visually appealing web applications using modern stacks like Symfony, React, Tailwind CSS, and TypeScript. Focused on seamless UI/UX and performance.",
-        "imgSrc": "/images/gif/web.gif"
+        "imgSrc": "/images/gif-optimized/web.gif"
     },
     {
         "title": "Database Management",
         "description": "Designing and managing efficient, secure, and scalable database systems with MySQL, ensuring data integrity, backups, and optimized queries.",
-        "imgSrc": "/images/gif/database.gif"
+        "imgSrc": "/images/gif-optimized/database.gif"
     },
     {
         "title": "Deployment & DevOps",
         "description": "Automating CI/CD workflows using GitHub Actions or Bitbucket Pipeline, containerizing applications with Docker, and deploying to AWS ECS Fargate with Nginx + PHP-FPM stacks.",
-        "imgSrc": "/images/gif/deploy.gif"
+        "imgSrc": "/images/gif-optimized/deploy.gif"
     },
     {
         "title": "Performance Optimization",
         "description": "Improving load time and scalability using advanced caching, database indexing and frontend optimization",
-        "imgSrc": "/images/gif/performance.gif"
+        "imgSrc": "/images/gif-optimized/performance.gif"
     },
     {
         "title": "Cloud Storage Integration",
         "description": "Implementing secure file uploads with AWS S3, handling public/private visibility, presigned URLs, and efficient asset delivery for media-rich platforms.",
-        "imgSrc": "/images/gif/cloud.gif"
+        "imgSrc": "/images/gif-optimized/cloud.gif"
     },
     {
         "title": "API Development",
         "description": "Creating secure and RESTful APIs using Symfony 7 or Next.Js, enabling smooth integration with frontend clients and third-party services.",
-        "imgSrc": "/images/gif/api.gif"
+        "imgSrc": "/images/gif-optimized/api.gif"
     },
 ];
 

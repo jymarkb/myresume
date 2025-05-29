@@ -31,8 +31,8 @@ const ProjectCarousel = () => {
       </CarouselContent>
 
       <div className="absolute right-0 top-0 mt-[-2rem] carousel-buttons flex gap-2">
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious aria-label="previous" />
+        <CarouselNext aria-label="next" />
       </div>
     </Carousel>
   );
