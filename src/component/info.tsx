@@ -55,9 +55,9 @@ const Info = () => {
 
           <p
             id="desc-info"
-            className="min-h-[90px] leading-8 lg:leading-9 xl:leading-9 lg:text-md xl:text-lg text-gray-600 max-w-[610px"
+            className="min-h-[90px] leading-8 lg:leading-9 xl:leading-9 lg:text-md xl:text-lg text-gray-600 max-w-[610px] hidden-right"
           >
-            {/* <span className="span-text">{"<p>"}</span>
+            <span className="span-text">{"<p>"}</span>
             {" I'm a web developer, experience in "}
             <span className="span-text">
               building and maintaining full-stack web applications
@@ -67,7 +67,7 @@ const Info = () => {
               responsive, reusable UI components
             </span>
             {" and contributing to robust server-side functionality. "}
-            <span className="span-text">{"</p>"}</span> */}
+            <span className="span-text">{"</p>"}</span>
           </p>
 
           <div className="author-btn flex flex-col sm:flex-row md:flex-col lg:flex-row gap-4 mt-2 2xl:mt-8">

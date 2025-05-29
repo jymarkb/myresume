@@ -1,8 +1,9 @@
 "use client";
 import { useEffect } from "react";
-import { AnimateElement, AnimateInfo } from "@/lib/animate-element";
+// import { AnimateElement, AnimateInfo } from "@/lib/animate-element";
+import { AnimateElement } from "@/lib/animate-element";
 import ObserveWrapper from "./observer-wrapper";
-import MonoObserver from "./mono-observer";
+// import MonoObserver from "./mono-observer";
 
 export const PageObserver = () => {
   useEffect(() => {
@@ -44,10 +45,10 @@ export const PageObserver = () => {
       animate: AnimateElement,
     });
 
-    const descInfo = document.getElementById("desc-info");
-    if (!descInfo) return;
+    // const descInfo = document.getElementById("desc-info");
+    // if (!descInfo) return;
 
-    MonoObserver({ target: descInfo, options, animate: AnimateInfo });
+    // MonoObserver({ target: descInfo, options, animate: AnimateInfo });
   }, []);
 
   return null;
