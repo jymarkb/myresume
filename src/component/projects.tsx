@@ -1,5 +1,7 @@
 import Image from "next/image";
 import ProjectCarousel from "./project-carousel";
+import GalleryWrapper from "./gallery/gallery-wrapper";
+import { workData } from "@/lib/static-data";
 const Projects = () => {
   return (
     <div className="container-max-w w-full lg:p-12 xl:p-16 flex flex-col items-center">
@@ -40,7 +42,7 @@ const Projects = () => {
                 showcasing blog posts with smooth user interactions.
               </p>
             </div>
-            <div className="flex gap-2 md:gap-4 items-center">
+            <div className="flex gap-2 md:gap-3 items-center">
               <a
                 href="https://github.com/jymarkb/symfonyBlog"
                 aria-label="github repository link"
@@ -48,11 +50,15 @@ const Projects = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <i className="rounded-full border-2 border-primaryTheme p-2 sm:h-6 sm:w-6 md:h-8 md:w-8 icon-github transition duration-300 hover:bg-primary hover:text-white"></i>
+                <i className="rounded-full border-2 border-primaryTheme p-2 sm:h-6 sm:w-6 md:h-8 md:w-8 icon-github transition duration-300 hover:bg-primary/30 hover:border-white hover:text-white"></i>
               </a>
+              <GalleryWrapper btnStyle="md:text-xl" data={workData}>
+                <i className="rounded-full border-2 border-primaryTheme p-2 sm:h-6 sm:w-6 md:h-8 md:w-8 icon-images transition duration-300 hover:bg-primary/30 hover:border-white hover:text-white"></i>
+              </GalleryWrapper>
+
               <a
                 href="https://myblog.jymarkb.cloud/"
-                className="flex items-center gap-2 border-2 border-primaryTheme w-fit px-2 md:px-4 py-2 rounded-sm transition duration-300 hover:bg-primary hover:text-white text-sm md:text-base"
+                className="flex items-center gap-2 border-2 border-primaryTheme w-fit px-2 md:px-4 py-2 rounded-sm transition duration-300 hover:bg-primary/30 hover:border-white hover:text-white text-sm md:text-base"
                 target="_blank"
                 rel="noreferrer"
               >
