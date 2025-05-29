@@ -10,6 +10,7 @@ const Socials = () => {
               href={item.url}
               aria-label="social media links"
               className="border-2 rounded-full p-2 flex items-center h-10 w-10"
+              target="_blank"
             >
               <i className={`text-xl icon-${item.icon}`}></i>
             </Link>

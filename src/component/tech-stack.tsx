@@ -6,7 +6,7 @@ const TechStack = () => {
     <div className="container-max-w w-full py-8 sm:px-8 lg:p-12 xl:p-16 md:gap-8 lg:gap-12 xl:gap-16">
       <div className="flex items-center flex-col text-center gap-2 text-primary/85 mb-4 sm:mb-8 lg:mb-12 xl:mb-16 hidden-up">
         <p className="text-xl text-white font-semibold bg-gradient-to-r from-primaryTheme to-indigo-500 filter animate-subtlePulse px-8 py-2 rounded-sm">
-          Experties
+          Expertise
         </p>
         <div className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl sm:max-w-[500px] md:max-w-[700px] lg:max-w-[900px] font-semibold">
           <span className="bg-gradient-to-r from-primaryTheme to-indigo-500 bg-clip-text text-transparent filter animate-subtlePulse">

@@ -1,4 +1,5 @@
-import { aboutMeDescription, aboutMeSocial } from "@/lib/static-data";
+import { aboutMeDescription } from "@/lib/static-data";
+import AboutSocial from "./about-social";
 
 const AboutMe = () => {
   return (
@@ -21,26 +22,7 @@ const AboutMe = () => {
 
       <div className="flex flex-col md:flex-row border-b pb-8 md:pb-12">
         <div className="order-2 md:order-1 w-full md:max-w-sm md:pr-8 grid gap-4 mt-8 md:mt-0 sm:grid-cols-2 md:grid-cols-none">
-          {aboutMeSocial.map((item, index) => {
-            return (
-              <div
-                className="flex items-center gap-2 md:gap-3 xl:gap-4 observe-left hidden-left"
-                key={index}
-              >
-                <i
-                  className={`flex items-center justify-center p-4 text-lg lg:text-xl xl:text-2xl  icon-${item.icon} rounded-full bg-white/20 h-12 w-12 lg:h-14 lg:w-14`}
-                ></i>
-                <div>
-                  <h1 className="text-base md:text-lg lg:text-xl font-bold">
-                    {item.data}
-                  </h1>
-                  <p className="text-xs md:text-sm lg:text-md font-thin">
-                    {item.title}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
+          <AboutSocial />
         </div>
 
         <div className="order-1 md:order-2 md:border-l pl-4 sm:pl-8 lg:pl-12 xl:pl-16">

@@ -30,6 +30,22 @@ export const closeModal = ({ e, onClose }: { e: React.MouseEvent; onClose: () =>
   onClose();
 };
 
+export type WorkDataType = {
+  title: string;
+  imgSrc: string;
+};
+
+
+export type ProjectCardType = {
+  title: string;
+  description: string;
+  tags: string[];
+  link: string;
+  imageSrc: string;
+  gallery: WorkDataType[] | null;
+};
+
+
 export type OptionType = {
   threshold: number;
   rootMargin: string;

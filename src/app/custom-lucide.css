@@ -61,3 +61,9 @@
 .icon-send:before {
   content: "\e156";
 }
+.icon-clipboard-copy:before {
+  content: "\e225";
+}
+.icon-images:before {
+  content: "\e5c9";
+}
