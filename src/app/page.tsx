@@ -24,7 +24,7 @@ export default function Home() {
         <AboutMe />
       </section>
 
-      <section id="experties" className="wrapper flex justify-center">
+      <section id="expertise" className="wrapper flex justify-center">
         <TechStack />
       </section>
 
@@ -40,6 +40,7 @@ export default function Home() {
         <Talk />
       </section>
 
+      <div id="modal-overlay"></div>
       <Footer />
       <ClientObserver animate={PageObserver} />
       <Toaster richColors />
