@@ -1,11 +1,15 @@
 export const headerLinkData = [
     {
+        "title": "Home",
+        "target": "home",
+    },
+    {
         "title": "About Me",
         "target": "aboutme",
     },
     {
-        "title": "Experties",
-        "target": "experties",
+        "title": "Expertise",
+        "target": "expertise",
     },
     {
         "title": "Services",
@@ -75,23 +79,23 @@ export const socialData = [
 export const workData = [
     {
         "title": "Landing Page",
-        "imgSrc": "/images/webp/work/image-1.webp"
+        "imgSrc": "/images/work/blog/s-blog-1.png"
     },
     {
         "title": "About Page",
-        "imgSrc": "/images/webp/work/image-2.webp"
+        "imgSrc": "/images/work/blog/s-blog-2.png"
     },
     {
         "title": "Blog Page",
-        "imgSrc": "/images/webp/work/image-3.webp"
+        "imgSrc": "/images/work/blog/s-blog-3.png"
     },
     {
         "title": "Contact Page",
-        "imgSrc": "/images/webp/work/image-4.webp"
+        "imgSrc": "/images/work/blog/s-blog-4.png"
     },
     {
         "title": "Blog Edit Page",
-        "imgSrc": "/images/webp/work/image-5.webp"
+        "imgSrc": "/images/work/blog/s-blog-5.png"
     },
 ];
 
@@ -99,22 +103,26 @@ export const aboutMeSocial = [
     {
         "data": "2+",
         "title": "Experience",
-        "icon": "briefcase"
+        "icon": "briefcase",
+        "target": ""
     },
     {
         "data": "in/jaymark-borja",
         "title": "Linkedin",
-        "icon": "linkedin"
+        "icon": "linkedin",
+        "target": "https://www.linkedin.com/in/jaymark-borja/"
     },
     {
         "data": "github.com/jymarkb",
         "title": "Github",
-        "icon": "github"
+        "icon": "github",
+        "target": "https://github.com/jymarkb"
     },
     {
         "data": "dev.jymarkb@gmail.com",
         "title": "Email",
-        "icon": "mail"
+        "icon": "mail",
+        "target": "dev.jymarkb@gmail.com"
     },
 ];
 
@@ -206,29 +214,45 @@ export const techData = [
 ];
 
 export const projectCard = [
-    {
-        title: "Smart Pixel",
-        description: "An AI-powered image optimization tool built with a Laravel backend and a Next.js frontend. SmartPixel allows users to upload images with custom parameters (e.g., width, height, format, crop) and returns optimized results using advanced processing logic and cloud storage integration.",
-        tags: [
-            "React", "TypeScript", "Laravel", "Next.js", "MySQL", "Monorepo", "AI", "Image Optimization"
-        ],
-        link: "/"
-    },
-    {
-        title: "My Drive",
-        description: "A personal cloud storage application inspired by Google Drive. My Drive allows users to securely upload, organize, and manage files in folders, with support for sharing and downloading. Built with a Laravel backend and React-based frontend, it integrates with S3 for scalable storage and uses Docker for containerized deployment.",
-        tags: [
-            "React", "TypeScript", "Laravel", "MySQL", "S3", "Docker", "Cloud Storage", "File Management", "REST API", "JWT Auth",
-        ],
-        link: "/"
-    },
+
     {
         title: "COVID-19 Contact Tracing System",
         description: "A web and mobile-based application designed to assist in tracking and managing COVID-19 exposure. The system allows users to log check-ins, monitor potential contact events, and store health data securely. Built with Laravel 7 and Bootstrap for the web interface, and Android with Material UI for the mobile app scanner.",
         tags: [
             "Bootstrap", "Material UI", "Android (Java)", "Laravel 7", "XAMPP", "MySQL", "JWT Auth", "Monorepo",
         ],
-        link: "https://github.com/jymarkb/ContactTracing"
+        link: "https://github.com/jymarkb/ContactTracing",
+        imageSrc: "covid-1.png",
+        gallery: [
+            {
+                "title": "Landing Page Image 1",
+                "imgSrc": "/images/work/covid/s-covid-1.png"
+            },
+            {
+                "title": "Landing Page Image 2",
+                "imgSrc": "/images/work/covid/s-covid-7.png"
+            },
+            {
+                "title": "Landing Page Image 3",
+                "imgSrc": "/images/work/covid/s-covid-8.png"
+            },
+            {
+                "title": "Citizen Generated Identification Card Image",
+                "imgSrc": "/images/work/covid/s-covid-2.png"
+            },
+            {
+                "title": "Establishment App Image 1",
+                "imgSrc": "/images/work/covid/s-covid-3.png"
+            },
+            {
+                "title": "Establishment App Image 2",
+                "imgSrc": "/images/work/covid/s-covid-4.png"
+            },
+            {
+                "title": "Citizen QR Scan Record",
+                "imgSrc": "/images/work/covid/s-covid-6.png"
+            },
+        ]
     },
     {
         title: "E-CapProLib",
@@ -236,8 +260,43 @@ export const projectCard = [
         tags: [
             "Bootstrap", "PHP", "MySQL", "XAMPP", "HTML", "CSS", "jQuery"
         ],
-        link: "https://github.com/jymarkb/CapstoneRepo"
-    }
+        link: "https://github.com/jymarkb/CapstoneRepo",
+        imageSrc: "capstone-1.png",
+        gallery: [
+            {
+                "title": "Landing Page Image 1",
+                "imgSrc": "/images/work/capstone/s-capstone-1.png"
+            },
+            {
+                "title": "Landing Page Image 1",
+                "imgSrc": "/images/work/capstone/s-capstone-2.png"
+            },
+            {
+                "title": "Landing Page Image 1",
+                "imgSrc": "/images/work/capstone/s-capstone-3.png"
+            },
+        ]
+    },
+    {
+        title: "Smart Pixel",
+        description: "An AI-powered image optimization tool built with a Laravel backend and a Next.js frontend. SmartPixel allows users to upload images with custom parameters (e.g., width, height, format, crop) and returns optimized results using advanced processing logic and cloud storage integration.",
+        tags: [
+            "React", "TypeScript", "Laravel", "Next.js", "MySQL", "Monorepo", "AI", "Image Optimization"
+        ],
+        link: "/",
+        imageSrc: "temporary.png",
+        gallery: null
+    },
+    {
+        title: "My Drive",
+        description: "A personal cloud storage application inspired by Google Drive. My Drive allows users to securely upload, organize, and manage files in folders, with support for sharing and downloading. Built with a Laravel backend and React-based frontend, it integrates with S3 for scalable storage and uses Docker for containerized deployment.",
+        tags: [
+            "React", "TypeScript", "Laravel", "MySQL", "S3", "Docker", "Cloud Storage", "File Management", "REST API", "JWT Auth",
+        ],
+        link: "/",
+        imageSrc: "temporary.png",
+        gallery: null
+    },
 
 ];
 
