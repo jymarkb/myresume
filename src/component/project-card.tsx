@@ -21,6 +21,7 @@ const ProjectCard = ({ data }: { data: ProjectCardType }) => {
               href={data.link}
               className=" bg-primary p-2 h-12 w-12 flex items-center justify-center rounded-full hover:bg-primary/90"
               target="_blank"
+              aria-label="GitHub"
             >
               <i className="icon-github text-2xl text-white"></i>
             </Link>

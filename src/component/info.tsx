@@ -10,6 +10,7 @@ const Info = () => {
           width={500}
           height={500}
           alt="Jay Mark Borja"
+          loading="eager"
         />
       </div>
 
@@ -23,6 +24,7 @@ const Info = () => {
                 width={500}
                 height={500}
                 alt="Jay Mark Borja avatar"
+                loading="eager"
               />
             </div>
 

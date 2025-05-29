@@ -33,9 +33,9 @@ const Services = () => {
                   className="object-cover"
                 />
               </div>
-              <h3 className="text-lg xl:text-xl 2xl:text-2xl font-bold text-primaryTheme">
+              <h1 className="text-lg xl:text-xl 2xl:text-2xl font-bold text-primaryTheme">
                 {item.title}
-              </h3>
+              </h1>
               <p className="text-xs md:text-sm xl:text-md text-justify">
                 {item.description}
               </p>

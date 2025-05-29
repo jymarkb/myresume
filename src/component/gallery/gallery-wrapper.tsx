@@ -18,7 +18,11 @@ const GalleryWrapper = ({
 
   return (
     <>
-      <button className={`${btnStyle}`} onClick={() => setIsOpen(!isOpen)}>
+      <button
+        className={`${btnStyle}`}
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="gallery"
+      >
         {children}
       </button>
       {isOpen && <GalleryModal onClose={() => setIsOpen(false)} data={data} />}

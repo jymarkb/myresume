@@ -83,6 +83,7 @@ const Header = () => {
               alt="website logo"
               width={160}
               height={48}
+              loading="eager"
             />
             <Image
               className="h-16 w-16 object-contain lg:hidden"
@@ -90,10 +91,15 @@ const Header = () => {
               alt="website logo"
               width={64}
               height={64}
+              loading="eager"
             />
           </div>
         </Link>
-        <button className="ml-auto md:hidden" onClick={setMobileHeader}>
+        <button
+          className="ml-auto md:hidden"
+          aria-label="menu button"
+          onClick={setMobileHeader}
+        >
           <i className="icon-nav-menu text-2xl h-10 w-10 border-2 rounded-sm p-1 border-primary text-primary"></i>
         </button>
         <div className="ml-auto font-semibold flex gap-8 hidden md:block">
