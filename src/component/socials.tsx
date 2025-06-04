@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { socialData } from "@/lib/static-data";
+import Image from "next/image";
 const Socials = () => {
   return (
     <>
@@ -12,7 +13,16 @@ const Socials = () => {
               className="border-2 rounded-full p-2 flex items-center h-10 w-10"
               target="_blank"
             >
-              <i className={`text-xl icon-${item.icon}`}></i>
+              {item.icon ? (
+                <i className={`text-xl icon-${item.icon}`}></i>
+              ) : (
+                <Image
+                  src={item.imgSrc ?? "/images/mobile-logo.svg"}
+                  alt={item.title}
+                  height={20}
+                  width={20}
+                ></Image>
+              )}
             </Link>
           </li>
         );
