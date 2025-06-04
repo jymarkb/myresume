@@ -23,7 +23,7 @@ const AuthorSocial = () => {
           See my work
         </Link>
       </div>
-      <ul className="flex font-thin gap-4 items-center sm:ml-auto md:ml-0 lg:ml-auto hidden-right">
+      <ul className="flex font-thin gap-2 items-center sm:ml-auto md:ml-0 lg:ml-auto hidden-right">
         <Socials />
       </ul>
     </>

@@ -74,6 +74,16 @@ export const socialData = [
         "url": "https://www.linkedin.com/in/jaymark-borja/",
         "icon": "linkedin"
     },
+    {
+        "title": "Leetcode",
+        "url": "https://leetcode.com/u/jymarkb/",
+        "imgSrc": "/images/svg/leetcode.svg"
+    },
+    {
+        "title": "Leetcode",
+        "url": "https://www.hackerrank.com/profile/jymark_borja",
+        "imgSrc": "/images/svg/hackerrank.svg"
+    },
 ];
 
 export const workData = [
