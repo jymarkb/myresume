@@ -5,7 +5,9 @@ import { toast } from "sonner";
 const AboutSocial = () => {
   const onCopy = (target: string) => {
     navigator.clipboard.writeText(target);
+    toast.dismiss();
     toast.info("📋 Copied!", {
+      position: "top-center",
       description: target,
     });
   };

@@ -16,6 +16,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
       });
 
       toast.success("Success: Form Submit", {
+        position: "top-center",
         description: (
           <p className="text-sm font-semibold text-green-900">
             {"Thanks so much! I’ll be in contact soon."}
@@ -27,6 +28,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
       onClose();
     } catch (error) {
       toast.error("Error: Form Submit", {
+        position: "top-center",
         description: (
           <div>
             <p className="text-red-900"> Cannot submit form at the moment.</p>
