@@ -57,7 +57,7 @@ const Projects = () => {
               </GalleryWrapper>
 
               <a
-                href="https://myblog.jymarkb.cloud/"
+                href="https://myblog.jymarkb.info/"
                 className="flex items-center gap-2 border-2 border-primaryTheme w-fit px-2 md:px-4 py-2 rounded-sm transition duration-300 hover:bg-primary/30 hover:border-white hover:text-white text-sm md:text-base"
                 target="_blank"
                 rel="noreferrer"

@@ -111,7 +111,7 @@ export const workData = [
 
 export const aboutMeSocial = [
     {
-        "data": "2+",
+        "data": "4 years",
         "title": "Experience",
         "icon": "briefcase",
         "target": ""
@@ -224,7 +224,16 @@ export const techData = [
 ];
 
 export const projectCard = [
-
+    {
+        title: "SimpleEditor",
+        description: "An AI-powered image optimization tool built with a Laravel backend and a Next.js frontend. SmartPixel allows users to upload images with custom parameters (e.g., width, height, format, crop) and returns optimized results using advanced processing logic and cloud storage integration.",
+        tags: [
+            "React", "TypeScript", "Slate.js", "CMS Editor", "Generative AI"
+        ],
+        link: "/",
+        imageSrc: "temporary.png",
+        gallery: null
+    },
     {
         title: "COVID-19 Contact Tracing System",
         description: "A web and mobile-based application designed to assist in tracking and managing COVID-19 exposure. The system allows users to log check-ins, monitor potential contact events, and store health data securely. Built with Laravel 7 and Bootstrap for the web interface, and Android with Material UI for the mobile app scanner.",
