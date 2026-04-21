@@ -1,11 +1,9 @@
-import type { NextConfig } from "next";
+import path from "path";
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   devIndicators: false,
-  eslint: {
-    // This will run `next lint` on every build and show errors
-    dirs: ["src"],
-    ignoreDuringBuilds: false,
+  turbopack: {
+    root: path.resolve(__dirname),
   },
 };
 
