@@ -1,9 +1,10 @@
+/* @import "~lucide-static/font/lucide.css"; */
+@import url(./custom-lucide.css);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* @import "~lucide-static/font/lucide.css"; */
-@import url(./custom-lucide.css);
 
 @theme inline {
   --color-background: var(--background);
@@ -43,6 +44,7 @@
     --delay-up-base: 45s;
     --delay-down-base: 120s;
   }
+
   .dark {
     --background: 224 71.4% 4.1%;
     --foreground: 210 20% 98%;
@@ -69,6 +71,7 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+
   body {
     @apply font-sans;
     font-family: var(--font-poppins), sans-serif;
