@@ -4,10 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next lint --max-warnings=0  && next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "upgrade": "next upgrade"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.2",
@@ -21,11 +22,11 @@
     "eslint-config-prettier": "^10.1.2",
     "lucide-react": "^0.488.0",
     "lucide-static": "^0.503.0",
-    "next": "15.3.8",
+    "next": "^16.2.4",
     "next-themes": "^0.4.6",
     "postcss": "^8.5.3",
-    "react": "18",
-    "react-dom": "18",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
     "react-scroll": "^1.9.3",
     "sonner": "^2.0.3",
     "tailwind-merge": "^3.2.0",
@@ -41,7 +42,7 @@
     "@typescript-eslint/parser": "^8.30.1",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.24.0",
-    "eslint-config-next": "^15.3.0",
+    "eslint-config-next": "^16.2.4",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-next": "^0.0.0",
     "eslint-plugin-react": "^7.37.5",
