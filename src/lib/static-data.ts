@@ -226,9 +226,9 @@ export const techData = [
 export const projectCard = [
     {
         title: "SimpleEditor",
-        description: "An AI-powered image optimization tool built with a Laravel backend and a Next.js frontend. SmartPixel allows users to upload images with custom parameters (e.g., width, height, format, crop) and returns optimized results using advanced processing logic and cloud storage integration.",
+        description: "Simple Editor is a modular visual content editor built for creating blog and landing page layouts through a drag-and-drop editing experience. It lets users compose structured pages with nested rows and columns, customizable content blocks, live style editing, and media components such as images, buttons, YouTube embeds, maps, cover sections, and accordions. The editor is powered by a flexible JSON-based content model, making it easier to manage, preview, and render rich page layouts from a single editing surface.",
         tags: [
-            "React", "TypeScript", "Slate.js", "CMS Editor", "Generative AI"
+            "React", "TypeScript", "Slate.js", "Vite"
         ],
         link: "/",
         imageSrc: "temporary.png",
