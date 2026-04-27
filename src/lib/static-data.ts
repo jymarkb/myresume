@@ -4,7 +4,7 @@ export const headerLinkData = [
         "target": "home",
     },
     {
-        "title": "About Me",
+        "title": "About",
         "target": "aboutme",
     },
     {
@@ -18,6 +18,10 @@ export const headerLinkData = [
     {
         "title": "Projects",
         "target": "projects",
+    },
+    {
+        "title": "Testimonials",
+        "target": "testimonials",
     },
     {
         "title": "Contact",
@@ -74,16 +78,16 @@ export const socialData = [
         "url": "https://www.linkedin.com/in/jaymark-borja/",
         "icon": "linkedin"
     },
-    {
-        "title": "Leetcode",
-        "url": "https://leetcode.com/u/jymarkb/",
-        "imgSrc": "/images/svg/leetcode.svg"
-    },
-    {
-        "title": "Leetcode",
-        "url": "https://www.hackerrank.com/profile/jymark_borja",
-        "imgSrc": "/images/svg/hackerrank.svg"
-    },
+    // {
+    //     "title": "Leetcode",
+    //     "url": "https://leetcode.com/u/jymarkb/",
+    //     "imgSrc": "/images/svg/leetcode.svg"
+    // },
+    // {
+    //     "title": "Leetcode",
+    //     "url": "https://www.hackerrank.com/profile/jymark_borja",
+    //     "imgSrc": "/images/svg/hackerrank.svg"
+    // },
 ];
 
 export const workData = [
@@ -138,13 +142,13 @@ export const aboutMeSocial = [
 
 export const aboutMeDescription = [
     {
-        "sentence": "I am an accomplished web developer with a proven track record in designing, developing, and maintaining web applications using contemporary programming languages."
+        "sentence": "I'm a results-driven developer building scalable, high-performance web applications from concept to deployment with modern best practices."
     },
     {
-        "sentence": "With two years of experience, I have proficiently worked on both the front- end and back - end facets of web applications."
+        "sentence": "With over four years of professional experience across the full stack, I've delivered production-ready features that hold up under real load."
     },
     {
-        "sentence": " My primary expertise lies in crafting responsive and reusable web UI components, complemented by a solid ability to contribute to server- side coding."
+        "sentence": "I specialize in reusable, responsive UI components and contribute to backend systems, APIs, and architectural decisions that scale."
     },
 ];
 
@@ -316,7 +320,41 @@ export const projectCard = [
         imageSrc: "temporary.png",
         gallery: null
     },
+];
 
+export const testimonialData = [
+    {
+        "name": "Replace with name",
+        "role": "Senior Developer",
+        "company": "Company Name",
+        "avatar": "",
+        "linkedin": "https://www.linkedin.com/",
+        "quote": "Working with Jay was a great experience. He delivers clean, well-tested code on time and is always willing to dig into problems no one else wants to touch."
+    },
+    {
+        "name": "Replace with name",
+        "role": "Tech Lead",
+        "company": "Company Name",
+        "avatar": "",
+        "linkedin": "https://www.linkedin.com/",
+        "quote": "Jay paired with me on a Symfony migration that had blocked the team for weeks. He picked up the legacy code fast, proposed a clear plan, and we shipped two sprints ahead of schedule."
+    },
+    {
+        "name": "Replace with name",
+        "role": "Product Manager",
+        "company": "Company Name",
+        "avatar": "",
+        "linkedin": "https://www.linkedin.com/",
+        "quote": "What stood out was how Jay translated vague requirements into shippable UI without endless back-and-forth. The components he built were reused across three other features."
+    },
+    {
+        "name": "Replace with name",
+        "role": "Frontend Engineer",
+        "company": "Company Name",
+        "avatar": "",
+        "linkedin": "https://www.linkedin.com/",
+        "quote": "Reliable, communicative, and genuinely cares about code quality. Reviews from Jay always made my PRs measurably better."
+    },
 ];
 
 export const animationGroups = [
