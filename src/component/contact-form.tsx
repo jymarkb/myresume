@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { toast } from "sonner";
+import { ChevronDown, Send, X } from "lucide-react";
 import { closeModal, formInputClass } from "@/lib/utils";
 import { contactSubjects } from "@/lib/static-data";
 
@@ -77,7 +78,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
               className="text-muted-foreground hover:text-foreground p-1 -mr-1 -mt-1"
               aria-label="close"
             >
-              <i className="text-xl icon-x"></i>
+              <X className="h-5 w-5" />
             </button>
           </div>
 
@@ -133,7 +134,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
                       </option>
                     ))}
                   </select>
-                  <i className="icon-chevron-down absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-muted-foreground transition-transform duration-200" />
+                  <ChevronDown className="h-4 w-4 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-muted-foreground transition-transform duration-200" />
                 </div>
               </label>
 
@@ -155,7 +156,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
                 type="submit"
                 onClick={onSubmit}
               >
-                Submit <i className="icon-send" />
+                Submit <Send className="h-4 w-4" />
               </button>
             </div>
           </form>

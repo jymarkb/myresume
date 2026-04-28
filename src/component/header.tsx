@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { Menu } from "lucide-react";
 import MobileHeader from "./mobile-header";
 import HeaderLink from "./header-link";
 import ThemeToggle from "./theme-toggle";
@@ -87,8 +88,12 @@ const Header = () => {
         </Link>
         <div className="ml-auto flex items-center gap-2 lg:hidden">
           <ThemeToggle />
-          <button aria-label="menu button" onClick={setMobileHeader}>
-            <i className="icon-nav-menu text-2xl h-10 w-10 border border-border rounded p-1 text-foreground"></i>
+          <button
+            aria-label="menu button"
+            onClick={setMobileHeader}
+            className="h-10 w-10 flex items-center justify-center border border-border rounded text-foreground"
+          >
+            <Menu className="h-6 w-6" />
           </button>
         </div>
         <div className="ml-auto hidden lg:flex items-center gap-6 xl:gap-8">

@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import GetInTouch from "./get-in-touch";
 import Socials from "./socials";
 import ScrollToTarget from "./scroll-to-target";
@@ -16,7 +17,7 @@ const AuthorSocial = () => {
           onClick={ScrollToTarget}
         >
           See my work
-          <i className="icon-arrow-right" />
+          <ArrowRight className="h-4 w-4" />
         </Link>
       </div>
 

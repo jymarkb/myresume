@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArrowRight, Github, Images } from "lucide-react";
 import GalleryWrapper from "./gallery/gallery-wrapper";
 import ProjectsTabs from "./projects-tabs";
 import { workData } from "@/lib/static-data";
@@ -68,7 +69,7 @@ const Projects = () => {
               target="_blank"
               rel="noreferrer"
             >
-              Visit Page <i className="icon-arrow-right" />
+              Visit Page <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="https://github.com/jymarkb/symfonyBlog"
@@ -77,11 +78,11 @@ const Projects = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <i className="icon-github" />
+              <Github className="h-4 w-4" />
               <span className="hidden sm:inline">Source</span>
             </a>
             <GalleryWrapper btnStyle="btn-ghost text-sm" data={workData}>
-              <i className="icon-images" />
+              <Images className="h-4 w-4" />
               <span className="hidden sm:inline">Gallery</span>
             </GalleryWrapper>
           </div>

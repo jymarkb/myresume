@@ -1,6 +1,7 @@
 import { ProjectCardType } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight, Github, Images } from "lucide-react";
 import GalleryWrapper from "./gallery/gallery-wrapper";
 
 const ProjectCard = ({ data }: { data: ProjectCardType }) => {
@@ -52,9 +53,11 @@ const ProjectCard = ({ data }: { data: ProjectCardType }) => {
                   target="_blank"
                   aria-label={isCompany ? "Visit site" : "GitHub"}
                 >
-                  <i
-                    className={`text-base ${isCompany ? "icon-arrow-right" : "icon-github"}`}
-                  />
+                  {isCompany ? (
+                    <ArrowRight className="h-4 w-4" />
+                  ) : (
+                    <Github className="h-4 w-4" />
+                  )}
                 </Link>
               )}
               {data.gallery !== null ? (
@@ -62,7 +65,7 @@ const ProjectCard = ({ data }: { data: ProjectCardType }) => {
                   data={data.gallery}
                   btnStyle="bg-background/90 border border-border backdrop-blur p-2 h-9 w-9 flex items-center justify-center rounded-full hover:border-primaryTheme/60 hover:text-primaryTheme transition-colors"
                 >
-                  <i className="icon-images text-base"></i>
+                  <Images className="h-4 w-4" />
                 </GalleryWrapper>
               ) : null}
             </div>
