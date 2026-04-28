@@ -45,7 +45,7 @@ const Header = () => {
       const currentScroll = windowInner * 0.3 + yAxis;
 
       const match = sectionData.find(
-        (item) => item.top < currentScroll && item.bot > currentScroll
+        (item) => item.top < currentScroll && item.bot > currentScroll,
       );
 
       const target = match?.target as string;
@@ -78,19 +78,16 @@ const Header = () => {
         <Link href="/" aria-label="home">
           <div className="logo flex items-center gap-2">
             <span className="font-mono-tech text-primaryTheme text-xl font-bold">
-              {"<jb/>"}
+              {"<jmb/>"}
             </span>
-            <span className="font-mono-tech text-foreground text-sm hidden sm:inline">
-              jaymark.dev
-            </span>
+            {/* <span className="font-mono-tech text-foreground text-sm hidden sm:inline">
+              jymark.dev
+            </span> */}
           </div>
         </Link>
         <div className="ml-auto flex items-center gap-2 lg:hidden">
           <ThemeToggle />
-          <button
-            aria-label="menu button"
-            onClick={setMobileHeader}
-          >
+          <button aria-label="menu button" onClick={setMobileHeader}>
             <i className="icon-nav-menu text-2xl h-10 w-10 border border-border rounded p-1 text-foreground"></i>
           </button>
         </div>
@@ -102,9 +99,7 @@ const Header = () => {
         </div>
       </nav>
       {/* mobile popup nav link */}
-      {isOpen && (
-        <MobileHeader isActive={isActive} onClose={setMobileHeader} />
-      )}
+      {isOpen && <MobileHeader isActive={isActive} onClose={setMobileHeader} />}
     </header>
   );
 };
