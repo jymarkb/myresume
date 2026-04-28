@@ -67,8 +67,8 @@ const Info = () => {
         <div className="avatar-glow rounded-2xl">
           <div className="relative rounded-2xl overflow-hidden border border-border bg-card">
             <Image
-              className="object-cover aspect-square w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] lg:w-[400px] lg:h-[400px] xl:w-[440px] xl:h-[440px]"
-              src="/images/webp/avatar.webp"
+              className="object-cover aspect-square w-[300px] h-[300px] sm:w-[320px] sm:h-[320px] lg:w-[400px] lg:h-[400px] xl:w-[440px] xl:h-[440px]"
+              src="/images/webp/avatar2.webp"
               width={500}
               height={500}
               alt="Jay Mark Borja"
