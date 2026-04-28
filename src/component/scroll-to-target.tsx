@@ -4,7 +4,7 @@ const ScrollToTarget = (element: React.SyntheticEvent) => {
   element.preventDefault();
   element.stopPropagation();
 
-  const tag = element.target as HTMLAnchorElement;
+  const tag = element.currentTarget as HTMLAnchorElement;
   const href = tag.getAttribute("href")?.slice(1);
 
   if (!href) {
