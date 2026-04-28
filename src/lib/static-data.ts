@@ -95,23 +95,23 @@ export const socialData = [
 export const workData = [
     {
         "title": "Landing Page",
-        "imgSrc": "/images/work/blog/s-blog-1.png"
+        "imgSrc": "/images/work/blog/s-blog-1.webp"
     },
     {
         "title": "About Page",
-        "imgSrc": "/images/work/blog/s-blog-2.png"
+        "imgSrc": "/images/work/blog/s-blog-2.webp"
     },
     {
         "title": "Blog Page",
-        "imgSrc": "/images/work/blog/s-blog-3.png"
+        "imgSrc": "/images/work/blog/s-blog-3.webp"
     },
     {
         "title": "Contact Page",
-        "imgSrc": "/images/work/blog/s-blog-4.png"
+        "imgSrc": "/images/work/blog/s-blog-4.webp"
     },
     {
         "title": "Blog Edit Page",
-        "imgSrc": "/images/work/blog/s-blog-5.png"
+        "imgSrc": "/images/work/blog/s-blog-5.webp"
     },
 ];
 
@@ -161,7 +161,13 @@ export const projectCard: ProjectCardType[] = [
     // ── Currently shipping (client work) ─────────────────────────────
     {
         title: "REILink",
-        description: "Full-stack real estate platform for lead generation, deal pipeline management, and investor collaboration. I shipped the internal lead-messaging system, deal pipeline, AI-assisted property tools, and integrations with Auth0 / Go High Level / third-party data (Zillow, Redfin, BatchData).",
+        description: "Full-stack real estate platform for lead generation, deal pipeline management, and investor collaboration.",
+        tagline: "Real estate platform for lead generation, deal pipelines, and investor collaboration.",
+        highlights: [
+            "Built internal lead-messaging system + deal pipeline",
+            "AI-assisted property analysis tools",
+            "Auth0, Go High Level, Zillow / Redfin / BatchData integrations",
+        ],
         tags: [
             "Symfony 7", "Preact.js", "Tailwind CSS", "MySQL", "Auth0", "Docker", "reCAPTCHA", "REST APIs",
         ],
@@ -175,7 +181,13 @@ export const projectCard: ProjectCardType[] = [
     },
     {
         title: "Apex",
-        description: "Full-stack platform for automated WordPress site & page generation — AI-generated content (Gemini) and images (OpenAI), Stripe-powered subscriptions and credit systems, queue-based workers, and webhook-driven delivery. Part of a broader CRM and lead-management system.",
+        description: "Full-stack platform for automated WordPress site & page generation, powered by AI and credit-based subscriptions.",
+        tagline: "Automated WordPress site and page generation, powered by AI and credit-based subscriptions.",
+        highlights: [
+            "AI content via Gemini, image generation via OpenAI",
+            "Stripe subscriptions + one-time credit system",
+            "Queue-based workers and webhook-driven delivery",
+        ],
         tags: [
             "Symfony 7", "React", "Tailwind CSS", "MySQL", "Docker", "AWS", "Stripe", "Twilio", "DocuSign", "OpenAI", "Gemini",
         ],
@@ -189,7 +201,13 @@ export const projectCard: ProjectCardType[] = [
     },
     {
         title: "Lamudi Real-Estate Platform",
-        description: "Contributed to the core platform: a Symfony 4 → 5 + PHP 8 + AWS migration, a landmark-search microservice with optimized Elasticsearch indexing, lazy-loaded map APIs that cut server query cost by 35%, GA4 event tracking refactor, and SEO + perf work that lifted PageSpeed from 70 → 90+.",
+        description: "Real estate marketplace serving multiple Southeast Asian markets.",
+        tagline: "Real estate marketplace serving multiple Southeast Asian markets.",
+        highlights: [
+            "Led Symfony 4 → 5 + PHP 8 migration onto AWS",
+            "Cut server query cost ~35% with lazy-loaded map APIs",
+            "Lifted PageSpeed from 70 → 90+ across key pages",
+        ],
         tags: [
             "Symfony 5", "PHP 8", "Elasticsearch", "Bitbucket CI/CD", "AWS", "SEO",
         ],
@@ -205,40 +223,46 @@ export const projectCard: ProjectCardType[] = [
     // ── Selected work (personal, live) ────────────────────────────────
     {
         title: "COVID-19 Contact Tracing System",
-        description: "A web and mobile-based application designed to assist in tracking and managing COVID-19 exposure. The system allows users to log check-ins, monitor potential contact events, and store health data securely. Built with Laravel 7 and Bootstrap for the web interface, and Android with Material UI for the mobile app scanner.",
+        description: "Contact tracing system built for the LGU of Libmanan during COVID-19.",
+        tagline: "Contact tracing system built for the LGU of Libmanan during COVID-19.",
+        highlights: [
+            "Web app for resident registration and QR ID generation",
+            "Android scanner app for establishments",
+            "Geographic dashboard tracking cases by barangay",
+        ],
         tags: [
             "Bootstrap", "Material UI", "Android (Java)", "Laravel 7", "XAMPP", "MySQL", "JWT Auth", "Monorepo",
         ],
         link: "https://github.com/jymarkb/ContactTracing",
-        imageSrc: "covid-1.png",
+        imageSrc: "covid-1.webp",
         gallery: [
             {
                 "title": "Landing Page Image 1",
-                "imgSrc": "/images/work/covid/s-covid-1.png"
+                "imgSrc": "/images/work/covid/s-covid-1.webp"
             },
             {
                 "title": "Landing Page Image 2",
-                "imgSrc": "/images/work/covid/s-covid-7.png"
+                "imgSrc": "/images/work/covid/s-covid-7.webp"
             },
             {
                 "title": "Landing Page Image 3",
-                "imgSrc": "/images/work/covid/s-covid-8.png"
+                "imgSrc": "/images/work/covid/s-covid-8.webp"
             },
             {
                 "title": "Citizen Generated Identification Card Image",
-                "imgSrc": "/images/work/covid/s-covid-2.png"
+                "imgSrc": "/images/work/covid/s-covid-2.webp"
             },
             {
                 "title": "Establishment App Image 1",
-                "imgSrc": "/images/work/covid/s-covid-3.png"
+                "imgSrc": "/images/work/covid/s-covid-3.webp"
             },
             {
                 "title": "Establishment App Image 2",
-                "imgSrc": "/images/work/covid/s-covid-4.png"
+                "imgSrc": "/images/work/covid/s-covid-4.webp"
             },
             {
                 "title": "Citizen QR Scan Record",
-                "imgSrc": "/images/work/covid/s-covid-6.png"
+                "imgSrc": "/images/work/covid/s-covid-6.webp"
             },
         ],
         status: "live",
@@ -246,24 +270,30 @@ export const projectCard: ProjectCardType[] = [
     },
     {
         title: "E-CapProLib",
-        description: "An online Capstone Project Repository Library designed for academic institutions to store, manage, and browse student capstone projects. Developed with PHP and MySQL, the system allows users to upload documents, search project titles, and categorize works by course and year level, with a responsive UI using Bootstrap.",
+        description: "Capstone project repository for academic institutions.",
+        tagline: "Capstone project repository for academic institutions.",
+        highlights: [
+            "Document upload, search, and category-based browsing",
+            "Filter projects by course and year level",
+            "Built for the College of Information Criminology archive",
+        ],
         tags: [
             "Bootstrap", "PHP", "MySQL", "XAMPP", "HTML", "CSS", "jQuery"
         ],
         link: "https://github.com/jymarkb/CapstoneRepo",
-        imageSrc: "capstone-1.png",
+        imageSrc: "capstone-1.webp",
         gallery: [
             {
                 "title": "Landing Page Image 1",
-                "imgSrc": "/images/work/capstone/s-capstone-1.png"
+                "imgSrc": "/images/work/capstone/s-capstone-1.webp"
             },
             {
                 "title": "Landing Page Image 1",
-                "imgSrc": "/images/work/capstone/s-capstone-2.png"
+                "imgSrc": "/images/work/capstone/s-capstone-2.webp"
             },
             {
                 "title": "Landing Page Image 1",
-                "imgSrc": "/images/work/capstone/s-capstone-3.png"
+                "imgSrc": "/images/work/capstone/s-capstone-3.webp"
             },
         ],
         status: "live",
@@ -273,7 +303,13 @@ export const projectCard: ProjectCardType[] = [
     // ── Building now (WIP) ────────────────────────────────────────────
     {
         title: "SimpleEditor",
-        description: "A drag-and-drop visual content editor for building web pages of any kind — similar in spirit to TinyMCE or other rich-text editors, but with structured layout primitives (rows, columns, content blocks) layered on top. Live style editing, embedded WYSIWYG for rich text, and a flexible JSON content model that makes any layout easy to preview, persist, and re-render.",
+        description: "Drag-and-drop visual content editor for building web pages of any kind.",
+        tagline: "Drag-and-drop visual content editor for building web pages of any kind.",
+        highlights: [
+            "Structured layout primitives — rows, columns, content blocks",
+            "Embedded WYSIWYG for rich text and media",
+            "JSON content model for preview, persist, and re-render",
+        ],
         tags: [
             "React", "TypeScript", "Slate.js", "Tailwind CSS", "Vite", "WYSIWYG", "Page Builder",
         ],
@@ -285,7 +321,13 @@ export const projectCard: ProjectCardType[] = [
     },
     {
         title: "Smart Pixel",
-        description: "An AI-powered image optimization tool built with a Laravel backend and a Next.js frontend. SmartPixel allows users to upload images with custom parameters (e.g., width, height, format, crop) and returns optimized results using advanced processing logic and cloud storage integration.",
+        description: "AI-powered image optimization tool with custom parameter controls.",
+        tagline: "AI-powered image optimization tool with custom parameter controls.",
+        highlights: [
+            "Custom width, height, format, and crop parameters",
+            "Cloud storage integration for delivery",
+            "Laravel backend + Next.js frontend in a monorepo",
+        ],
         tags: [
             "React", "TypeScript", "Laravel", "Next.js", "MySQL", "Monorepo", "AI", "Image Optimization"
         ],
@@ -297,7 +339,13 @@ export const projectCard: ProjectCardType[] = [
     },
     {
         title: "PhotoSync",
-        description: "A mobile photo gallery that pulls images from multiple cloud accounts into one searchable timeline. Users connect several Google accounts on the device to browse photos from each Drive in one place — with planned support for Apple iCloud Drive where the API allows. A small web admin panel handles account management and usage oversight.",
+        description: "Mobile photo gallery aggregating images from multiple cloud accounts.",
+        tagline: "Mobile photo gallery aggregating images from multiple cloud accounts.",
+        highlights: [
+            "Connect multiple Google Drive accounts in one timeline",
+            "Planned support for Apple iCloud Drive where the API allows",
+            "Small Next.js web admin for account management",
+        ],
         tags: [
             "React Native", "Expo", "TypeScript", "Next.js", "Google Drive API", "OAuth 2.0", "iCloud", "Multi-Account", "REST API",
         ],

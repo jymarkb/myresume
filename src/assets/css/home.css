@@ -455,3 +455,10 @@ html {
   border-color: hsl(var(--primary-theme) / 0.4);
   box-shadow: 0 4px 14px -8px hsl(var(--primary-theme) / 0.12);
 }
+
+/* Light theme — stronger cyan hover shadow since the light bg eats subtle shadows */
+:root:not(.dark) .project-card-modern:hover {
+  box-shadow:
+    0 8px 24px -8px hsl(var(--primary-theme) / 0.35),
+    0 2px 6px -2px hsl(var(--primary-theme) / 0.18);
+}

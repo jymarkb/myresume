@@ -20,17 +20,15 @@ const Projects = () => {
 
       {/* Featured project */}
       <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 mb-12 lg:mb-16">
-        <div className="lg:col-span-7 group relative rounded-2xl overflow-hidden border border-border bg-card hidden-pop">
-          <div className="aspect-video overflow-hidden">
-            <Image
-              src="/images/webp/work/image-1.webp"
-              alt="project feature image"
-              className="object-cover object-top h-full w-full transition-transform duration-500 group-hover:scale-105"
-              width={854}
-              height={480}
-            />
-          </div>
-          <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-primaryTheme/15 backdrop-blur border border-primaryTheme/40 font-mono-tech text-xs text-primaryTheme">
+        <div className="lg:col-span-7 group relative rounded-2xl overflow-hidden border border-border bg-card hidden-pop aspect-video lg:aspect-auto lg:min-h-[400px]">
+          <Image
+            src="/images/webp/work/image-1.webp"
+            alt="project feature image"
+            fill
+            sizes="(max-width: 1024px) 100vw, 60vw"
+            className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-primaryTheme/15 backdrop-blur border border-primaryTheme/40 font-mono-tech text-xs text-primaryTheme z-10">
             ★ Featured
           </div>
         </div>

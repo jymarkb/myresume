@@ -43,7 +43,7 @@ const ProjectCard = ({ data }: { data: ProjectCardType }) => {
         {/* Action overlay (only when there are actions to show) */}
         {!isWip && (
           <>
-            <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent opacity-0 sm:group-hover:opacity-100 transition-opacity" />
             <div className="absolute right-3 bottom-3 flex gap-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
               {hasLink && (
                 <Link
@@ -85,9 +85,26 @@ const ProjectCard = ({ data }: { data: ProjectCardType }) => {
           </p>
         ) : null}
 
-        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-4">
-          {data.description}
-        </p>
+        {data.tagline ? (
+          <p className="text-sm font-medium text-foreground/90 leading-relaxed">
+            {data.tagline}
+          </p>
+        ) : (
+          <p className="text-sm text-muted-foreground leading-relaxed line-clamp-4">
+            {data.description}
+          </p>
+        )}
+
+        {data.highlights && data.highlights.length > 0 ? (
+          <ul className="flex flex-col gap-1 text-xs text-muted-foreground leading-relaxed">
+            {data.highlights.map((h, i) => (
+              <li key={i} className="flex gap-2">
+                <span className="text-primaryTheme/70 flex-shrink-0">›</span>
+                <span>{h}</span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
 
         <div className="flex flex-wrap mt-auto pt-3 gap-1.5">
           {data.tags.slice(0, 5).map((subItem, index) => (

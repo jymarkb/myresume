@@ -18,7 +18,9 @@ const Info = () => {
                 width={500}
                 height={500}
                 alt="Jay Mark Borja"
-                loading="eager"
+                priority
+                fetchPriority="high"
+                sizes="(max-width: 1024px) 300px, (max-width: 1280px) 320px, 360px"
               />
               <div className="absolute bottom-3 left-3 font-mono-tech text-xs">
                 <div className="px-2 py-1 rounded bg-background/80 backdrop-blur border border-border text-muted-foreground">

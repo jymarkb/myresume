@@ -25,9 +25,9 @@ const Talk = () => {
         <div className="relative flex flex-col items-center gap-5">
           <div className="section-eyebrow">Contact</div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight max-w-2xl">
-            Have a project in mind?{" "}
-            <span className="text-accent-gradient">Let&apos;s talk.</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight max-w-2xl leading-tight">
+            <span className="block">Have a project in mind?</span>
+            <span className="block text-accent-gradient">Let&apos;s talk.</span>
           </h2>
 
           <p className="text-muted-foreground max-w-md">

@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/component/theme-provider";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-poppins",
   display: "swap",
 });
@@ -83,13 +83,7 @@ export const metadata: Metadata = {
     images: ["/opengraph-image"],
     creator: "@jymarkb",
   },
-  icons: {
-    icon: [
-      { url: "/images/mobile-logo.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico" },
-    ],
-    apple: { url: "/images/mobile-logo.svg", type: "image/svg+xml" },
-  },
+  // icons handled by Next.js file convention: src/app/icon.svg + apple-icon.png
   manifest: "/manifest.webmanifest",
   formatDetection: {
     email: false,
