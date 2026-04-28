@@ -11,7 +11,7 @@ const poppins = Poppins({
 });
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://jymarkb.info";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://resume.jymarkb.info";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
