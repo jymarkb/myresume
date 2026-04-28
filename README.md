@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jay Mark Borja — Portfolio
 
-## Getting Started
+Personal portfolio and résumé site for Jay Mark Borja, a full-stack web developer based in Quezon City, Philippines.
 
-First, run the development server:
+**Live:** [resume.jymarkb.info](https://resume.jymarkb.info)
+
+## Tech stack
+
+- **Framework:** Next.js 16 (App Router) + React 19 + TypeScript
+- **Styling:** Tailwind CSS v3, CSS custom properties for theming
+- **Theme:** `next-themes` with system / light / dark detection (cyan accent, dark-first)
+- **Fonts:** Poppins + JetBrains Mono via `next/font/google` (self-hosted)
+- **Icons:** `lucide-react` (tree-shaken SVG components)
+- **Carousel:** Embla via shadcn/ui wrapper
+- **Toasts:** sonner
+- **SEO:** OpenGraph, Twitter Card, JSON-LD `Person` + `WebSite` schemas, dynamic OG image via `next/og`, sitemap, robots.txt, PWA manifest
+
+## Local development
 
 ```bash
-npm run dev
-# or
+yarn install
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Other scripts:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+yarn build    # production build
+yarn start    # serve the production build
+yarn lint     # run ESLint
+```
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/                  # Next.js App Router — layout, routes, metadata, SEO files
+│   ├── layout.tsx        # root layout, metadata, JSON-LD
+│   ├── page.tsx          # home page
+│   ├── opengraph-image.tsx   # dynamic OG image (edge runtime)
+│   ├── manifest.ts       # PWA manifest
+│   ├── sitemap.ts        # sitemap.xml
+│   ├── robots.ts         # robots.txt
+│   ├── icon.svg          # favicon
+│   └── globals.css       # base tokens (light + dark)
+├── component/            # React components
+│   ├── animation/        # IntersectionObserver-based scroll animations
+│   └── gallery/          # gallery modal + wrapper (portaled)
+├── lib/
+│   ├── static-data.ts    # all portfolio copy + data (services, projects, testimonials, tech stack)
+│   ├── utils.ts          # shared types + helpers (cn, debounce, closeModal, formInputClass)
+│   ├── icon-map.tsx      # lucide-react icon resolver for data-driven icon names
+│   └── animate-element.ts # IntersectionObserver helper
+├── components/ui/        # shadcn/ui primitives (carousel)
+├── assets/css/           # additional CSS (home.css)
+└── lib/                  # types, helpers, data
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Convention: data → `lib/static-data.ts`, types → `lib/utils.ts`, components are UI-only.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Environment variables
 
-## Deploy on Vercel
+| Var | Required | Default | Purpose |
+|-----|----------|---------|---------|
+| `NEXT_PUBLIC_SITE_URL` | recommended | `https://resume.jymarkb.info` | Canonical URL for OG, sitemap, robots, JSON-LD |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Local: copy to `.env.local`. Production: set in your hosting dashboard.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+Built for static + edge deployment on Vercel, Netlify, or any Next.js host.
+
+Pre-deploy checklist:
+
+- Set `NEXT_PUBLIC_SITE_URL` in production env.
+- Point a DNS `CNAME` record for `resume` to your host.
+- Submit `/sitemap.xml` to Google Search Console after first deploy.
