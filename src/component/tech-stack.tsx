@@ -1,102 +1,5 @@
 import Image from "next/image";
-
-type Tech = {
-  name: string;
-  icon: string;
-  invertOnDark?: boolean;
-  invertOnLight?: boolean;
-};
-type Layer = {
-  id: string;
-  index: number;
-  title: string;
-  role: string;
-  items: Tech[];
-};
-
-const layers: Layer[] = [
-  {
-    id: "frontend",
-    index: 1,
-    title: "Frontend",
-    role: "UI frameworks, styling, foundations",
-    items: [
-      { name: "React", icon: "react.svg" },
-      { name: "Next.js", icon: "nextjs.svg", invertOnDark: true },
-      { name: "TypeScript", icon: "typescript.svg" },
-      { name: "Tailwind CSS", icon: "tailwind.svg" },
-      { name: "shadcn/ui", icon: "shadcn.svg", invertOnDark: true },
-      { name: "Material UI", icon: "api.svg" },
-      { name: "Lucide", icon: "lucide.svg", invertOnLight: true },
-      { name: "SASS", icon: "sass.svg" },
-      { name: "Bootstrap", icon: "bootstrap.svg" },
-      { name: "TinyMCE", icon: "tiny.svg" },
-      { name: "jQuery", icon: "api.svg" },
-      { name: "HTML", icon: "html.svg" },
-      { name: "CSS", icon: "css.svg" },
-    ],
-  },
-  {
-    id: "backend",
-    index: 2,
-    title: "Backend",
-    role: "Server frameworks, APIs, data",
-    items: [
-      { name: "Symfony 7", icon: "symfony.svg", invertOnDark: true },
-      { name: "Laravel", icon: "laravel.svg" },
-      { name: "Node.js", icon: "nodejs.svg" },
-      { name: "PHP", icon: "php.svg" },
-      { name: "WordPress", icon: "wordpress.svg" },
-      { name: "Bolt CMS", icon: "api.svg" },
-      { name: "MySQL", icon: "mysql.svg" },
-      { name: "PostgreSQL", icon: "postgresql.svg" },
-      { name: "Supabase", icon: "api.svg" },
-      { name: "Prisma", icon: "prisma.svg", invertOnDark: true },
-      { name: "REST API", icon: "api.svg" },
-      { name: "WhatsApp API", icon: "whatsapp.svg" },
-      { name: "Twilio", icon: "twilio.svg" },
-    ],
-  },
-  {
-    id: "platform",
-    index: 3,
-    title: "Platform",
-    role: "Containers, hosting, deployment",
-    items: [
-      { name: "Docker", icon: "docker.svg" },
-      { name: "NGINX", icon: "nginx.svg" },
-      { name: "AWS", icon: "aws.svg", invertOnDark: true },
-      { name: "Vercel", icon: "vercel.svg", invertOnDark: true },
-      { name: "Railway", icon: "railway.svg", invertOnDark: true },
-      { name: "Koyeb", icon: "koyeb.svg", invertOnDark: true },
-      { name: "Namecheap", icon: "api.svg" },
-    ],
-  },
-  {
-    id: "tools",
-    index: 4,
-    title: "Tools",
-    role: "Dev tools, environments, process",
-    items: [
-      { name: "Git", icon: "git.svg" },
-      { name: "ESLint", icon: "eslint.svg" },
-      { name: "Prettier", icon: "prettier.svg" },
-      { name: "Postman", icon: "postman.svg" },
-      { name: "Figma", icon: "figma.svg" },
-      { name: "Jira", icon: "jira.svg" },
-      { name: "OpenAI", icon: "api.svg" },
-      { name: "Gemini", icon: "api.svg" },
-      { name: "Stripe", icon: "api.svg" },
-      { name: "Auth0", icon: "api.svg" },
-      { name: "GoHighLevel", icon: "api.svg" },
-      { name: "DocuSign", icon: "api.svg" },
-      { name: "reCAPTCHA", icon: "api.svg" },
-      { name: "BatchData", icon: "api.svg" },
-      { name: "WSL 2 Linux", icon: "linux.svg", invertOnDark: true },
-      { name: "Microservices", icon: "micro-services.svg", invertOnDark: true },
-    ],
-  },
-];
+import { techLayers } from "@/lib/static-data";
 
 const TechStack = () => {
   return (
@@ -123,7 +26,7 @@ const TechStack = () => {
         />
 
         <div className="grid gap-5 lg:gap-6">
-          {layers.map((layer) => (
+          {techLayers.map((layer) => (
             <div
               key={layer.id}
               className="relative rounded-xl border border-border bg-card overflow-hidden"

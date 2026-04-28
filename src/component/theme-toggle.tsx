@@ -3,8 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import { Sun, Moon, Monitor, Check } from "lucide-react";
-
-type ThemeOption = "system" | "light" | "dark";
+import type { ThemeOption } from "@/lib/utils";
 
 const options: { value: ThemeOption; label: string; Icon: typeof Sun }[] = [
   { value: "system", label: "System", Icon: Monitor },

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { toast } from "sonner";
-import { closeModal } from "@/lib/utils";
+import { closeModal, formInputClass } from "@/lib/utils";
+import { contactSubjects } from "@/lib/static-data";
 
 const ContactForm = ({ onClose }: { onClose: () => void }) => {
   const [mounted, setMounted] = useState(false);
@@ -49,9 +50,6 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
     };
   }, []);
 
-  const inputClass =
-    "border border-border bg-secondary px-3 text-sm rounded-md placeholder:text-muted-foreground h-10 w-full text-foreground focus:outline-none focus:border-primaryTheme/60 focus:ring-1 focus:ring-primaryTheme/30 transition-colors";
-
   if (!mounted) return null;
   const modalRoot = document.getElementById("modal-overlay");
   if (!modalRoot) return null;
@@ -96,7 +94,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
                 <input
                   type="text"
                   name="entry.107559119"
-                  className={inputClass}
+                  className={formInputClass}
                   placeholder="Jane Doe"
                   required
                 />
@@ -109,7 +107,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
                 <input
                   type="email"
                   name="entry.777016354"
-                  className={inputClass}
+                  className={formInputClass}
                   placeholder="email@domain.com"
                   required
                 />
@@ -123,26 +121,17 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
                   <select
                     name="entry.1032562887"
                     defaultValue=""
-                    className={`${inputClass} pr-10 appearance-none bg-secondary`}
+                    className={`${formInputClass} pr-10 appearance-none bg-secondary`}
                     required
                   >
                     <option value="" disabled>
                       Select a subject
                     </option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="Database Management">
-                      Database Management
-                    </option>
-                    <option value="Deployment & DevOps">
-                      Deployment &amp; DevOps
-                    </option>
-                    <option value="Performance Optimization">
-                      Performance Optimization
-                    </option>
-                    <option value="Cloud Storage Integration">
-                      Cloud Storage Integration
-                    </option>
-                    <option value="API Development">API Development</option>
+                    {contactSubjects.map((subject) => (
+                      <option key={subject} value={subject}>
+                        {subject}
+                      </option>
+                    ))}
                   </select>
                   <i className="icon-chevron-down absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-muted-foreground transition-transform duration-200" />
                 </div>
@@ -153,7 +142,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
                   Message
                 </span>
                 <textarea
-                  className={`${inputClass} h-auto py-2 leading-relaxed`}
+                  className={`${formInputClass} h-auto py-2 leading-relaxed`}
                   placeholder="Tell me about your project..."
                   name="entry.552486820"
                   rows={5}

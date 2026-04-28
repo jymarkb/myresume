@@ -1,8 +1,6 @@
-import { testimonialData } from "@/lib/static-data";
+import { testimonialData, type Testimonial } from "@/lib/static-data";
 import Image from "next/image";
 import Link from "next/link";
-
-type Testimonial = (typeof testimonialData)[number];
 
 const TestimonialCard = ({ item }: { item: Testimonial }) => (
   <figure className="group relative flex flex-col gap-5 rounded-xl border border-border bg-card/60 p-6 w-[280px] sm:w-[340px] lg:w-[380px] flex-shrink-0 transition-colors hover:border-primaryTheme/40 hover:bg-card">

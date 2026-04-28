@@ -1,3 +1,5 @@
+import type { TechLayer } from "./utils";
+
 export const headerLinkData = [
     {
         "title": "Home",
@@ -152,80 +154,8 @@ export const aboutMeDescription = [
     },
 ];
 
-export const techButtons = [
-    {
-        "name": "Frontend"
-    },
-    {
-        "name": "Backend"
-    },
-    {
-        "name": "Tools & Platform"
-    },
-    {
-        "name": "Other"
-    },
-];
-
-export const techData = [
-    {
-        category: "Frontend",
-        items: [
-            { name: "React.js", imgSrc: "react.svg" },
-            { name: "Typescript", imgSrc: "typescript.svg" },
-            { name: "TailwindCSS", imgSrc: "tailwind.svg" },
-            { name: "HTML", imgSrc: "html.svg" },
-            { name: "CSS", imgSrc: "css.svg" },
-            { name: "SASS", imgSrc: "sass.svg" },
-            { name: "Bootstrap", imgSrc: "bootstrap.svg" },
-            { name: "shadcn/ui", imgSrc: "shadcn.svg" },
-            { name: "Lucide", imgSrc: "lucide.svg" },
-            { name: "TinyMCE", imgSrc: "tiny.svg" },
-        ],
-    },
-    {
-        category: "Backend",
-        items: [
-            { name: "Symfony", imgSrc: "symfony.svg" },
-            { name: "Laravel", imgSrc: "laravel.svg" },
-            { name: "Next.js", imgSrc: "nextjs.svg" },
-            { name: "Node.js", imgSrc: "nodejs.svg" },
-            { name: "Wordpress", imgSrc: "wordpress.svg" },
-            { name: "PHP", imgSrc: "php.svg" },
-            { name: "Prisma", imgSrc: "prisma.svg" },
-            { name: "MySQL", imgSrc: "mysql.svg" },
-            // { name: "Postgres", imgSrc: "postgresql.svg" },
-        ],
-    },
-    {
-        category: "Tools & Platform",
-        items: [
-            { name: "Docker", imgSrc: "docker.svg" },
-            { name: "NGINX", imgSrc: "nginx.svg" },
-            { name: "Git", imgSrc: "git.svg" },
-            { name: "AWS", imgSrc: "aws.svg" },
-            { name: "Railway", imgSrc: "railway.svg" },
-            { name: "Koyeb", imgSrc: "koyeb.svg" },
-            { name: "Vercel", imgSrc: "vercel.svg" },
-            { name: "ESLint", imgSrc: "eslint.svg" },
-            { name: "Prettier", imgSrc: "prettier.svg" },
-            { name: "Twilio", imgSrc: "twilio.svg" },
-        ],
-    },
-    {
-        category: "Other",
-        items: [
-            { name: "Jira", imgSrc: "jira.svg" },
-            { name: "Figma", imgSrc: "figma.svg" },
-            { name: "RESTful API", imgSrc: "api.svg" },
-            { name: "WhatsApp API", imgSrc: "whatsapp.svg" },
-            { name: "Postman", imgSrc: "postman.svg" },
-            { name: "WSL 2 Linux", imgSrc: "linux.svg" },
-            { name: "Agile Method", imgSrc: "agile.svg" },
-            { name: "Micro Service", imgSrc: "micro-services.svg" },
-        ],
-    },
-];
+// Subject options for the contact form's <select> — kept in sync with serviceData titles.
+export const contactSubjects: string[] = serviceData.map((s) => s.title);
 
 export const projectCard = [
     {
@@ -354,6 +284,92 @@ export const testimonialData = [
         "avatar": "",
         "linkedin": "https://www.linkedin.com/",
         "quote": "Reliable, communicative, and genuinely cares about code quality. Reviews from Jay always made my PRs measurably better."
+    },
+];
+
+export type Testimonial = (typeof testimonialData)[number];
+
+export const techLayers: TechLayer[] = [
+    {
+        id: "frontend",
+        index: 1,
+        title: "Frontend",
+        role: "UI frameworks, styling, foundations",
+        items: [
+            { name: "React", icon: "react.svg" },
+            { name: "Next.js", icon: "nextjs.svg", invertOnDark: true },
+            { name: "TypeScript", icon: "typescript.svg" },
+            { name: "Tailwind CSS", icon: "tailwind.svg" },
+            { name: "shadcn/ui", icon: "shadcn.svg", invertOnDark: true },
+            { name: "Material UI", icon: "api.svg" },
+            { name: "Lucide", icon: "lucide.svg", invertOnLight: true },
+            { name: "SASS", icon: "sass.svg" },
+            { name: "Bootstrap", icon: "bootstrap.svg" },
+            { name: "TinyMCE", icon: "tiny.svg" },
+            { name: "jQuery", icon: "api.svg" },
+            { name: "HTML", icon: "html.svg" },
+            { name: "CSS", icon: "css.svg" },
+        ],
+    },
+    {
+        id: "backend",
+        index: 2,
+        title: "Backend",
+        role: "Server frameworks, APIs, data",
+        items: [
+            { name: "Symfony 7", icon: "symfony.svg", invertOnDark: true },
+            { name: "Laravel", icon: "laravel.svg" },
+            { name: "Node.js", icon: "nodejs.svg" },
+            { name: "PHP", icon: "php.svg" },
+            { name: "WordPress", icon: "wordpress.svg" },
+            { name: "Bolt CMS", icon: "api.svg" },
+            { name: "MySQL", icon: "mysql.svg" },
+            { name: "PostgreSQL", icon: "postgresql.svg" },
+            { name: "Supabase", icon: "api.svg" },
+            { name: "Prisma", icon: "prisma.svg", invertOnDark: true },
+            { name: "REST API", icon: "api.svg" },
+            { name: "WhatsApp API", icon: "whatsapp.svg" },
+            { name: "Twilio", icon: "twilio.svg" },
+        ],
+    },
+    {
+        id: "platform",
+        index: 3,
+        title: "Platform",
+        role: "Containers, hosting, deployment",
+        items: [
+            { name: "Docker", icon: "docker.svg" },
+            { name: "NGINX", icon: "nginx.svg" },
+            { name: "AWS", icon: "aws.svg", invertOnDark: true },
+            { name: "Vercel", icon: "vercel.svg", invertOnDark: true },
+            { name: "Railway", icon: "railway.svg", invertOnDark: true },
+            { name: "Koyeb", icon: "koyeb.svg", invertOnDark: true },
+            { name: "Namecheap", icon: "api.svg" },
+        ],
+    },
+    {
+        id: "tools",
+        index: 4,
+        title: "Tools",
+        role: "Dev tools, environments, process",
+        items: [
+            { name: "Git", icon: "git.svg" },
+            { name: "ESLint", icon: "eslint.svg" },
+            { name: "Prettier", icon: "prettier.svg" },
+            { name: "Postman", icon: "postman.svg" },
+            { name: "Figma", icon: "figma.svg" },
+            { name: "Jira", icon: "jira.svg" },
+            { name: "OpenAI", icon: "api.svg" },
+            { name: "Gemini", icon: "api.svg" },
+            { name: "Stripe", icon: "api.svg" },
+            { name: "Auth0", icon: "api.svg" },
+            { name: "GoHighLevel", icon: "api.svg" },
+            { name: "DocuSign", icon: "api.svg" },
+            { name: "reCAPTCHA", icon: "api.svg" },
+            { name: "BatchData", icon: "api.svg" },
+            { name: "WSL 2 Linux", icon: "linux.svg", invertOnDark: true },
+            { name: "Microservices", icon: "micro-services.svg", invertOnDark: true },
+        ],
     },
 ];
 

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-// import ExpandedGallery from "../expand-gallery";
 import GalleryModal from "./gallery-modal";
 import { WorkDataType } from "@/lib/utils";
 
