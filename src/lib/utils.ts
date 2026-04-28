@@ -41,7 +41,7 @@ export type ProjectKind = "company" | "personal";
 
 export type ProjectCardType = {
   title: string;
-  description: string;
+  description?: string;
   tagline?: string;
   highlights?: string[];
   tags: string[];

@@ -164,12 +164,12 @@ export const projectCard: ProjectCardType[] = [
         description: "Full-stack real estate platform for lead generation, deal pipeline management, and investor collaboration.",
         tagline: "Real estate platform for lead generation, deal pipelines, and investor collaboration.",
         highlights: [
-            "Built internal lead-messaging system + deal pipeline",
-            "AI-assisted property analysis tools",
-            "Auth0, Go High Level, Zillow / Redfin / BatchData integrations",
+            "Built internal lead-messaging system and deal pipeline",
+            "Shipped AI-assisted property analysis tools",
+            "Integrated Auth0, GoHighLevel, Zillow / Redfin / BatchData APIs",
         ],
         tags: [
-            "Symfony 7", "Preact.js", "Tailwind CSS", "MySQL", "Auth0", "Docker", "reCAPTCHA", "REST APIs",
+            "Symfony 7", "Preact.js", "Tailwind CSS", "MySQL", "Auth0", "Docker", "reCAPTCHA", "REST API",
         ],
         link: "https://reilink.com",
         imageSrc: "temporary.png",
@@ -201,7 +201,6 @@ export const projectCard: ProjectCardType[] = [
     },
     {
         title: "Lamudi Real-Estate Platform",
-        description: "Real estate marketplace serving multiple Southeast Asian markets.",
         tagline: "Real estate marketplace serving multiple Southeast Asian markets.",
         highlights: [
             "Led Symfony 4 → 5 + PHP 8 migration onto AWS",
@@ -223,7 +222,6 @@ export const projectCard: ProjectCardType[] = [
     // ── Selected work (personal, live) ────────────────────────────────
     {
         title: "COVID-19 Contact Tracing System",
-        description: "Contact tracing system built for the LGU of Libmanan during COVID-19.",
         tagline: "Contact tracing system built for the LGU of Libmanan during COVID-19.",
         highlights: [
             "Web app for resident registration and QR ID generation",
@@ -270,7 +268,6 @@ export const projectCard: ProjectCardType[] = [
     },
     {
         title: "E-CapProLib",
-        description: "Capstone project repository for academic institutions.",
         tagline: "Capstone project repository for academic institutions.",
         highlights: [
             "Document upload, search, and category-based browsing",
@@ -303,7 +300,6 @@ export const projectCard: ProjectCardType[] = [
     // ── Building now (WIP) ────────────────────────────────────────────
     {
         title: "SimpleEditor",
-        description: "Drag-and-drop visual content editor for building web pages of any kind.",
         tagline: "Drag-and-drop visual content editor for building web pages of any kind.",
         highlights: [
             "Structured layout primitives — rows, columns, content blocks",
@@ -321,7 +317,6 @@ export const projectCard: ProjectCardType[] = [
     },
     {
         title: "Smart Pixel",
-        description: "AI-powered image optimization tool with custom parameter controls.",
         tagline: "AI-powered image optimization tool with custom parameter controls.",
         highlights: [
             "Custom width, height, format, and crop parameters",
@@ -339,7 +334,6 @@ export const projectCard: ProjectCardType[] = [
     },
     {
         title: "PhotoSync",
-        description: "Mobile photo gallery aggregating images from multiple cloud accounts.",
         tagline: "Mobile photo gallery aggregating images from multiple cloud accounts.",
         highlights: [
             "Connect multiple Google Drive accounts in one timeline",
@@ -388,7 +382,7 @@ export const testimonialData = [
         "company": "Company Name",
         "avatar": "",
         "linkedin": "https://www.linkedin.com/",
-        "quote": "Reliable, communicative, and genuinely cares about code quality. Reviews from Jay always made my PRs measurably better."
+        "quote": "He's reliable, communicative, and genuinely cares about code quality. Reviews from Jay always made my PRs measurably better."
     },
 ];
 
@@ -483,7 +477,7 @@ export const animationGroups = [
     { classes: ["hidden-left-up"], animation: "animate-left-up" },
 ];
 
-export const descInfoText = "<p> I'm a web developer, experience in building and maintaining full-stack web applications. I specialize in creating responsive, reusable UI components and contributing to robust server-side functionality. </p>";
+export const descInfoText = "<p> I'm a web developer, experienced in building and maintaining full-stack web applications. I specialize in creating responsive, reusable UI components and contributing to robust server-side functionality. </p>";
 
 export const animateSpan = [
     "<p>",
