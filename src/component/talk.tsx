@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { Mail } from "lucide-react";
 import GetInTouch from "./get-in-touch";
 import Socials from "./socials";
 
@@ -41,7 +42,7 @@ const Talk = () => {
               href="mailto:dev.jymarkb@gmail.com"
               className="btn-ghost text-sm break-all"
             >
-              <i className="icon-mail flex-shrink-0" />
+              <Mail className="h-4 w-4 flex-shrink-0" />
               <span className="truncate">dev.jymarkb@gmail.com</span>
             </a>
           </div>

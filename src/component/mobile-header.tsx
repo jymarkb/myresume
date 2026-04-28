@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import Link from "next/link";
+import { ArrowRight, X } from "lucide-react";
 import { headerLinkData } from "@/lib/static-data";
 import ScrollToTarget from "./scroll-to-target";
 import ThemeToggle from "./theme-toggle";
@@ -53,7 +54,7 @@ const MobileHeader = ({
             aria-label="close menu"
             className="h-9 w-9 flex items-center justify-center rounded-md border border-border bg-card text-muted-foreground hover:text-foreground hover:border-primaryTheme/60 transition-colors"
           >
-            <i className="icon-x text-lg" />
+            <X className="h-[18px] w-[18px]" />
           </button>
         </div>
       </header>
@@ -88,7 +89,7 @@ const MobileHeader = ({
                   <span className="text-2xl sm:text-3xl font-semibold tracking-tight flex-1">
                     {item.title}
                   </span>
-                  <i className="icon-arrow-right text-lg opacity-40 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                  <ArrowRight className="h-[18px] w-[18px] opacity-40 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                 </Link>
               </li>
             );

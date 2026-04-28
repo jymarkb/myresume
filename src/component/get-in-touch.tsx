@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { ArrowRight } from "lucide-react";
 import ContactForm from "./contact-form";
 const GetInTouch = ({ slideStyle }: { slideStyle: string }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +18,7 @@ const GetInTouch = ({ slideStyle }: { slideStyle: string }) => {
         onClick={onShowForm}
       >
         Get in touch
-        <i className="icon-arrow-right" />
+        <ArrowRight className="h-4 w-4" />
       </button>
 
       {isOpen && <ContactForm onClose={onShowForm} />}

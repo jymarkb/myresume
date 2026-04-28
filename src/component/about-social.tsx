@@ -1,5 +1,6 @@
 "use client";
 import { aboutMeSocial } from "@/lib/static-data";
+import { iconMap } from "@/lib/icon-map";
 import { toast } from "sonner";
 
 const AboutSocial = () => {
@@ -14,14 +15,16 @@ const AboutSocial = () => {
   return (
     <>
       {aboutMeSocial.map((item, index) => {
+        const Icon = iconMap[item.icon];
+        const CopyIcon = iconMap["clipboard-copy"];
         return (
           <div
             className="group flex items-center gap-3 p-3 rounded-lg border border-border bg-card/50 hover:border-primaryTheme/40 transition-colors hidden-left"
             key={index}
           >
-            <i
-              className={`flex items-center justify-center text-base icon-${item.icon} rounded-md bg-primaryTheme/10 text-primaryTheme h-10 w-10 flex-shrink-0`}
-            ></i>
+            <span className="flex items-center justify-center rounded-md bg-primaryTheme/10 text-primaryTheme h-10 w-10 flex-shrink-0">
+              {Icon ? <Icon className="h-4 w-4" /> : null}
+            </span>
             <div className="relative flex-1 min-w-0">
               <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-mono-tech">
                 {item.title}
@@ -35,7 +38,7 @@ const AboutSocial = () => {
                   onClick={() => onCopy(item.target)}
                   aria-label={`copy ${item.title}`}
                 >
-                  <i className="icon-clipboard-copy"></i>
+                  {CopyIcon ? <CopyIcon className="h-3.5 w-3.5" /> : null}
                 </button>
               ) : (
                 ""

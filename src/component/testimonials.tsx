@@ -1,6 +1,7 @@
 import { testimonialData, type Testimonial } from "@/lib/static-data";
 import Image from "next/image";
 import Link from "next/link";
+import { Linkedin } from "lucide-react";
 
 const TestimonialCard = ({ item }: { item: Testimonial }) => (
   <figure className="group relative flex flex-col gap-5 rounded-xl border border-border bg-card/60 p-6 w-[280px] sm:w-[340px] lg:w-[380px] flex-shrink-0 transition-colors hover:border-primaryTheme/40 hover:bg-card">
@@ -45,7 +46,7 @@ const TestimonialCard = ({ item }: { item: Testimonial }) => (
           {item.company ? (
             <>
               {" · "}
-              <span className="text-primaryTheme/80">{item.company}</span>
+              <span className="text-primaryTheme">{item.company}</span>
             </>
           ) : null}
         </p>
@@ -58,7 +59,7 @@ const TestimonialCard = ({ item }: { item: Testimonial }) => (
           aria-label={`${item.name} on LinkedIn`}
           className="text-muted-foreground hover:text-primaryTheme transition-colors flex-shrink-0"
         >
-          <i className="icon-linkedin text-lg" />
+          <Linkedin className="h-[18px] w-[18px]" />
         </Link>
       ) : null}
     </figcaption>

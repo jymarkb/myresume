@@ -64,7 +64,7 @@ const ProjectsTabs = () => {
   const countClass = (isActive: boolean) =>
     `text-[10px] font-mono-tech px-1.5 py-0.5 rounded ${
       isActive
-        ? "bg-[hsl(var(--hint-color))]/20"
+        ? "bg-[hsl(var(--hint-color))] text-[hsl(var(--primary-theme))]"
         : "bg-secondary text-muted-foreground"
     }`;
 

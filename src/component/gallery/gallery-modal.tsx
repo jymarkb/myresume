@@ -3,6 +3,7 @@ import { closeModal, WorkDataType } from "@/lib/utils";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
+import { ArrowRight, X } from "lucide-react";
 
 type ModalProps = {
   onClose: () => void;
@@ -93,7 +94,7 @@ const GalleryModal = ({ onClose, data }: ModalProps) => {
             className="h-9 w-9 flex items-center justify-center rounded-md border border-border bg-card text-muted-foreground hover:text-foreground hover:border-primaryTheme/60 transition-colors"
             aria-label="close"
           >
-            <i className="text-lg icon-x" />
+            <X className="h-[18px] w-[18px]" />
           </button>
         </div>
       </header>
@@ -130,7 +131,7 @@ const GalleryModal = ({ onClose, data }: ModalProps) => {
               className="hidden sm:flex absolute left-6 top-1/2 -translate-y-1/2 h-11 w-11 items-center justify-center rounded-full bg-card/90 backdrop-blur border border-border text-foreground hover:border-primaryTheme/60 hover:text-primaryTheme transition-colors shadow-lg"
               aria-label="previous"
             >
-              <i className="icon-arrow-right rotate-180 inline-block" />
+              <ArrowRight className="h-4 w-4 rotate-180" />
             </button>
             <button
               onClick={(e) => {
@@ -140,7 +141,7 @@ const GalleryModal = ({ onClose, data }: ModalProps) => {
               className="hidden sm:flex absolute right-6 top-1/2 -translate-y-1/2 h-11 w-11 items-center justify-center rounded-full bg-card/90 backdrop-blur border border-border text-foreground hover:border-primaryTheme/60 hover:text-primaryTheme transition-colors shadow-lg"
               aria-label="next"
             >
-              <i className="icon-arrow-right" />
+              <ArrowRight className="h-4 w-4" />
             </button>
           </>
         )}

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Globe } from "lucide-react";
+import { Briefcase, Globe } from "lucide-react";
 import AuthorSocial from "./author-social";
 
 const Info = () => {
@@ -79,7 +79,7 @@ const Info = () => {
         <div className="md:row-start-4 md:col-span-2 xl:col-span-1 xl:col-start-1">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-mono-tech text-muted-foreground">
             <div className="flex items-center gap-2">
-              <i className="icon-briefcase text-primaryTheme" />
+              <Briefcase className="h-3.5 w-3.5 text-primaryTheme" strokeWidth={2} />
               <span>4+ years experience</span>
             </div>
             <span className="opacity-40">·</span>
