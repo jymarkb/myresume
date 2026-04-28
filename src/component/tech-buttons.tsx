@@ -13,7 +13,7 @@ const TechButton = ({
         return (
           <button
             key={index}
-            className={`border-b-2 pb-2 ${selectedId === index ? "active" : ""} border-dashed text-white`}
+            className={`border-b-2 pb-2 text-left ${selectedId === index ? "active" : ""}`}
             onClick={() => onSelectBtn(index)}
           >
             {item.name}
