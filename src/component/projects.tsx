@@ -1,7 +1,7 @@
 import Image from "next/image";
 import GalleryWrapper from "./gallery/gallery-wrapper";
-import ProjectCard from "./project-card";
-import { projectCard, workData } from "@/lib/static-data";
+import ProjectsTabs from "./projects-tabs";
+import { workData } from "@/lib/static-data";
 
 const Projects = () => {
   return (
@@ -63,7 +63,7 @@ const Projects = () => {
             ))}
           </div>
 
-          <div className="flex flex-wrap gap-3 items-center mt-2">
+          <div className="flex items-center gap-2 sm:gap-3 mt-2">
             <a
               href="https://myblog.jymarkb.info/"
               className="btn-primary text-sm"
@@ -74,36 +74,24 @@ const Projects = () => {
             </a>
             <a
               href="https://github.com/jymarkb/symfonyBlog"
-              aria-label="github"
+              aria-label="View source on GitHub"
               className="btn-ghost text-sm"
               target="_blank"
               rel="noreferrer"
             >
               <i className="icon-github" />
-              <span>Source</span>
+              <span className="hidden sm:inline">Source</span>
             </a>
             <GalleryWrapper btnStyle="btn-ghost text-sm" data={workData}>
               <i className="icon-images" />
-              <span>Gallery</span>
+              <span className="hidden sm:inline">Gallery</span>
             </GalleryWrapper>
           </div>
         </div>
       </div>
 
-      {/* Other projects bento grid */}
-      <div className="flex items-end justify-between mb-6">
-        <h3 className="text-xl lg:text-2xl font-semibold">More projects</h3>
-        <span className="font-mono-tech text-xs text-muted-foreground hidden sm:inline">
-          {projectCard.length.toString().padStart(2, "0")} entries
-        </span>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-        {projectCard.map((item, index) => (
-          <div key={index} className="hidden-right">
-            <ProjectCard data={item} />
-          </div>
-        ))}
-      </div>
+      {/* Filter chips + project grid */}
+      <ProjectsTabs />
     </div>
   );
 };

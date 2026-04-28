@@ -13,11 +13,25 @@ const GalleryModal = ({ onClose, data }: ModalProps) => {
   const [mounted, setMounted] = useState(false);
   const [selectedImgId, setSelectedImgId] = useState(0);
   const stripRef = useRef<HTMLDivElement | null>(null);
+  const touchStartX = useRef<number | null>(null);
 
   const onSelect = (id: number) => setSelectedImgId(id);
   const onPrev = () =>
     setSelectedImgId((id) => (id - 1 + data.length) % data.length);
   const onNext = () => setSelectedImgId((id) => (id + 1) % data.length);
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) onNext();
+      else onPrev();
+    }
+    touchStartX.current = null;
+  };
 
   useEffect(() => {
     setMounted(true);
@@ -85,7 +99,11 @@ const GalleryModal = ({ onClose, data }: ModalProps) => {
       </header>
 
       {/* Stage */}
-      <div className="flex-1 relative flex items-center justify-center p-4 sm:p-8 lg:p-10 overflow-hidden">
+      <div
+        className="flex-1 relative flex items-center justify-center p-4 sm:py-8 sm:px-20 lg:py-10 lg:px-24 overflow-hidden touch-pan-y select-none"
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+      >
         <div className="relative flex items-center justify-center w-full h-full max-w-[1400px]">
           <Image
             key={current.imgSrc}
@@ -96,11 +114,12 @@ const GalleryModal = ({ onClose, data }: ModalProps) => {
             sizes="(max-width: 1280px) 90vw, 1400px"
             priority
             unoptimized={current.imgSrc.endsWith(".gif")}
-            className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg border border-border bg-card shadow-2xl"
+            className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg border border-border bg-card shadow-2xl pointer-events-none"
+            draggable={false}
           />
         </div>
 
-        {/* prev / next */}
+        {/* prev / next — desktop only; mobile uses swipe */}
         {data.length > 1 && (
           <>
             <button
@@ -108,7 +127,7 @@ const GalleryModal = ({ onClose, data }: ModalProps) => {
                 e.stopPropagation();
                 onPrev();
               }}
-              className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 h-11 w-11 flex items-center justify-center rounded-full bg-card/90 backdrop-blur border border-border text-foreground hover:border-primaryTheme/60 hover:text-primaryTheme transition-colors shadow-lg"
+              className="hidden sm:flex absolute left-6 top-1/2 -translate-y-1/2 h-11 w-11 items-center justify-center rounded-full bg-card/90 backdrop-blur border border-border text-foreground hover:border-primaryTheme/60 hover:text-primaryTheme transition-colors shadow-lg"
               aria-label="previous"
             >
               <i className="icon-arrow-right rotate-180 inline-block" />
@@ -118,7 +137,7 @@ const GalleryModal = ({ onClose, data }: ModalProps) => {
                 e.stopPropagation();
                 onNext();
               }}
-              className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 h-11 w-11 flex items-center justify-center rounded-full bg-card/90 backdrop-blur border border-border text-foreground hover:border-primaryTheme/60 hover:text-primaryTheme transition-colors shadow-lg"
+              className="hidden sm:flex absolute right-6 top-1/2 -translate-y-1/2 h-11 w-11 items-center justify-center rounded-full bg-card/90 backdrop-blur border border-border text-foreground hover:border-primaryTheme/60 hover:text-primaryTheme transition-colors shadow-lg"
               aria-label="next"
             >
               <i className="icon-arrow-right" />
