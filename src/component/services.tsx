@@ -30,7 +30,6 @@ const Services = () => {
                     width={32}
                     height={32}
                     alt="services images"
-                    unoptimized
                     loading="lazy"
                     className="object-contain"
                   />
