@@ -10,7 +10,7 @@ const Info = () => {
       <div className="grid gap-6 md:grid-cols-[1fr_auto] md:gap-x-10 lg:gap-x-12 xl:gap-x-16 md:gap-y-6 md:items-center">
         {/* Avatar — first in source for mobile stacking; positioned right at md+ */}
         <div className="justify-self-center md:justify-self-end md:row-start-1 md:col-start-2 xl:row-span-4 hidden-pop">
-          <div className="avatar-glow rounded-2xl w-[300px] h-[300px] lg:w-[320px] lg:h-[320px] xl:w-[360px] xl:h-[360px]">
+          <div className="avatar-glow rounded-2xl w-[300px] h-[300px] lg:w-[380px] lg:h-[380px] xl:w-[500px] xl:h-[500px]">
             <div className="relative rounded-2xl overflow-hidden w-full h-full">
               <Image
                 className="object-cover w-full h-full"
@@ -20,7 +20,7 @@ const Info = () => {
                 alt="Jay Mark Borja"
                 priority
                 fetchPriority="high"
-                sizes="(max-width: 1024px) 300px, (max-width: 1280px) 320px, 360px"
+                sizes="(max-width: 1024px) 300px, (max-width: 1280px) 380px, 500px"
               />
               <div className="absolute bottom-3 left-3 font-mono-tech text-xs">
                 <div className="px-2 py-1 rounded bg-background/80 backdrop-blur border border-border text-muted-foreground">
