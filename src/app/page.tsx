@@ -29,7 +29,10 @@ export default function Home() {
         <TechStack />
       </section>
 
-      <section id="services" className="wrapper section-alt flex justify-center">
+      <section
+        id="services"
+        className="wrapper section-alt flex justify-center"
+      >
         <Services />
       </section>
 
@@ -37,7 +40,10 @@ export default function Home() {
         <Projects />
       </section>
 
-      <section id="testimonials" className="wrapper section-alt flex justify-center">
+      <section
+        id="testimonials"
+        className="wrapper section-alt flex justify-center"
+      >
         <Testimonials />
       </section>
 

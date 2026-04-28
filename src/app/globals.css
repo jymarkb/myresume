@@ -17,11 +17,11 @@
 @layer base {
   /* light (default) */
   :root {
-    --background: 210 20% 99%;
+    --background: 210 20% 96%;
     --foreground: 222 39% 9%;
-    --card: 0 0% 100%;
+    --card: 210 20% 99%;
     --card-foreground: 222 39% 9%;
-    --popover: 0 0% 100%;
+    --popover: 210 20% 99%;
     --popover-foreground: 222 39% 9%;
     --primary: 222 39% 11%;
     --primary-theme: 187 90% 36%;
@@ -46,8 +46,8 @@
     --bg-glow-1: hsla(187, 90%, 50%, 0.06);
     --bg-glow-2: hsla(260, 70%, 60%, 0.05);
     --hint-color: 210 20% 96%;
-    --section-alt: 220 16% 94%;
-    --panel: 220 18% 91%;
+    --section-alt: 220 16% 91%;
+    --panel: 220 18% 88%;
     --accent-2: 260 70% 60%;
   }
 
@@ -95,6 +95,7 @@
       radial-gradient(circle at 20% 0%, var(--bg-glow-1), transparent 40%),
       radial-gradient(circle at 80% 30%, var(--bg-glow-2), transparent 45%);
     background-attachment: fixed;
+    overflow-x: hidden;
     transition:
       background-color 0.2s ease,
       color 0.2s ease;

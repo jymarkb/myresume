@@ -1,4 +1,4 @@
-import type { TechLayer } from "./utils";
+import type { TechLayer, ProjectCardType } from "./utils";
 
 export const headerLinkData = [
     {
@@ -34,33 +34,33 @@ export const headerLinkData = [
 export const serviceData = [
     {
         "title": "Web Development",
-        "description": "Building responsive and visually appealing web applications using modern stacks like Symfony, React, Tailwind CSS, and TypeScript. Focused on seamless UI/UX and performance.",
-        "imgSrc": "/images/gif-optimized/web.gif"
+        "description": "Production web apps end-to-end — clean UI, solid performance, sensible architecture across React, Next.js, Symfony, and Laravel.",
+        "imgSrc": "/images/webp/services/web.webp"
     },
     {
         "title": "Database Management",
-        "description": "Designing and managing efficient, secure, and scalable database systems with MySQL, ensuring data integrity, backups, and optimized queries.",
-        "imgSrc": "/images/gif-optimized/database.gif"
+        "description": "Schema design, query tuning, and reliable backups for MySQL and PostgreSQL — built to stay fast as your data grows.",
+        "imgSrc": "/images/webp/services/database.webp"
     },
     {
         "title": "Deployment & DevOps",
-        "description": "Automating CI/CD workflows using GitHub Actions or Bitbucket Pipeline, containerizing applications with Docker, and deploying to AWS ECS Fargate with Nginx + PHP-FPM stacks.",
-        "imgSrc": "/images/gif-optimized/deploy.gif"
+        "description": "CI/CD pipelines, Docker containers, and AWS deployments wired up so releases stop being a Friday afternoon problem.",
+        "imgSrc": "/images/webp/services/deploy.webp"
     },
     {
         "title": "Performance Optimization",
-        "description": "Improving load time and scalability using advanced caching, database indexing and frontend optimization",
-        "imgSrc": "/images/gif-optimized/performance.gif"
+        "description": "Caching, query indexes, and frontend cleanup. Concrete past wins — 40% app perf gain, PageSpeed 70 → 90+.",
+        "imgSrc": "/images/webp/services/performance.webp"
     },
     {
         "title": "Cloud Storage Integration",
-        "description": "Implementing secure file uploads with AWS S3, handling public/private visibility, presigned URLs, and efficient asset delivery for media-rich platforms.",
-        "imgSrc": "/images/gif-optimized/cloud.gif"
+        "description": "Secure S3 uploads with presigned URLs and visibility controls — built for media-heavy apps without runaway costs.",
+        "imgSrc": "/images/webp/services/cloud.webp"
     },
     {
         "title": "API Development",
-        "description": "Creating secure and RESTful APIs using Symfony 7 or Next.Js, enabling smooth integration with frontend clients and third-party services.",
-        "imgSrc": "/images/gif-optimized/api.gif"
+        "description": "REST APIs in Symfony or Next.js — auth, third-party integrations, and error handling that holds up in production.",
+        "imgSrc": "/images/webp/services/api.webp"
     },
 ];
 
@@ -157,17 +157,52 @@ export const aboutMeDescription = [
 // Subject options for the contact form's <select> — kept in sync with serviceData titles.
 export const contactSubjects: string[] = serviceData.map((s) => s.title);
 
-export const projectCard = [
+export const projectCard: ProjectCardType[] = [
+    // ── Currently shipping (client work) ─────────────────────────────
     {
-        title: "SimpleEditor",
-        description: "Simple Editor is a modular visual content editor built for creating blog and landing page layouts through a drag-and-drop editing experience. It lets users compose structured pages with nested rows and columns, customizable content blocks, live style editing, and media components such as images, buttons, YouTube embeds, maps, cover sections, and accordions. The editor is powered by a flexible JSON-based content model, making it easier to manage, preview, and render rich page layouts from a single editing surface.",
+        title: "REILink",
+        description: "Full-stack real estate platform for lead generation, deal pipeline management, and investor collaboration. I shipped the internal lead-messaging system, deal pipeline, AI-assisted property tools, and integrations with Auth0 / Go High Level / third-party data (Zillow, Redfin, BatchData).",
         tags: [
-            "React", "TypeScript", "Slate.js", "Vite"
+            "Symfony 7", "Preact.js", "Tailwind CSS", "MySQL", "Auth0", "Docker", "reCAPTCHA", "REST APIs",
         ],
-        link: "/",
+        link: "https://reilink.com",
         imageSrc: "temporary.png",
-        gallery: null
+        gallery: null,
+        status: "live",
+        kind: "company",
+        role: "PHP Developer",
+        company: "SEO For Real Estate Investors",
     },
+    {
+        title: "Apex",
+        description: "Full-stack platform for automated WordPress site & page generation — AI-generated content (Gemini) and images (OpenAI), Stripe-powered subscriptions and credit systems, queue-based workers, and webhook-driven delivery. Part of a broader CRM and lead-management system.",
+        tags: [
+            "Symfony 7", "React", "Tailwind CSS", "MySQL", "Docker", "AWS", "Stripe", "Twilio", "DocuSign", "OpenAI", "Gemini",
+        ],
+        link: "",
+        imageSrc: "temporary.png",
+        gallery: null,
+        status: "live",
+        kind: "company",
+        role: "PHP Developer",
+        company: "SEO For Real Estate Investors",
+    },
+    {
+        title: "Lamudi Real-Estate Platform",
+        description: "Contributed to the core platform: a Symfony 4 → 5 + PHP 8 + AWS migration, a landmark-search microservice with optimized Elasticsearch indexing, lazy-loaded map APIs that cut server query cost by 35%, GA4 event tracking refactor, and SEO + perf work that lifted PageSpeed from 70 → 90+.",
+        tags: [
+            "Symfony 5", "PHP 8", "Elasticsearch", "Bitbucket CI/CD", "AWS", "SEO",
+        ],
+        link: "https://www.lamudi.com.ph",
+        imageSrc: "temporary.png",
+        gallery: null,
+        status: "live",
+        kind: "company",
+        role: "Junior Software Engineer",
+        company: "Lamudi Technical Services Corp.",
+    },
+
+    // ── Selected work (personal, live) ────────────────────────────────
     {
         title: "COVID-19 Contact Tracing System",
         description: "A web and mobile-based application designed to assist in tracking and managing COVID-19 exposure. The system allows users to log check-ins, monitor potential contact events, and store health data securely. Built with Laravel 7 and Bootstrap for the web interface, and Android with Material UI for the mobile app scanner.",
@@ -205,7 +240,9 @@ export const projectCard = [
                 "title": "Citizen QR Scan Record",
                 "imgSrc": "/images/work/covid/s-covid-6.png"
             },
-        ]
+        ],
+        status: "live",
+        kind: "personal",
     },
     {
         title: "E-CapProLib",
@@ -228,7 +265,23 @@ export const projectCard = [
                 "title": "Landing Page Image 1",
                 "imgSrc": "/images/work/capstone/s-capstone-3.png"
             },
-        ]
+        ],
+        status: "live",
+        kind: "personal",
+    },
+
+    // ── Building now (WIP) ────────────────────────────────────────────
+    {
+        title: "SimpleEditor",
+        description: "A drag-and-drop visual content editor for building web pages of any kind — similar in spirit to TinyMCE or other rich-text editors, but with structured layout primitives (rows, columns, content blocks) layered on top. Live style editing, embedded WYSIWYG for rich text, and a flexible JSON content model that makes any layout easy to preview, persist, and re-render.",
+        tags: [
+            "React", "TypeScript", "Slate.js", "Tailwind CSS", "Vite", "WYSIWYG", "Page Builder",
+        ],
+        link: "/",
+        imageSrc: "temporary.png",
+        gallery: null,
+        status: "wip",
+        kind: "personal",
     },
     {
         title: "Smart Pixel",
@@ -238,17 +291,21 @@ export const projectCard = [
         ],
         link: "/",
         imageSrc: "temporary.png",
-        gallery: null
+        gallery: null,
+        status: "wip",
+        kind: "personal",
     },
     {
-        title: "My Drive",
-        description: "A personal cloud storage application inspired by Google Drive. My Drive allows users to securely upload, organize, and manage files in folders, with support for sharing and downloading. Built with a Laravel backend and React-based frontend, it integrates with S3 for scalable storage and uses Docker for containerized deployment.",
+        title: "PhotoSync",
+        description: "A mobile photo gallery that pulls images from multiple cloud accounts into one searchable timeline. Users connect several Google accounts on the device to browse photos from each Drive in one place — with planned support for Apple iCloud Drive where the API allows. A small web admin panel handles account management and usage oversight.",
         tags: [
-            "React", "TypeScript", "Laravel", "MySQL", "S3", "Docker", "Cloud Storage", "File Management", "REST API", "JWT Auth",
+            "React Native", "Expo", "TypeScript", "Next.js", "Google Drive API", "OAuth 2.0", "iCloud", "Multi-Account", "REST API",
         ],
         link: "/",
         imageSrc: "temporary.png",
-        gallery: null
+        gallery: null,
+        status: "wip",
+        kind: "personal",
     },
 ];
 

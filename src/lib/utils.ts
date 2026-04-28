@@ -36,6 +36,9 @@ export type WorkDataType = {
 };
 
 
+export type ProjectStatus = "live" | "wip";
+export type ProjectKind = "company" | "personal";
+
 export type ProjectCardType = {
   title: string;
   description: string;
@@ -43,6 +46,10 @@ export type ProjectCardType = {
   link: string;
   imageSrc: string;
   gallery: WorkDataType[] | null;
+  status: ProjectStatus;
+  kind: ProjectKind;
+  role?: string;
+  company?: string;
 };
 
 
