@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import MobileHeader from "./mobile-header";
 import HeaderLink from "./header-link";
+import ThemeToggle from "./theme-toggle";
 import { sectionType, debounce } from "@/lib/utils";
 
 const Header = () => {
@@ -45,7 +45,7 @@ const Header = () => {
       const currentScroll = windowInner * 0.3 + yAxis;
 
       const match = sectionData.find(
-        (item) => item.top < currentScroll && item.bot > currentScroll
+        (item) => item.top < currentScroll && item.bot > currentScroll,
       );
 
       const target = match?.target as string;
@@ -73,47 +73,33 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="h-20 sticky top-0 bg-background/95 z-50 flex items-center justify-center border-b-4 border-primary shadow-lg">
-      <nav className="container-max-w w-full flex items-center py-4 px-4 md:px-8 lg:px-12 xl:px-16">
-        <Link href="/">
-          <div className="logo">
-            <Image
-              className="h-12 w-40 object-contain hidden lg:block"
-              src="/images/logo.svg"
-              alt="website logo"
-              width={160}
-              height={48}
-              loading="eager"
-            />
-            <Image
-              className="h-16 w-16 object-contain lg:hidden"
-              src="/images/mobile-logo.svg"
-              alt="website logo"
-              width={64}
-              height={64}
-              loading="eager"
-            />
+    <header className="h-16 sticky top-0 bg-background/70 backdrop-blur-md z-50 flex items-center justify-center border-b border-border">
+      <nav className="container-max-w w-full flex items-center py-3 px-4 md:px-8 lg:px-12 xl:px-16">
+        <Link href="/" aria-label="home">
+          <div className="logo flex items-center gap-2">
+            <span className="font-mono-tech text-primaryTheme text-xl font-bold">
+              {"<jmb/>"}
+            </span>
+            {/* <span className="font-mono-tech text-foreground text-sm hidden sm:inline">
+              jymark.dev
+            </span> */}
           </div>
         </Link>
-        <button
-          className="ml-auto md:hidden"
-          aria-label="menu button"
-          onClick={setMobileHeader}
-        >
-          <i className="icon-nav-menu text-2xl h-10 w-10 border-2 rounded-sm p-1 border-primary text-primary"></i>
-        </button>
-        <div className="ml-auto font-semibold flex gap-8 hidden md:block">
-          <ul className="flex md:gap-6 lg:gap-8 nav-header">
+        <div className="ml-auto flex items-center gap-2 lg:hidden">
+          <ThemeToggle />
+          <button aria-label="menu button" onClick={setMobileHeader}>
+            <i className="icon-nav-menu text-2xl h-10 w-10 border border-border rounded p-1 text-foreground"></i>
+          </button>
+        </div>
+        <div className="ml-auto hidden lg:flex items-center gap-6 xl:gap-8">
+          <ul className="flex gap-5 xl:gap-7 2xl:gap-8 nav-header items-center">
             <HeaderLink isActive={isActive} />
           </ul>
+          <ThemeToggle />
         </div>
       </nav>
       {/* mobile popup nav link */}
-      {isOpen && (
-        <MobileHeader onClose={setMobileHeader}>
-          <HeaderLink isActive={isActive} />
-        </MobileHeader>
-      )}
+      {isOpen && <MobileHeader isActive={isActive} onClose={setMobileHeader} />}
     </header>
   );
 };

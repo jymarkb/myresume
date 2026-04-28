@@ -3,40 +3,46 @@ import Image from "next/image";
 
 const Services = () => {
   return (
-    <div className="container-max-w w-full flex flex-col items-center py-8 px-6 sm:px-8 lg:p-12 xl:p-16">
-      <div className="flex items-center flex-col text-center gap-2 text-primary/85 mb-4 sm:mb-8 lg:mb-12 xl:mb-16 hidden-up">
-        <p className="text-xl text-white font-semibold bg-gradient-to-r from-primaryTheme to-indigo-500 filter animate-subtlePulse px-8 py-2 rounded-sm">
-          My Services
+    <div className="container-max-w w-full py-16 lg:py-24 px-6 sm:px-8 lg:px-12 xl:px-16">
+      <div className="flex flex-col items-start gap-3 mb-10 lg:mb-14 hidden-up">
+        <div className="section-eyebrow">Services</div>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-3xl font-bold tracking-tight leading-tight">
+          What I can{" "}
+          <span className="text-accent-gradient">build for you.</span>
+        </h2>
+        <p className="text-muted-foreground max-w-xl">
+          End-to-end solutions across the full stack — from frontend interfaces
+          to deployment pipelines.
         </p>
-        <div className="text-2xl sm:text-4xl xl:text-6xl max-w-full md:max-w-[700px] xl:max-w-[1000px] font-semibold">
-          <span className="bg-gradient-to-r from-primaryTheme to-indigo-500 bg-clip-text text-transparent filter animate-subtlePulse">
-            Designing Solution
-          </span>
-          <span> Customized to Meet Your Requirement</span>
-        </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-4 xl:gap-8 w-fit">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
         {serviceData.map((item, index) => {
           return (
             <div
               key={index}
-              className={`hidden-left-up max-w-md flex flex-col border rounded-lg py-4 px-4 md:px-6 xl:px-8 shadow-lg ${(index + 1) % 2 == 0 ? "border-primary bg-gradient-to-r from-primary/90 to-primary/80 text-white" : "bg-gradient-to-r from-gray-200 to-gray-100 border-primaryTheme "}`}
+              className="hidden-left-up group relative flex flex-col gap-4 rounded-xl border border-border bg-card/60 p-6 transition-all hover:border-primaryTheme/40 hover:bg-card"
             >
-              <div className="h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16 aspect-square">
-                <Image
-                  src={item.imgSrc}
-                  width={64}
-                  height={64}
-                  alt="services images"
-                  unoptimized
-                  loading="lazy"
-                  className="object-cover"
-                />
+              <div className="flex items-start justify-between">
+                <div className="h-12 w-12 rounded-lg bg-primaryTheme/10 border border-primaryTheme/20 flex items-center justify-center">
+                  <Image
+                    src={item.imgSrc}
+                    width={32}
+                    height={32}
+                    alt="services images"
+                    loading="lazy"
+                    className="object-contain"
+                  />
+                </div>
+                <span className="font-mono-tech text-xs text-muted-foreground">
+                  {String(index + 1).padStart(2, "0")} / {String(serviceData.length).padStart(2, "0")}
+                </span>
               </div>
-              <h1 className="text-lg xl:text-xl 2xl:text-2xl font-bold text-primaryTheme">
+
+              <h3 className="text-lg lg:text-xl font-semibold text-foreground">
                 {item.title}
-              </h1>
-              <p className="text-xs md:text-sm xl:text-md text-justify">
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {item.description}
               </p>
             </div>

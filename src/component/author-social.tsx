@@ -3,30 +3,28 @@ import Link from "next/link";
 import GetInTouch from "./get-in-touch";
 import Socials from "./socials";
 import ScrollToTarget from "./scroll-to-target";
-// import TargetLink from "./target-link";
+
 const AuthorSocial = () => {
   return (
-    <>
-      <div className="flex gap-4">
-        <GetInTouch slideStyle="hidden-right" />
-        {/* <TargetLink
-          style="px-5 sm:px-8 py-2 text-primary border rounded shadow-md transition duration-300 hover:scale-105"
-          target="#projects"
-        >
-         
-        </TargetLink> */}
+    <div className="flex flex-col gap-3 mt-2 hidden-right">
+      {/* Buttons — always on the same row, never wrap text inside */}
+      <div className="flex items-center gap-2 sm:gap-3">
+        <GetInTouch slideStyle="text-sm sm:text-base whitespace-nowrap" />
         <Link
-          className="px-5 sm:px-8 py-2 text-primary border rounded shadow-md transition duration-300 hover:scale-105 hidden-right"
+          className="btn-ghost text-sm sm:text-base whitespace-nowrap"
           href="#projects"
           onClick={ScrollToTarget}
         >
           See my work
+          <i className="icon-arrow-right" />
         </Link>
       </div>
-      <ul className="flex font-thin gap-2 items-center sm:ml-auto md:ml-0 lg:ml-auto hidden-right">
+
+      {/* Socials — below the buttons */}
+      <ul className="flex gap-2 items-center">
         <Socials />
       </ul>
-    </>
+    </div>
   );
 };
 

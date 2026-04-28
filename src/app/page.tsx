@@ -5,8 +5,9 @@ import AboutMe from "@/component/about";
 import TechStack from "@/component/tech-stack";
 import Services from "@/component/services";
 import Projects from "@/component/projects";
+import Testimonials from "@/component/testimonials";
 import Talk from "@/component/talk";
-import { Toaster } from "sonner";
+import ThemedToaster from "@/component/themed-toaster";
 import Footer from "@/component/footer";
 import ClientObserver from "@/component/animation/client-observer";
 import { PageObserver } from "@/component/animation/page-observer";
@@ -20,7 +21,7 @@ export default function Home() {
         <Info />
       </section>
 
-      <section id="aboutme" className="wrapper flex justify-center">
+      <section id="aboutme" className="wrapper section-alt flex justify-center">
         <AboutMe />
       </section>
 
@@ -28,12 +29,22 @@ export default function Home() {
         <TechStack />
       </section>
 
-      <section id="services" className="wrapper flex justify-center">
+      <section
+        id="services"
+        className="wrapper section-alt flex justify-center"
+      >
         <Services />
       </section>
 
-      <section id="projects" className="wrapper bg-primary flex justify-center">
+      <section id="projects" className="wrapper flex justify-center">
         <Projects />
+      </section>
+
+      <section
+        id="testimonials"
+        className="wrapper section-alt flex justify-center"
+      >
+        <Testimonials />
       </section>
 
       <section id="contact" className="wrapper flex justify-center">
@@ -43,7 +54,7 @@ export default function Home() {
       <div id="modal-overlay"></div>
       <Footer />
       <ClientObserver animate={PageObserver} />
-      <Toaster richColors />
+      <ThemedToaster />
     </main>
   );
 }

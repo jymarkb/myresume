@@ -12,11 +12,12 @@ const GetInTouch = ({ slideStyle }: { slideStyle: string }) => {
   return (
     <>
       <button
-        className={`px-6 sm:px-8 py-2 bg-primary text-white rounded shadow-md transition duration-300 hover:bg-primary/90 hover:scale-105 w-fit ${slideStyle}`}
+        className={`btn-primary w-fit ${slideStyle}`}
         name="get in touch"
         onClick={onShowForm}
       >
         Get in touch
+        <i className="icon-arrow-right" />
       </button>
 
       {isOpen && <ContactForm onClose={onShowForm} />}

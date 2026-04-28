@@ -1,10 +1,12 @@
+import type { TechLayer, ProjectCardType } from "./utils";
+
 export const headerLinkData = [
     {
         "title": "Home",
         "target": "home",
     },
     {
-        "title": "About Me",
+        "title": "About",
         "target": "aboutme",
     },
     {
@@ -20,6 +22,10 @@ export const headerLinkData = [
         "target": "projects",
     },
     {
+        "title": "Testimonials",
+        "target": "testimonials",
+    },
+    {
         "title": "Contact",
         "target": "contact",
     },
@@ -28,33 +34,33 @@ export const headerLinkData = [
 export const serviceData = [
     {
         "title": "Web Development",
-        "description": "Building responsive and visually appealing web applications using modern stacks like Symfony, React, Tailwind CSS, and TypeScript. Focused on seamless UI/UX and performance.",
-        "imgSrc": "/images/gif-optimized/web.gif"
+        "description": "Production web apps end-to-end — clean UI, solid performance, sensible architecture across React, Next.js, Symfony, and Laravel.",
+        "imgSrc": "/images/webp/services/web.webp"
     },
     {
         "title": "Database Management",
-        "description": "Designing and managing efficient, secure, and scalable database systems with MySQL, ensuring data integrity, backups, and optimized queries.",
-        "imgSrc": "/images/gif-optimized/database.gif"
+        "description": "Schema design, query tuning, and reliable backups for MySQL and PostgreSQL — built to stay fast as your data grows.",
+        "imgSrc": "/images/webp/services/database.webp"
     },
     {
         "title": "Deployment & DevOps",
-        "description": "Automating CI/CD workflows using GitHub Actions or Bitbucket Pipeline, containerizing applications with Docker, and deploying to AWS ECS Fargate with Nginx + PHP-FPM stacks.",
-        "imgSrc": "/images/gif-optimized/deploy.gif"
+        "description": "CI/CD pipelines, Docker containers, and AWS deployments wired up so releases stop being a Friday afternoon problem.",
+        "imgSrc": "/images/webp/services/deploy.webp"
     },
     {
         "title": "Performance Optimization",
-        "description": "Improving load time and scalability using advanced caching, database indexing and frontend optimization",
-        "imgSrc": "/images/gif-optimized/performance.gif"
+        "description": "Caching, query indexes, and frontend cleanup. Concrete past wins — 40% app perf gain, PageSpeed 70 → 90+.",
+        "imgSrc": "/images/webp/services/performance.webp"
     },
     {
         "title": "Cloud Storage Integration",
-        "description": "Implementing secure file uploads with AWS S3, handling public/private visibility, presigned URLs, and efficient asset delivery for media-rich platforms.",
-        "imgSrc": "/images/gif-optimized/cloud.gif"
+        "description": "Secure S3 uploads with presigned URLs and visibility controls — built for media-heavy apps without runaway costs.",
+        "imgSrc": "/images/webp/services/cloud.webp"
     },
     {
         "title": "API Development",
-        "description": "Creating secure and RESTful APIs using Symfony 7 or Next.Js, enabling smooth integration with frontend clients and third-party services.",
-        "imgSrc": "/images/gif-optimized/api.gif"
+        "description": "REST APIs in Symfony or Next.js — auth, third-party integrations, and error handling that holds up in production.",
+        "imgSrc": "/images/webp/services/api.webp"
     },
 ];
 
@@ -74,38 +80,38 @@ export const socialData = [
         "url": "https://www.linkedin.com/in/jaymark-borja/",
         "icon": "linkedin"
     },
-    {
-        "title": "Leetcode",
-        "url": "https://leetcode.com/u/jymarkb/",
-        "imgSrc": "/images/svg/leetcode.svg"
-    },
-    {
-        "title": "Leetcode",
-        "url": "https://www.hackerrank.com/profile/jymark_borja",
-        "imgSrc": "/images/svg/hackerrank.svg"
-    },
+    // {
+    //     "title": "Leetcode",
+    //     "url": "https://leetcode.com/u/jymarkb/",
+    //     "imgSrc": "/images/svg/leetcode.svg"
+    // },
+    // {
+    //     "title": "Leetcode",
+    //     "url": "https://www.hackerrank.com/profile/jymark_borja",
+    //     "imgSrc": "/images/svg/hackerrank.svg"
+    // },
 ];
 
 export const workData = [
     {
         "title": "Landing Page",
-        "imgSrc": "/images/work/blog/s-blog-1.png"
+        "imgSrc": "/images/work/blog/s-blog-1.webp"
     },
     {
         "title": "About Page",
-        "imgSrc": "/images/work/blog/s-blog-2.png"
+        "imgSrc": "/images/work/blog/s-blog-2.webp"
     },
     {
         "title": "Blog Page",
-        "imgSrc": "/images/work/blog/s-blog-3.png"
+        "imgSrc": "/images/work/blog/s-blog-3.webp"
     },
     {
         "title": "Contact Page",
-        "imgSrc": "/images/work/blog/s-blog-4.png"
+        "imgSrc": "/images/work/blog/s-blog-4.webp"
     },
     {
         "title": "Blog Edit Page",
-        "imgSrc": "/images/work/blog/s-blog-5.png"
+        "imgSrc": "/images/work/blog/s-blog-5.webp"
     },
 ];
 
@@ -138,185 +144,330 @@ export const aboutMeSocial = [
 
 export const aboutMeDescription = [
     {
-        "sentence": "I am an accomplished web developer with a proven track record in designing, developing, and maintaining web applications using contemporary programming languages."
+        "sentence": "I'm a results-driven developer building scalable, high-performance web applications from concept to deployment with modern best practices."
     },
     {
-        "sentence": "With two years of experience, I have proficiently worked on both the front- end and back - end facets of web applications."
+        "sentence": "With over four years of professional experience across the full stack, I've delivered production-ready features that hold up under real load."
     },
     {
-        "sentence": " My primary expertise lies in crafting responsive and reusable web UI components, complemented by a solid ability to contribute to server- side coding."
-    },
-];
-
-export const techButtons = [
-    {
-        "name": "Frontend"
-    },
-    {
-        "name": "Backend"
-    },
-    {
-        "name": "Tools & Platform"
-    },
-    {
-        "name": "Other"
+        "sentence": "I specialize in reusable, responsive UI components and contribute to backend systems, APIs, and architectural decisions that scale."
     },
 ];
 
-export const techData = [
-    {
-        category: "Frontend",
-        items: [
-            { name: "React.js", imgSrc: "react.svg" },
-            { name: "Typescript", imgSrc: "typescript.svg" },
-            { name: "TailwindCSS", imgSrc: "tailwind.svg" },
-            { name: "HTML", imgSrc: "html.svg" },
-            { name: "CSS", imgSrc: "css.svg" },
-            { name: "SASS", imgSrc: "sass.svg" },
-            { name: "Bootstrap", imgSrc: "bootstrap.svg" },
-            { name: "shadcn/ui", imgSrc: "shadcn.svg" },
-            { name: "Lucide", imgSrc: "lucide.svg" },
-            { name: "TinyMCE", imgSrc: "tiny.svg" },
-        ],
-    },
-    {
-        category: "Backend",
-        items: [
-            { name: "Symfony", imgSrc: "symfony.svg" },
-            { name: "Laravel", imgSrc: "laravel.svg" },
-            { name: "Next.js", imgSrc: "nextjs.svg" },
-            { name: "Node.js", imgSrc: "nodejs.svg" },
-            { name: "Wordpress", imgSrc: "wordpress.svg" },
-            { name: "PHP", imgSrc: "php.svg" },
-            { name: "Prisma", imgSrc: "prisma.svg" },
-            { name: "MySQL", imgSrc: "mysql.svg" },
-            // { name: "Postgres", imgSrc: "postgresql.svg" },
-        ],
-    },
-    {
-        category: "Tools & Platform",
-        items: [
-            { name: "Docker", imgSrc: "docker.svg" },
-            { name: "NGINX", imgSrc: "nginx.svg" },
-            { name: "Git", imgSrc: "git.svg" },
-            { name: "AWS", imgSrc: "aws.svg" },
-            { name: "Railway", imgSrc: "railway.svg" },
-            { name: "Koyeb", imgSrc: "koyeb.svg" },
-            { name: "Vercel", imgSrc: "vercel.svg" },
-            { name: "ESLint", imgSrc: "eslint.svg" },
-            { name: "Prettier", imgSrc: "prettier.svg" },
-            { name: "Twilio", imgSrc: "twilio.svg" },
-        ],
-    },
-    {
-        category: "Other",
-        items: [
-            { name: "Jira", imgSrc: "jira.svg" },
-            { name: "Figma", imgSrc: "figma.svg" },
-            { name: "RESTful API", imgSrc: "api.svg" },
-            { name: "WhatsApp API", imgSrc: "whatsapp.svg" },
-            { name: "Postman", imgSrc: "postman.svg" },
-            { name: "WSL 2 Linux", imgSrc: "linux.svg" },
-            { name: "Agile Method", imgSrc: "agile.svg" },
-            { name: "Micro Service", imgSrc: "micro-services.svg" },
-        ],
-    },
-];
+// Subject options for the contact form's <select> — kept in sync with serviceData titles.
+export const contactSubjects: string[] = serviceData.map((s) => s.title);
 
-export const projectCard = [
+export const projectCard: ProjectCardType[] = [
+    // ── Currently shipping (client work) ─────────────────────────────
     {
-        title: "SimpleEditor",
-        description: "Simple Editor is a modular visual content editor built for creating blog and landing page layouts through a drag-and-drop editing experience. It lets users compose structured pages with nested rows and columns, customizable content blocks, live style editing, and media components such as images, buttons, YouTube embeds, maps, cover sections, and accordions. The editor is powered by a flexible JSON-based content model, making it easier to manage, preview, and render rich page layouts from a single editing surface.",
+        title: "REILink",
+        description: "Full-stack real estate platform for lead generation, deal pipeline management, and investor collaboration.",
+        tagline: "Real estate platform for lead generation, deal pipelines, and investor collaboration.",
+        highlights: [
+            "Built internal lead-messaging system and deal pipeline",
+            "Shipped AI-assisted property analysis tools",
+            "Integrated Auth0, GoHighLevel, Zillow / Redfin / BatchData APIs",
+        ],
         tags: [
-            "React", "TypeScript", "Slate.js", "Vite"
+            "Symfony 7", "Preact.js", "Tailwind CSS", "MySQL", "Auth0", "Docker", "reCAPTCHA", "REST API",
         ],
-        link: "/",
+        link: "https://reilink.com",
         imageSrc: "temporary.png",
-        gallery: null
+        gallery: null,
+        status: "live",
+        kind: "company",
+        role: "PHP Developer",
+        company: "SEO For Real Estate Investors",
     },
+    {
+        title: "Apex",
+        description: "Full-stack platform for automated WordPress site & page generation, powered by AI and credit-based subscriptions.",
+        tagline: "Automated WordPress site and page generation, powered by AI and credit-based subscriptions.",
+        highlights: [
+            "AI content via Gemini, image generation via OpenAI",
+            "Stripe subscriptions + one-time credit system",
+            "Queue-based workers and webhook-driven delivery",
+        ],
+        tags: [
+            "Symfony 7", "React", "Tailwind CSS", "MySQL", "Docker", "AWS", "Stripe", "Twilio", "DocuSign", "OpenAI", "Gemini",
+        ],
+        link: "",
+        imageSrc: "temporary.png",
+        gallery: null,
+        status: "live",
+        kind: "company",
+        role: "PHP Developer",
+        company: "SEO For Real Estate Investors",
+    },
+    {
+        title: "Lamudi Real-Estate Platform",
+        tagline: "Real estate marketplace serving multiple Southeast Asian markets.",
+        highlights: [
+            "Led Symfony 4 → 5 + PHP 8 migration onto AWS",
+            "Cut server query cost ~35% with lazy-loaded map APIs",
+            "Lifted PageSpeed from 70 → 90+ across key pages",
+        ],
+        tags: [
+            "Symfony 5", "PHP 8", "Elasticsearch", "Bitbucket CI/CD", "AWS", "SEO",
+        ],
+        link: "https://www.lamudi.com.ph",
+        imageSrc: "temporary.png",
+        gallery: null,
+        status: "live",
+        kind: "company",
+        role: "Junior Software Engineer",
+        company: "Lamudi Technical Services Corp.",
+    },
+
+    // ── Selected work (personal, live) ────────────────────────────────
     {
         title: "COVID-19 Contact Tracing System",
-        description: "A web and mobile-based application designed to assist in tracking and managing COVID-19 exposure. The system allows users to log check-ins, monitor potential contact events, and store health data securely. Built with Laravel 7 and Bootstrap for the web interface, and Android with Material UI for the mobile app scanner.",
+        tagline: "Contact tracing system built for the LGU of Libmanan during COVID-19.",
+        highlights: [
+            "Web app for resident registration and QR ID generation",
+            "Android scanner app for establishments",
+            "Geographic dashboard tracking cases by barangay",
+        ],
         tags: [
             "Bootstrap", "Material UI", "Android (Java)", "Laravel 7", "XAMPP", "MySQL", "JWT Auth", "Monorepo",
         ],
         link: "https://github.com/jymarkb/ContactTracing",
-        imageSrc: "covid-1.png",
+        imageSrc: "covid-1.webp",
         gallery: [
             {
                 "title": "Landing Page Image 1",
-                "imgSrc": "/images/work/covid/s-covid-1.png"
+                "imgSrc": "/images/work/covid/s-covid-1.webp"
             },
             {
                 "title": "Landing Page Image 2",
-                "imgSrc": "/images/work/covid/s-covid-7.png"
+                "imgSrc": "/images/work/covid/s-covid-7.webp"
             },
             {
                 "title": "Landing Page Image 3",
-                "imgSrc": "/images/work/covid/s-covid-8.png"
+                "imgSrc": "/images/work/covid/s-covid-8.webp"
             },
             {
                 "title": "Citizen Generated Identification Card Image",
-                "imgSrc": "/images/work/covid/s-covid-2.png"
+                "imgSrc": "/images/work/covid/s-covid-2.webp"
             },
             {
                 "title": "Establishment App Image 1",
-                "imgSrc": "/images/work/covid/s-covid-3.png"
+                "imgSrc": "/images/work/covid/s-covid-3.webp"
             },
             {
                 "title": "Establishment App Image 2",
-                "imgSrc": "/images/work/covid/s-covid-4.png"
+                "imgSrc": "/images/work/covid/s-covid-4.webp"
             },
             {
                 "title": "Citizen QR Scan Record",
-                "imgSrc": "/images/work/covid/s-covid-6.png"
+                "imgSrc": "/images/work/covid/s-covid-6.webp"
             },
-        ]
+        ],
+        status: "live",
+        kind: "personal",
     },
     {
         title: "E-CapProLib",
-        description: "An online Capstone Project Repository Library designed for academic institutions to store, manage, and browse student capstone projects. Developed with PHP and MySQL, the system allows users to upload documents, search project titles, and categorize works by course and year level, with a responsive UI using Bootstrap.",
+        tagline: "Capstone project repository for academic institutions.",
+        highlights: [
+            "Document upload, search, and category-based browsing",
+            "Filter projects by course and year level",
+            "Built for the College of Information Criminology archive",
+        ],
         tags: [
             "Bootstrap", "PHP", "MySQL", "XAMPP", "HTML", "CSS", "jQuery"
         ],
         link: "https://github.com/jymarkb/CapstoneRepo",
-        imageSrc: "capstone-1.png",
+        imageSrc: "capstone-1.webp",
         gallery: [
             {
                 "title": "Landing Page Image 1",
-                "imgSrc": "/images/work/capstone/s-capstone-1.png"
+                "imgSrc": "/images/work/capstone/s-capstone-1.webp"
             },
             {
                 "title": "Landing Page Image 1",
-                "imgSrc": "/images/work/capstone/s-capstone-2.png"
+                "imgSrc": "/images/work/capstone/s-capstone-2.webp"
             },
             {
                 "title": "Landing Page Image 1",
-                "imgSrc": "/images/work/capstone/s-capstone-3.png"
+                "imgSrc": "/images/work/capstone/s-capstone-3.webp"
             },
-        ]
+        ],
+        status: "live",
+        kind: "personal",
+    },
+
+    // ── Building now (WIP) ────────────────────────────────────────────
+    {
+        title: "SimpleEditor",
+        tagline: "Drag-and-drop visual content editor for building web pages of any kind.",
+        highlights: [
+            "Structured layout primitives — rows, columns, content blocks",
+            "Embedded WYSIWYG for rich text and media",
+            "JSON content model for preview, persist, and re-render",
+        ],
+        tags: [
+            "React", "TypeScript", "Slate.js", "Tailwind CSS", "Vite", "WYSIWYG", "Page Builder",
+        ],
+        link: "/",
+        imageSrc: "temporary.png",
+        gallery: null,
+        status: "wip",
+        kind: "personal",
     },
     {
         title: "Smart Pixel",
-        description: "An AI-powered image optimization tool built with a Laravel backend and a Next.js frontend. SmartPixel allows users to upload images with custom parameters (e.g., width, height, format, crop) and returns optimized results using advanced processing logic and cloud storage integration.",
+        tagline: "AI-powered image optimization tool with custom parameter controls.",
+        highlights: [
+            "Custom width, height, format, and crop parameters",
+            "Cloud storage integration for delivery",
+            "Laravel backend + Next.js frontend in a monorepo",
+        ],
         tags: [
             "React", "TypeScript", "Laravel", "Next.js", "MySQL", "Monorepo", "AI", "Image Optimization"
         ],
         link: "/",
         imageSrc: "temporary.png",
-        gallery: null
+        gallery: null,
+        status: "wip",
+        kind: "personal",
     },
     {
-        title: "My Drive",
-        description: "A personal cloud storage application inspired by Google Drive. My Drive allows users to securely upload, organize, and manage files in folders, with support for sharing and downloading. Built with a Laravel backend and React-based frontend, it integrates with S3 for scalable storage and uses Docker for containerized deployment.",
+        title: "PhotoSync",
+        tagline: "Mobile photo gallery aggregating images from multiple cloud accounts.",
+        highlights: [
+            "Connect multiple Google Drive accounts in one timeline",
+            "Planned support for Apple iCloud Drive where the API allows",
+            "Small Next.js web admin for account management",
+        ],
         tags: [
-            "React", "TypeScript", "Laravel", "MySQL", "S3", "Docker", "Cloud Storage", "File Management", "REST API", "JWT Auth",
+            "React Native", "Expo", "TypeScript", "Next.js", "Google Drive API", "OAuth 2.0", "iCloud", "Multi-Account", "REST API",
         ],
         link: "/",
         imageSrc: "temporary.png",
-        gallery: null
+        gallery: null,
+        status: "wip",
+        kind: "personal",
     },
+];
 
+export const testimonialData = [
+    {
+        "name": "Replace with name",
+        "role": "Senior Developer",
+        "company": "Company Name",
+        "avatar": "",
+        "linkedin": "https://www.linkedin.com/",
+        "quote": "Working with Jay was a great experience. He delivers clean, well-tested code on time and is always willing to dig into problems no one else wants to touch."
+    },
+    {
+        "name": "Replace with name",
+        "role": "Tech Lead",
+        "company": "Company Name",
+        "avatar": "",
+        "linkedin": "https://www.linkedin.com/",
+        "quote": "Jay paired with me on a Symfony migration that had blocked the team for weeks. He picked up the legacy code fast, proposed a clear plan, and we shipped two sprints ahead of schedule."
+    },
+    {
+        "name": "Replace with name",
+        "role": "Product Manager",
+        "company": "Company Name",
+        "avatar": "",
+        "linkedin": "https://www.linkedin.com/",
+        "quote": "What stood out was how Jay translated vague requirements into shippable UI without endless back-and-forth. The components he built were reused across three other features."
+    },
+    {
+        "name": "Replace with name",
+        "role": "Frontend Engineer",
+        "company": "Company Name",
+        "avatar": "",
+        "linkedin": "https://www.linkedin.com/",
+        "quote": "He's reliable, communicative, and genuinely cares about code quality. Reviews from Jay always made my PRs measurably better."
+    },
+];
+
+export type Testimonial = (typeof testimonialData)[number];
+
+export const techLayers: TechLayer[] = [
+    {
+        id: "frontend",
+        index: 1,
+        title: "Frontend",
+        role: "UI frameworks, styling, foundations",
+        items: [
+            { name: "React", icon: "react.svg" },
+            { name: "Next.js", icon: "nextjs.svg", invertOnDark: true },
+            { name: "TypeScript", icon: "typescript.svg" },
+            { name: "Tailwind CSS", icon: "tailwind.svg" },
+            { name: "shadcn/ui", icon: "shadcn.svg", invertOnDark: true },
+            { name: "Material UI", icon: "material.svg" },
+            { name: "Lucide", icon: "lucide.svg", invertOnLight: true },
+            { name: "SASS", icon: "sass.svg" },
+            { name: "Bootstrap", icon: "bootstrap.svg" },
+            { name: "TinyMCE", icon: "tiny.svg", invertOnDark: true },
+            { name: "jQuery", icon: "jquery.svg", invertOnDark: true },
+            { name: "HTML", icon: "html.svg" },
+            { name: "CSS", icon: "css.svg" },
+        ],
+    },
+    {
+        id: "backend",
+        index: 2,
+        title: "Backend",
+        role: "Server frameworks, APIs, data",
+        items: [
+            { name: "Symfony 7", icon: "symfony.svg", invertOnDark: true },
+            { name: "Laravel", icon: "laravel.svg" },
+            { name: "Node.js", icon: "nodejs.svg" },
+            { name: "PHP", icon: "php.svg" },
+            { name: "WordPress", icon: "wordpress.svg" },
+            { name: "Bolt CMS", icon: "bolt.svg", invertOnDark: true },
+            { name: "MySQL", icon: "mysql.svg" },
+            { name: "PostgreSQL", icon: "postgresql.svg", invertOnDark: true },
+            { name: "Supabase", icon: "supabase.svg" },
+            { name: "Prisma", icon: "prisma.svg", invertOnDark: true },
+            { name: "REST API", icon: "rest.svg", invertOnDark: true },
+            { name: "WhatsApp API", icon: "whatsapp.svg" },
+            { name: "Twilio", icon: "twilio.svg" },
+        ],
+    },
+    {
+        id: "platform",
+        index: 3,
+        title: "Platform",
+        role: "Containers, hosting, deployment",
+        items: [
+            { name: "Docker", icon: "docker.svg" },
+            { name: "NGINX", icon: "nginx.svg" },
+            { name: "AWS", icon: "aws.svg", invertOnDark: true },
+            { name: "Vercel", icon: "vercel.svg", invertOnDark: true },
+            { name: "Railway", icon: "railway.svg", invertOnDark: true },
+            { name: "Koyeb", icon: "koyeb.svg", invertOnDark: true },
+            { name: "Namecheap", icon: "namecheap.svg" },
+        ],
+    },
+    {
+        id: "tools",
+        index: 4,
+        title: "Tools",
+        role: "Dev tools, environments, process",
+        items: [
+            { name: "Git", icon: "git.svg" },
+            { name: "ESLint", icon: "eslint.svg" },
+            { name: "Prettier", icon: "prettier.svg" },
+            { name: "Postman", icon: "postman.svg" },
+            { name: "Figma", icon: "figma.svg" },
+            { name: "Jira", icon: "jira.svg" },
+            { name: "OpenAI", icon: "openai.svg", invertOnDark: true },
+            { name: "Gemini", icon: "gemini.svg" },
+            { name: "Stripe", icon: "stripe.svg" },
+            { name: "Auth0", icon: "auth0.svg" },
+            { name: "DocuSign", icon: "docusign.svg" },
+            { name: "reCAPTCHA", icon: "recaptcha.svg" },
+            { name: "WSL 2 Linux", icon: "linux.svg", invertOnDark: true },
+            { name: "Microservices", icon: "micro-services.svg", invertOnDark: true },
+        ],
+    },
 ];
 
 export const animationGroups = [
@@ -326,7 +477,7 @@ export const animationGroups = [
     { classes: ["hidden-left-up"], animation: "animate-left-up" },
 ];
 
-export const descInfoText = "<p> I'm a web developer, experience in building and maintaining full-stack web applications. I specialize in creating responsive, reusable UI components and contributing to robust server-side functionality. </p>";
+export const descInfoText = "<p> I'm a web developer, experienced in building and maintaining full-stack web applications. I specialize in creating responsive, reusable UI components and contributing to robust server-side functionality. </p>";
 
 export const animateSpan = [
     "<p>",
