@@ -216,104 +216,6 @@ html {
   background: hsl(var(--primary-theme) / 0.05);
 }
 
-/* old animated tech columns */
-.col-wrapper-up {
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 30%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0)
-  );
-}
-
-.col-wrapper-up div {
-  top: 100%;
-  animation-name: divScrollUp;
-  animation-duration: 45s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes divScrollUp {
-  to {
-    top: calc((12 * 7rem) * -1);
-  }
-}
-
-.col-wrapper-down {
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 10%,
-    rgba(0, 0, 0, 1) 90%,
-    rgba(0, 0, 0, 0)
-  );
-}
-
-.col-wrapper-down div {
-  bottom: 100%;
-  animation-name: divScrollDown;
-  animation-duration: 120s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes divScrollDown {
-  to {
-    bottom: calc((12 * 7rem) * -1);
-  }
-}
-.delay-up-0 { animation-delay: calc(var(--delay-up-base) / 12 * (12 - 1) * -1); }
-.delay-up-1 { animation-delay: calc(var(--delay-up-base) / 12 * (12 - 2) * -1); }
-.delay-up-2 { animation-delay: calc(var(--delay-up-base) / 12 * (12 - 3) * -1); }
-.delay-up-3 { animation-delay: calc(var(--delay-up-base) / 12 * (12 - 4) * -1); }
-.delay-up-4 { animation-delay: calc(var(--delay-up-base) / 12 * (12 - 5) * -1); }
-.delay-up-5 { animation-delay: calc(var(--delay-up-base) / 12 * (12 - 6) * -1); }
-.delay-up-6 { animation-delay: calc(var(--delay-up-base) / 12 * (12 - 7) * -1); }
-.delay-up-7 { animation-delay: calc(var(--delay-up-base) / 12 * (12 - 8) * -1); }
-.delay-up-8 { animation-delay: calc(var(--delay-up-base) / 12 * (12 - 9) * -1); }
-.delay-up-9 { animation-delay: calc(var(--delay-up-base) / 12 * (12 - 10) * -1); }
-.delay-up-10 { animation-delay: calc(var(--delay-up-base) / 12 * (12 - 11) * -1); }
-.delay-up-11 { animation-delay: calc(var(--delay-up-base) / 12 * (12 - 12) * -1); }
-
-.delay-down-0 { animation-delay: calc(var(--delay-down-base) / 12 * (12 - 1) * -1); }
-.delay-down-1 { animation-delay: calc(var(--delay-down-base) / 12 * (12 - 2) * -1); }
-.delay-down-2 { animation-delay: calc(var(--delay-down-base) / 12 * (12 - 3) * -1); }
-.delay-down-3 { animation-delay: calc(var(--delay-down-base) / 12 * (12 - 4) * -1); }
-.delay-down-4 { animation-delay: calc(var(--delay-down-base) / 12 * (12 - 5) * -1); }
-.delay-down-5 { animation-delay: calc(var(--delay-down-base) / 12 * (12 - 6) * -1); }
-.delay-down-6 { animation-delay: calc(var(--delay-down-base) / 12 * (12 - 7) * -1); }
-.delay-down-7 { animation-delay: calc(var(--delay-down-base) / 12 * (12 - 8) * -1); }
-.delay-down-8 { animation-delay: calc(var(--delay-down-base) / 12 * (12 - 9) * -1); }
-.delay-down-9 { animation-delay: calc(var(--delay-down-base) / 12 * (12 - 10) * -1); }
-.delay-down-10 { animation-delay: calc(var(--delay-down-base) / 12 * (12 - 11) * -1); }
-.delay-down-11 { animation-delay: calc(var(--delay-down-base) / 12 * (12 - 12) * -1); }
-
-.tech-buttons button {
-  font-family:
-    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.875rem;
-  color: hsl(var(--muted-foreground));
-  border-color: hsl(var(--border));
-  transition:
-    color 0.2s ease,
-    border-color 0.2s ease;
-}
-.tech-buttons button.active {
-  border-color: hsl(var(--primary-theme));
-  color: hsl(var(--primary-theme));
-}
-.tech-buttons button:hover {
-  color: hsl(var(--foreground));
-  border-color: hsl(var(--primary-theme) / 0.6);
-}
-
-.mono img {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-
 /* invert solid-black social SVGs (leetcode/hackerrank) in dark mode */
 .dark .social-svg {
   filter: invert(1) brightness(1.1);
@@ -327,25 +229,6 @@ html {
 /* tech icons whose SVGs use white strokes — invert in light mode */
 :root:not(.dark) .tech-invert-light {
   filter: invert(1) brightness(0.6);
-}
-
-@keyframes flipIn {
-  from {
-    opacity: 0;
-    transform: perspective(1000px) translate(-75px) rotateY(90deg);
-  }
-  to {
-    opacity: 1;
-    transform: perspective(1000px) translate(0) rotateY(0deg);
-  }
-}
-
-.tech-image {
-  animation-name: flipIn;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
-  backface-visibility: hidden;
 }
 
 .select-container:focus-within i {
