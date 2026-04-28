@@ -46,7 +46,7 @@ const TestimonialCard = ({ item }: { item: Testimonial }) => (
           {item.company ? (
             <>
               {" · "}
-              <span className="text-primaryTheme/80">{item.company}</span>
+              <span className="text-primaryTheme">{item.company}</span>
             </>
           ) : null}
         </p>

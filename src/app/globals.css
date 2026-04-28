@@ -22,7 +22,7 @@
     --popover: 210 20% 99%;
     --popover-foreground: 222 39% 9%;
     --primary: 222 39% 11%;
-    --primary-theme: 187 90% 36%;
+    --primary-theme: 187 90% 26%;
     --primary-foreground: 210 20% 98%;
     --secondary: 220 14% 96%;
     --secondary-foreground: 222 39% 11%;
@@ -34,8 +34,8 @@
     --destructive-foreground: 210 20% 98%;
     --border: 220 13% 88%;
     --input: 220 13% 88%;
-    --ring: 187 90% 36%;
-    --chart-1: 187 90% 36%;
+    --ring: 187 90% 26%;
+    --chart-1: 187 90% 26%;
     --chart-2: 165 70% 40%;
     --chart-3: 260 70% 55%;
     --chart-4: 43 74% 50%;

@@ -84,7 +84,7 @@ const ProjectCard = ({ data }: { data: ProjectCardType }) => {
           <p className="text-[11px] font-mono-tech text-muted-foreground -mt-1">
             {data.role}
             <span className="opacity-50"> · </span>
-            <span className="text-primaryTheme/80">{data.company}</span>
+            <span className="text-primaryTheme">{data.company}</span>
           </p>
         ) : null}
 
@@ -102,7 +102,7 @@ const ProjectCard = ({ data }: { data: ProjectCardType }) => {
           <ul className="flex flex-col gap-1 text-xs text-muted-foreground leading-relaxed">
             {data.highlights.map((h, i) => (
               <li key={i} className="flex gap-2">
-                <span className="text-primaryTheme/70 flex-shrink-0">›</span>
+                <span className="text-primaryTheme flex-shrink-0">›</span>
                 <span>{h}</span>
               </li>
             ))}
