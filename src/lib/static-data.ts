@@ -172,8 +172,45 @@ export const projectCard: ProjectCardType[] = [
             "Symfony 7", "Preact.js", "Tailwind CSS", "MySQL", "Auth0", "Docker", "reCAPTCHA", "REST API",
         ],
         link: "https://reilink.com",
-        imageSrc: "temporary.png",
-        gallery: null,
+        imageSrc: "reilink-1.webp",
+        gallery: [
+            {
+                "title": "REILink Landing Page",
+                "imgSrc": "/images/work/reilink/s-reilink-1.webp"
+            },
+            {
+                "title": "REILink Dashboard",
+                "imgSrc": "/images/work/reilink/s-reilink-2.webp"
+            },
+            {
+                "title": "REILink Orientations and Manual",
+                "imgSrc": "/images/work/reilink/s-reilink-3.webp"
+            },
+            {
+                "title": "REILink Community Group",
+                "imgSrc": "/images/work/reilink/s-reilink-4.webp"
+            },
+            {
+                "title": "REILink Property Listing",
+                "imgSrc": "/images/work/reilink/s-reilink-5.webp"
+            },
+            {
+                "title": "REILink Property View Details",
+                "imgSrc": "/images/work/reilink/s-reilink-6.webp"
+            },
+            {
+                "title": "REILink Course Dashboard",
+                "imgSrc": "/images/work/reilink/s-reilink-7.webp"
+            },
+            {
+                "title": "REILink Courses and Resources",
+                "imgSrc": "/images/work/reilink/s-reilink-8.webp"
+            },
+            {
+                "title": "REILink Sample Course",
+                "imgSrc": "/images/work/reilink/s-reilink-9.webp"
+            }
+        ],
         status: "live",
         kind: "company",
         role: "PHP Developer",
@@ -192,8 +229,13 @@ export const projectCard: ProjectCardType[] = [
             "Symfony 7", "React", "Tailwind CSS", "MySQL", "Docker", "AWS", "Stripe", "Twilio", "DocuSign", "OpenAI", "Gemini",
         ],
         link: "",
-        imageSrc: "temporary.png",
-        gallery: null,
+        imageSrc: "apex-1.webp",
+        gallery: [
+            {
+                "title": "Apex Landing Page",
+                "imgSrc": "/images/work/apex/s-apex-1.webp"
+            }
+        ],
         status: "live",
         kind: "company",
         role: "PHP Developer",
@@ -211,8 +253,29 @@ export const projectCard: ProjectCardType[] = [
             "Symfony 5", "PHP 8", "Elasticsearch", "Bitbucket CI/CD", "AWS", "SEO",
         ],
         link: "https://www.lamudi.com.ph",
-        imageSrc: "temporary.png",
-        gallery: null,
+        imageSrc: "lamudi-1.webp",
+        gallery: [
+            {
+                "title": "Lamudi Marketplace Home",
+                "imgSrc": "/images/work/lamudi/s-lamudi-1.webp"
+            },
+            {
+                "title": "Lamudi Apartment Listing",
+                "imgSrc": "/images/work/lamudi/s-lamudi-2.webp"
+            },
+            {
+                "title": "Lamudi House And Lot Search",
+                "imgSrc": "/images/work/lamudi/s-lamudi-3.webp"
+            },
+            {
+                "title": "New Developments Listing",
+                "imgSrc": "/images/work/lamudi/s-lamudi-4.webp"
+            },
+            {
+                "title": "New Developments View Listing",
+                "imgSrc": "/images/work/lamudi/s-lamudi-5.webp"
+            },
+        ],
         status: "live",
         kind: "company",
         role: "Junior Software Engineer",
