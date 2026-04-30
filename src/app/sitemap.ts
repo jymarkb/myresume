@@ -6,19 +6,12 @@ const SITE_URL =
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  const sections = [
-    "",
-    "#aboutme",
-    "#expertise",
-    "#services",
-    "#projects",
-    "#contact",
+  return [
+    {
+      url: SITE_URL,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 1,
+    },
   ];
-
-  return sections.map((hash) => ({
-    url: `${SITE_URL}/${hash}`,
-    lastModified,
-    changeFrequency: "monthly",
-    priority: hash === "" ? 1 : 0.7,
-  }));
 }
