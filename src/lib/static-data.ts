@@ -21,10 +21,10 @@ export const headerLinkData = [
         "title": "Projects",
         "target": "projects",
     },
-    {
-        "title": "Testimonials",
-        "target": "testimonials",
-    },
+    // {
+    //     "title": "Testimonials",
+    //     "target": "testimonials",
+    // },
     {
         "title": "Contact",
         "target": "contact",

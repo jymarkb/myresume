@@ -40,12 +40,12 @@ export default function Home() {
         <Projects />
       </section>
 
-      <section
+      {/* <section
         id="testimonials"
         className="wrapper section-alt flex justify-center"
       >
         <Testimonials />
-      </section>
+      </section> */}
 
       <section id="contact" className="wrapper flex justify-center">
         <Talk />
