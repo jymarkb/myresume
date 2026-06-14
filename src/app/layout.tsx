@@ -98,7 +98,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   verification: {
-    google: "V7JrfudxiKC9BCT_96BGFP2ZG1Xhyt1Xls2BJk-PAp8",
+    google: "DcUsqihgktC4b0jX1LK8nKyKTDZobScTA5S7lRMbMCY",
   },
 };
 
