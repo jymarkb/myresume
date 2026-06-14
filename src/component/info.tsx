@@ -14,7 +14,7 @@ const Info = () => {
             <div className="relative rounded-2xl overflow-hidden w-full h-full">
               <Image
                 className="object-cover w-full h-full"
-                src="/images/webp/avatar.avif"
+                src="/images/webp/avatar2.avif"
                 width={500}
                 height={500}
                 alt="Jay Mark Borja"
@@ -79,7 +79,10 @@ const Info = () => {
         <div className="md:row-start-4 md:col-span-2 xl:col-span-1 xl:col-start-1">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-mono-tech text-muted-foreground">
             <div className="flex items-center gap-2">
-              <Briefcase className="h-3.5 w-3.5 text-primaryTheme" strokeWidth={2} />
+              <Briefcase
+                className="h-3.5 w-3.5 text-primaryTheme"
+                strokeWidth={2}
+              />
               <span>4+ years experience</span>
             </div>
             <span className="opacity-40">·</span>
